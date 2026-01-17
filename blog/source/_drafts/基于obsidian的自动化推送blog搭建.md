@@ -21,52 +21,57 @@ git push origin HEAD -u
 
 完成推送后两种方案，一种github自带的githubaction，或者vercal单独设构建都行我们采取第一种，并利用obsdian的git插件实现自动化
 ``` 
-#vault/.github/hexo-deploy.yml
 name: Hexo Deploy
 
 on:
-  push:
-    branches:
-      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
+  build-deploy:
+    runs-on: ubuntu-latest
 
-  
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+    steps:
+      # 1. 拉取 main 分支代码
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-  
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      # 2. 准备 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-  
-      - name: Install dependencies
-        run: |
-          cd blog
-          npm install
+      # 3. 配置 git（使用 GITHUB_TOKEN，关键步骤）
+      - name: Setup git with GITHUB_TOKEN
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global credential.helper store
 
-  
-      - name: Build Hexo
-        run: |
-          cd blog
-          npx hexo clean
-          npx hexo generate
-  
-      - name: Deploy to web branch
-        run: |
-          cd blog
-          npx hexo deploy
-          
-        env:
-          GIT_AUTHOR_NAME: github-actions
-          GIT_AUTHOR_EMAIL: github-actions@github.com
-          GIT_COMMITTER_NAME: github-actions
-          GIT_COMMITTER_EMAIL: github-actions@github.com
+      # 4. 强制把 remote 改成带 token 的 HTTPS（核心兜底）
+      - name: Force git remote with GITHUB_TOKEN
+        run: |
+          cd blog
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+      # 5. 安装 Hexo 依赖
+      - name: Install dependencies
+        run: |
+          cd blog
+          npm install
+
+      # 6. Hexo 构建 + 部署到 web 分支
+      - name: Hexo deploy
+        run: |
+          cd blog
+          npx hexo clean
+          npx hexo deploy
+
 ```
