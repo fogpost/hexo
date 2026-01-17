@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "b094e285793f0a1a",
+        "id": "1e97d9e03f52c543",
         "type": "tabs",
         "children": [
           {
-            "id": "d6b7094c716b1361",
+            "id": "840182e87ea50281",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "blog/source/_posts/《安全服务工程师网络安全工具与命令实战笔记.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "《安全服务工程师网络安全工具与命令实战笔记"
             }
           }
         ]
@@ -136,12 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "blog/source/_posts/《安全服务工程师网络安全工具与命令实战笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "《安全服务工程师网络安全工具与命令实战笔记 的大纲"
             }
           },
           {
@@ -174,93 +189,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "0cc50d69a81f8613",
-    "type": "floating",
-    "children": [
-      {
-        "id": "c42e1f4b6580f512",
-        "type": "window",
-        "children": [
-          {
-            "id": "f91c66335696a249",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "642dcc04be2ccc08",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/git-doc/Start+here",
-                    "title": "Start here - Git Documentation - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "Start here - Git Documentation - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 312,
-        "y": 95,
-        "width": 1031,
-        "height": 806,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "8d8573e2076395ba",
   "lastOpenFiles": [
-    "themes",
-    "source/_posts/hello-world.md",
-    "source/_posts",
-    "source",
-    "scaffolds/post.md",
-    "scaffolds/draft.md",
-    "scaffolds/page.md",
-    "scaffolds",
-    "package.json",
-    "package-lock.json",
-    "_config.yml",
-    "_config.landscape.yml",
-    "blog/themes/fluid/source/css/_pages/_base/_widget/noscript.styl",
-    "blog/themes/fluid/source/css/_pages/_base/_widget/ngrogress.styl",
-    "blog/themes/fluid/source/css/_pages/_base/_widget/modal.styl",
-    "blog/source/_drafts/分支函数逆向.md",
-    "blog/themes/fluid/source/img/fluid.png",
-    "blog/themes/fluid/README_en.md",
-    "blog/themes/fluid/README.md",
-    "themes/fluid/source/img/fluid.png",
-    "themes/fluid/README_en.md",
-    "themes/fluid/README.md",
-    "theme/fluid/source/img/fluid.png",
-    "theme/fluid/README_en.md",
-    "theme/fluid/README.md",
-    "blog/fluid/source/img/fluid.png",
-    "blog/fluid/README_en.md",
-    "blog/fluid/README.md",
-    "blog/source/_posts/逆向出题记录.md",
-    "blog/source/_posts/sqli练习.md",
-    "blog/source/_posts/sqli10-20.md",
-    "blog/source/_drafts/易语言初识.md",
-    "blog/source/_drafts/我读过的逆向书.md",
-    "blog/source/_drafts/如何学习逆向.md",
-    "blog/source/_drafts/如何使用od.md",
-    "blog/source/_drafts/如何使用idapro.md",
-    "blog/source/_drafts/基于obsidian的自动化推送blog搭建.md",
+    "未命名.base",
+    "未命名 1.base",
+    "blog/source/_posts/《安全服务工程师网络安全工具与命令实战笔记.md",
     "blog/source/_drafts/关于转专业想说的话.md",
+    "blog/source/_drafts/基于obsidian的自动化推送blog搭建.md",
+    "blog/source/_drafts/分支函数逆向.md",
+    "《安全服务工程师网络安全工具与命令实战笔记.md",
+    "blog/start.bat",
+    "blog/_config.landscape.yml",
+    "Notion/🎯 奇安信测试岗校招备战题库（完整版）.md",
+    "blog/public/archives/2025/01/index.html",
+    "blog/public/archives/2025/01",
+    "blog/public/archives/page/5/index.html",
+    "blog/public/archives/page/5",
+    "blog/public/archives/page/7/index.html",
+    "blog/public/archives/page/7",
+    "🎯 奇安信测试岗校招备战题库（完整版）.md",
+    "Notion/日记/2025314.md",
+    "Notion/日记/2025313.md",
+    "Notion/日记/202551.md",
+    "blog/source/_drafts/如何使用od.md",
+    "blog/source/_drafts/如何学习逆向.md",
+    "blog/source/_drafts/我读过的逆向书.md",
+    "blog/source/_drafts/易语言初识.md",
+    "blog/source/_drafts/draft.md",
+    "blog/source/_drafts/webtest.md",
     "blog/source/_drafts/win32读书笔记.md",
-    "blog/source/image/LDAP.jpeg",
-    "blog/source/image/image 8.png",
-    "blog/source/image/image.png",
-    "blog/source/image/image 9.png",
-    "blog/source/image/image 7.png",
-    "blog/source/image/image 6.png",
-    "blog/source/about/index.md",
+    "blog/source/_drafts/如何使用idapro.md",
+    "blog/public/image/image.png",
+    "blog/public/image/image 30.png",
+    "blog/public/image/image 22.png",
+    "blog/public/image/image 2.png",
+    "blog/public/img/fluid.png",
+    "blog/public/img/avatar.png",
+    "node_modules/htmlparser2/README.md",
+    "node_modules/hexo-fs/node_modules/dom-serializer/README.md",
+    "node_modules/cross-spawn/README.md",
+    "node_modules/deepmerge/readme.md",
+    "node_modules/tslib/SECURITY.md",
+    "node_modules/is-glob/README.md",
+    "node_modules/to-regex-range/README.md",
+    "node_modules/highlight.js/styles/pojoaque.jpg",
+    "blog/themes/fluid/source/img/fluid.png",
+    "themes/fluid/source/img/fluid.png",
+    "theme/fluid/source/img/fluid.png",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
