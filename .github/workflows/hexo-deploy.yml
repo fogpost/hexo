@@ -41,4 +41,5 @@ jobs:
           cd blog
           npx hexo clean
           npx hexo generate
+          git remote set-url origin https://fogpost:${GH_PAT}@github.com/fogpost/hexo.git
           npx hexo deploy
