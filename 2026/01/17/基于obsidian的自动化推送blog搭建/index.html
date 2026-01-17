@@ -21,15 +21,16 @@
   
     <meta name="description" content="基于obsidian的自动化推送blog搭建(这个好蠢呀，突然发现没标题没标签，难搞，难不成每次还要复制，看来下一下还要搞个什么自动化创建标签才行) 好久没有写blog了，考完研旅完游之后在家里面看了一点点32汇编的书之后发现还有一门c语言考试没完结，要是我没考过的话就得重读大四了，直接延毕，然后可以去考更好的大学研了，不过说到这个我还有一些关于转专业的想说的话，不过中心不在这（[[关于转专业想说">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fogpost&#96;s little blog">
+<meta property="og:title" content="基于obsidian的自动化推送blog搭建">
 <meta property="og:url" content="https://fogpost.top/2026/01/17/%E5%9F%BA%E4%BA%8Eobsidian%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%8E%A8%E9%80%81blog%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="fogpost&#96;s little blog">
 <meta property="og:description" content="基于obsidian的自动化推送blog搭建(这个好蠢呀，突然发现没标题没标签，难搞，难不成每次还要复制，看来下一下还要搞个什么自动化创建标签才行) 好久没有写blog了，考完研旅完游之后在家里面看了一点点32汇编的书之后发现还有一门c语言考试没完结，要是我没考过的话就得重读大四了，直接延毕，然后可以去考更好的大学研了，不过说到这个我还有一些关于转专业的想说的话，不过中心不在这（[[关于转专业想说">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202601171958945.png">
-<meta property="article:published_time" content="2026-01-17T12:12:00.140Z">
-<meta property="article:modified_time" content="2026-01-17T12:12:00.140Z">
+<meta property="article:published_time" content="2026-01-17T20:13:37.000Z">
+<meta property="article:modified_time" content="2026-01-17T12:15:49.642Z">
 <meta property="article:author" content="fogpost">
+<meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/fogpost/photo/raw/master/202601171958945.png">
   
@@ -38,7 +39,7 @@
     <!-- <meta name="referrer" content="no-referrer" /> -->
   
   
-  <title>fogpost`s little blog</title>
+  <title>基于obsidian的自动化推送blog搭建 - fogpost`s little blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +217,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="基于obsidian的自动化推送blog搭建"></span>
           
         </div>
 
@@ -227,8 +228,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-01-17 12:12" pubdate>
-          2026年1月17日 中午
+        <time datetime="2026-01-17 20:13" pubdate>
+          2026年1月17日 晚上
         </time>
       </span>
     
@@ -296,7 +297,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">基于obsidian的自动化推送blog搭建</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2026-01-17T12:15:49+00:00
+                  
+                  
+
+                
+              </p>
             
             
               <div class="markdown-body">
@@ -323,6 +334,13 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/blog/" class="print-no-link">#blog</a>
+      
+    </div>
+  
 </div>
 
 
@@ -331,7 +349,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>基于obsidian的自动化推送blog搭建</div>
       <div>https://fogpost.top/2026/01/17/基于obsidian的自动化推送blog搭建/</div>
     </div>
     <div class="license-meta">
@@ -347,6 +365,11 @@
           <div>2026年1月17日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2026年1月17日</div>
+        </div>
       
       
         <div class="license-meta-item">
@@ -565,6 +588,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   
