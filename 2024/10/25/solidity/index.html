@@ -1,0 +1,785 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head><!-- hexo injector head_begin start --><meta name="referrer" content="no-referrer" /><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="fogpost">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Solidity代码块真不想写这个啊，没见过的代码，直接搜的到时候背就行,一下代码都是Solidity代码块，为了便于查看用的是c++格式解析，因为sd根本就没有自带解析，也懒得找了 完成加减运算int &#x2F; uint ：分别表示有符号和无符号的不同位数的整型变量。 支持关键字 uint8 到 uint256 （无符号，从 8 位到 256 位）以及 int8 到 int256，以 8 位">
+<meta property="og:type" content="article">
+<meta property="og:title" content="solidity">
+<meta property="og:url" content="https://fogpost.top/2024/10/25/solidity/index.html">
+<meta property="og:site_name" content="fogpost&#96;s little blog">
+<meta property="og:description" content="Solidity代码块真不想写这个啊，没见过的代码，直接搜的到时候背就行,一下代码都是Solidity代码块，为了便于查看用的是c++格式解析，因为sd根本就没有自带解析，也懒得找了 完成加减运算int &#x2F; uint ：分别表示有符号和无符号的不同位数的整型变量。 支持关键字 uint8 到 uint256 （无符号，从 8 位到 256 位）以及 int8 到 int256，以 8 位">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-25T08:45:51.000Z">
+<meta property="article:modified_time" content="2026-01-17T11:43:05.773Z">
+<meta property="article:author" content="fogpost">
+<meta property="article:tag" content="course">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <!-- <meta name="referrer" content="no-referrer-when-downgrade"> -->
+    <!-- <meta name="referrer" content="no-referrer" /> -->
+  
+  
+  <title>solidity - fogpost`s little blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"fogpost.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="fogpost`s little blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/miku.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="solidity"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-10-25 08:45" pubdate>
+          2024年10月25日 早上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          18 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">solidity</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2026-01-17T11:43:05+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Solidity代码块"><a href="#Solidity代码块" class="headerlink" title="Solidity代码块"></a>Solidity代码块</h1><p>真不想写这个啊，没见过的代码，直接搜的到时候背就行,一下代码都是Solidity代码块，为了便于查看用的是c++格式解析，因为sd根本就没有自带解析，也懒得找了</p>
+<h2 id="完成加减运算"><a href="#完成加减运算" class="headerlink" title="完成加减运算"></a>完成加减运算</h2><p>int &#x2F; uint ：分别表示有符号和无符号的不同位数的整型变量。 支持关键字 uint8 到 uint256 （无符号，从 8 位到 256 位）以及 int8 到 int256，以 8 位为步长递增。 uint 和 int 分别是 uint256 和 int256 的别名</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c++">pragma solidity &gt;=<span class="hljs-number">0.4</span><span class="hljs-number">.21</span> &lt;=<span class="hljs-number">0.8</span><span class="hljs-number">.0</span><br><br>contract MatchTest&#123;<br>    function <span class="hljs-built_in">add</span>(uint i,uint j) pure <span class="hljs-keyword">public</span> <span class="hljs-built_in">returns</span>(uint)&#123;<br>        <span class="hljs-keyword">return</span> i + j;<br>    &#125;<br>    <span class="hljs-function">function <span class="hljs-title">sub</span><span class="hljs-params">(uint i,uint j)</span> pure <span class="hljs-keyword">public</span> <span class="hljs-title">returns</span><span class="hljs-params">(uint)</span></span>&#123;<br>        <span class="hljs-keyword">return</span> i - j;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>你看连识别都用不了</p>
+<h2 id="简单计算器合约"><a href="#简单计算器合约" class="headerlink" title="简单计算器合约"></a>简单计算器合约</h2><p>题目: 创建一个合约，用于存储一个整数。用户可以通过 set(uint256 x) 函数来设置这个整数，通过 get() 函数来查询当前存储的值。</p>
+<p>提示:<br>•    set(uint256 x)：设置存储的整数值。<br>•    get()：返回当前存储的整数值<br>题目: 实现一个简单的计算器合约，支持加法、减法、乘法和除法操作。分别实现 add(uint256 a, uint256 b)、subtract(uint256 a, uint256 b)、multiply(uint256 a, uint256 b) 和 divide(uint256 a, uint256 b) 函数。<br>提示:<br>add(uint256 a, uint256 b)：返回 a 和 b 的和。<br>subtract(uint256 a, uint256 b)：返回 a 和 b 的差。<br>multiply(uint256 a, uint256 b)：返回 a 和 b 的积。<br>divide(uint256 a, uint256 b)：返回 a 除以 b 的商，需检查 b 是否为零。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract SimpleCalculator &#123;<br>    <span class="hljs-comment">// 加法函数</span><br>    <span class="hljs-function">function <span class="hljs-title">add</span><span class="hljs-params">(uint256 a, uint256 b)</span> <span class="hljs-keyword">public</span> pure <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> a + b;<br>    &#125;<br><br>    <span class="hljs-comment">// 减法函数</span><br>    <span class="hljs-function">function <span class="hljs-title">subtract</span><span class="hljs-params">(uint256 a, uint256 b)</span> <span class="hljs-keyword">public</span> pure <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-built_in">require</span>(a &gt;= b, <span class="hljs-string">&quot;Subtraction would result in a negative value&quot;</span>);<br>        <span class="hljs-keyword">return</span> a - b;<br>    &#125;<br><br>    <span class="hljs-comment">// 乘法函数</span><br>    <span class="hljs-function">function <span class="hljs-title">multiply</span><span class="hljs-params">(uint256 a, uint256 b)</span> <span class="hljs-keyword">public</span> pure <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> a * b;<br>    &#125;<br><br>    <span class="hljs-comment">// 除法函数</span><br>    <span class="hljs-function">function <span class="hljs-title">divide</span><span class="hljs-params">(uint256 a, uint256 b)</span> <span class="hljs-keyword">public</span> pure <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-built_in">require</span>(b != <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Cannot divide by zero&quot;</span>);<br>        <span class="hljs-keyword">return</span> a / b;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="存储合约"><a href="#存储合约" class="headerlink" title="存储合约"></a>存储合约</h2><p>题目: 创建一个合约，用于存储一个整数。用户可以通过 set(uint256 x) 函数来设置这个整数，通过 get() 函数来查询当前存储的值。</p>
+<p>提示:<br>•    set(uint256 x)：设置存储的整数值。<br>•    get()：返回当前存储的整数值。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract SimpleStorage &#123;<br>    uint256 <span class="hljs-keyword">private</span> storedValue;<br><br>    <span class="hljs-comment">// 设置存储的整数值</span><br>    <span class="hljs-function">function <span class="hljs-title">set</span><span class="hljs-params">(uint256 x)</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        storedValue = x;<br>    &#125;<br><br>    <span class="hljs-comment">// 返回当前存储的整数值</span><br>    <span class="hljs-function">function <span class="hljs-title">get</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> storedValue;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="简单身份验证合约"><a href="#简单身份验证合约" class="headerlink" title="简单身份验证合约"></a>简单身份验证合约</h2><p>题目: 实现一个身份验证合约，允许用户注册和查询注册状态。用户可以通过 register() 函数注册，通过 isRegistered(address user) 函数查询某个地址是否已注册。</p>
+<p>提示:<br>•    register()：用户调用此函数进行注册。<br>•    isRegistered(address user)：返回指定地址的注册状态。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract Authentication &#123;<br>    <span class="hljs-built_in">mapping</span>(address =&gt; <span class="hljs-type">bool</span>) <span class="hljs-keyword">private</span> registeredUsers;<br><br>    <span class="hljs-comment">// 注册函数：调用该函数的用户地址将被标记为已注册</span><br>    <span class="hljs-function">function <span class="hljs-title">register</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        <span class="hljs-built_in">require</span>(!registeredUsers[msg.sender], <span class="hljs-string">&quot;User is already registered&quot;</span>);<br>        registeredUsers[msg.sender] = <span class="hljs-literal">true</span>;<br>    &#125;<br><br>    <span class="hljs-comment">// 查询注册状态函数：返回指定地址的注册状态</span><br>    <span class="hljs-function">function <span class="hljs-title">isRegistered</span><span class="hljs-params">(address user)</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(<span class="hljs-type">bool</span>)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> registeredUsers[user];<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="简单拍卖合约"><a href="#简单拍卖合约" class="headerlink" title="简单拍卖合约"></a>简单拍卖合约</h2><p>题目: 创建一个简单的拍卖合约，允许用户出价。实现 bid() 函数来提交出价，使用 getHighestBid() 函数查询当前最高出价。<br>提示:<br>•    bid()：提交出价，需确保出价高于当前最高出价。<br>•    getHighestBid()：返回当前最高出价。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract SimpleAuction &#123;<br>    address <span class="hljs-keyword">public</span> highestBidder;<br>    uint256 <span class="hljs-keyword">public</span> highestBid;<br><br>    <span class="hljs-comment">// 提交出价函数，要求新出价高于当前最高出价</span><br>    <span class="hljs-function">function <span class="hljs-title">bid</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> payable </span>&#123;<br>        <span class="hljs-built_in">require</span>(msg.value &gt; highestBid, <span class="hljs-string">&quot;Bid must be higher than the current highest bid&quot;</span>);<br><br>        <span class="hljs-comment">// 如果有之前的最高出价，将其退还给之前的最高出价者</span><br>        <span class="hljs-keyword">if</span> (highestBidder != <span class="hljs-built_in">address</span>(<span class="hljs-number">0</span>)) &#123;<br>            <span class="hljs-built_in">payable</span>(highestBidder).<span class="hljs-built_in">transfer</span>(highestBid);<br>        &#125;<br><br>        <span class="hljs-comment">// 更新最高出价者和最高出价</span><br>        highestBidder = msg.sender;<br>        highestBid = msg.value;<br>    &#125;<br><br>    <span class="hljs-comment">// 查询当前最高出价</span><br>    <span class="hljs-function">function <span class="hljs-title">getHighestBid</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> highestBid;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="简单奖励合约"><a href="#简单奖励合约" class="headerlink" title="简单奖励合约"></a>简单奖励合约</h2><p>题目: 创建一个合约，允许用户存款并根据存款金额给予奖励。实现 deposit() 函数进行存款和 getReward() 函数查询奖励。</p>
+<p>提示:<br>•    deposit()：存入以太，系统给予 10% 的奖励。<br>•    getReward()：查询当前用户的奖励。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract DepositRewards &#123;<br>    <span class="hljs-built_in">mapping</span>(address =&gt; uint256) <span class="hljs-keyword">private</span> deposits;<br>    <span class="hljs-built_in">mapping</span>(address =&gt; uint256) <span class="hljs-keyword">private</span> rewards;<br><br>    <span class="hljs-comment">// 存款函数，用户存入以太并获得 10% 的奖励</span><br>    <span class="hljs-function">function <span class="hljs-title">deposit</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> payable </span>&#123;<br>        <span class="hljs-built_in">require</span>(msg.value &gt; <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Deposit amount must be greater than zero&quot;</span>);<br><br>        <span class="hljs-comment">// 记录用户的存款金额</span><br>        deposits[msg.sender] += msg.value;<br><br>        <span class="hljs-comment">// 计算奖励并更新奖励映射</span><br>        uint256 reward = (msg.value * <span class="hljs-number">10</span>) / <span class="hljs-number">100</span>;<br>        rewards[msg.sender] += reward;<br>    &#125;<br><br>    <span class="hljs-comment">// 查询当前用户的奖励</span><br>    <span class="hljs-function">function <span class="hljs-title">getReward</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> rewards[msg.sender];<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="投票合约"><a href="#投票合约" class="headerlink" title="投票合约"></a>投票合约</h2><p>题目: 创建一个投票合约，允许用户注册候选人并为其投票。实现 addCandidate(string memory name) 和 vote(uint candidateId) 函数。</p>
+<p>提示:<br>•    addCandidate(string memory name)：添加新的候选人。<br>•    vote(uint candidateId)：为指定候选人投票。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract Voting &#123;<br>    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Candidate</span> &#123;<br>        string name;<br>        uint256 voteCount;<br>    &#125;<br><br>    Candidate[] <span class="hljs-keyword">public</span> candidates;<br>    <span class="hljs-built_in">mapping</span>(address =&gt; <span class="hljs-type">bool</span>) <span class="hljs-keyword">private</span> hasVoted;<br><br>    <span class="hljs-comment">// 添加候选人函数</span><br>    <span class="hljs-function">function <span class="hljs-title">addCandidate</span><span class="hljs-params">(string memory name)</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        candidates.<span class="hljs-built_in">push</span>(<span class="hljs-built_in">Candidate</span>(name, <span class="hljs-number">0</span>));<br>    &#125;<br><br>    <span class="hljs-comment">// 投票函数，为指定候选人投票</span><br>    <span class="hljs-function">function <span class="hljs-title">vote</span><span class="hljs-params">(uint256 candidateId)</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        <span class="hljs-built_in">require</span>(candidateId &lt; candidates.length, <span class="hljs-string">&quot;Invalid candidate ID&quot;</span>);<br>        <span class="hljs-built_in">require</span>(!hasVoted[msg.sender], <span class="hljs-string">&quot;You have already voted&quot;</span>);<br><br>        <span class="hljs-comment">// 增加候选人的票数</span><br>        candidates[candidateId].voteCount += <span class="hljs-number">1</span>;<br><br>        <span class="hljs-comment">// 标记该用户已投票</span><br>        hasVoted[msg.sender] = <span class="hljs-literal">true</span>;<br>    &#125;<br><br>    <span class="hljs-comment">// 获取候选人总数</span><br>    <span class="hljs-function">function <span class="hljs-title">getCandidateCount</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> candidates.length;<br>    &#125;<br><br>    <span class="hljs-comment">// 获取候选人信息</span><br>    <span class="hljs-function">function <span class="hljs-title">getCandidate</span><span class="hljs-params">(uint256 candidateId)</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(string memory, uint256)</span> </span>&#123;<br>        <span class="hljs-built_in">require</span>(candidateId &lt; candidates.length, <span class="hljs-string">&quot;Invalid candidate ID&quot;</span>);<br>        <span class="hljs-keyword">return</span> (candidates[candidateId].name, candidates[candidateId].voteCount);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="众筹合约"><a href="#众筹合约" class="headerlink" title="众筹合约"></a>众筹合约</h2><p>题目: 创建一个众筹合约，允许用户出资并达到目标后提取资金。实现 contribute() 和 withdraw() 函数。</p>
+<p>提示:<br>•    contribute()：允许用户捐款并记录贡献金额。<br>•    withdraw()：允许众筹目标达成后提取资金。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract Crowdfunding &#123;<br>    address <span class="hljs-keyword">public</span> owner;<br>    uint256 <span class="hljs-keyword">public</span> goal;<br>    uint256 <span class="hljs-keyword">public</span> totalContributions;<br>    <span class="hljs-type">bool</span> <span class="hljs-keyword">public</span> goalReached;<br>    <br>    <span class="hljs-built_in">mapping</span>(address =&gt; uint256) <span class="hljs-keyword">public</span> contributions;<br><br>    <span class="hljs-built_in">constructor</span>(uint256 _goal) &#123;<br>        owner = msg.sender;<br>        goal = _goal;<br>        goalReached = <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    <span class="hljs-comment">// 出资函数，记录用户的贡献金额</span><br>    <span class="hljs-function">function <span class="hljs-title">contribute</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> payable </span>&#123;<br>        <span class="hljs-built_in">require</span>(msg.value &gt; <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Contribution must be greater than zero&quot;</span>);<br>        <span class="hljs-built_in">require</span>(!goalReached, <span class="hljs-string">&quot;Goal already reached&quot;</span>);<br><br>        contributions[msg.sender] += msg.value;<br>        totalContributions += msg.value;<br><br>        <span class="hljs-comment">// 如果总贡献金额达到或超过目标，标记为达成</span><br>        <span class="hljs-keyword">if</span> (totalContributions &gt;= goal) &#123;<br>            goalReached = <span class="hljs-literal">true</span>;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-comment">// 提取资金函数，众筹达成目标后允许合约所有者提取资金</span><br>    <span class="hljs-function">function <span class="hljs-title">withdraw</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        <span class="hljs-built_in">require</span>(msg.sender == owner, <span class="hljs-string">&quot;Only the owner can withdraw funds&quot;</span>);<br>        <span class="hljs-built_in">require</span>(goalReached, <span class="hljs-string">&quot;Funding goal not reached&quot;</span>);<br><br>        <span class="hljs-built_in">payable</span>(owner).<span class="hljs-built_in">transfer</span>(<span class="hljs-built_in">address</span>(<span class="hljs-keyword">this</span>).balance);<br>    &#125;<br><br>    <span class="hljs-comment">// 查询用户的贡献金额</span><br>    <span class="hljs-function">function <span class="hljs-title">getContribution</span><span class="hljs-params">(address contributor)</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> contributions[contributor];<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="资产管理合约"><a href="#资产管理合约" class="headerlink" title="资产管理合约"></a>资产管理合约</h2><p>题目: 开发一个合约，允许用户存款、取款并查询余额。实现 deposit()、withdraw(uint amount) 和 getBalance() 函数。</p>
+<p>提示:<br>•    deposit()：存入以太。<br>•    withdraw(uint amount)：提取指定金额。<br>•    getBalance()：查询当前余额</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract SimpleBank &#123;<br>    <span class="hljs-built_in">mapping</span>(address =&gt; uint256) <span class="hljs-keyword">private</span> balances;<br><br>    <span class="hljs-comment">// 存款函数，将用户发送的以太存入他们的账户</span><br>    <span class="hljs-function">function <span class="hljs-title">deposit</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> payable </span>&#123;<br>        <span class="hljs-built_in">require</span>(msg.value &gt; <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Deposit amount must be greater than zero&quot;</span>);<br>        balances[msg.sender] += msg.value;<br>    &#125;<br><br>    <span class="hljs-comment">// 取款函数，用户可以提取指定金额的以太</span><br>    <span class="hljs-function">function <span class="hljs-title">withdraw</span><span class="hljs-params">(uint256 amount)</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        <span class="hljs-built_in">require</span>(amount &gt; <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Withdrawal amount must be greater than zero&quot;</span>);<br>        <span class="hljs-built_in">require</span>(balances[msg.sender] &gt;= amount, <span class="hljs-string">&quot;Insufficient balance&quot;</span>);<br><br>        <span class="hljs-comment">// 更新余额并转账</span><br>        balances[msg.sender] -= amount;<br>        <span class="hljs-built_in">payable</span>(msg.sender).<span class="hljs-built_in">transfer</span>(amount);<br>    &#125;<br><br>    <span class="hljs-comment">// 查询当前余额</span><br>    <span class="hljs-function">function <span class="hljs-title">getBalance</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> balances[msg.sender];<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="合约升级示例"><a href="#合约升级示例" class="headerlink" title="合约升级示例"></a>合约升级示例</h2><p>题目: 创建一个可升级的合约。初始合约实现 setValue(uint value) 和 getValue()，升级合约添加 incrementValue()。</p>
+<p>提示:<br>•    setValue(uint value)：设置一个值。<br>•    getValue()：获取当前值。<br>•    incrementValue()：将当前值加一（在升级合约中实现）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br><span class="hljs-comment">//  可升级合约的代理合约</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract Proxy &#123;<br>    address <span class="hljs-keyword">public</span> implementation;<br><br>    <span class="hljs-built_in">constructor</span>(address _implementation) &#123;<br>        implementation = _implementation;<br>    &#125;<br><br>    <span class="hljs-function">function <span class="hljs-title">upgradeTo</span><span class="hljs-params">(address _implementation)</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        implementation = _implementation;<br>    &#125;<br><br>    <span class="hljs-built_in">fallback</span>() external &#123;<br>        address impl = implementation;<br>        <span class="hljs-built_in">require</span>(impl != <span class="hljs-built_in">address</span>(<span class="hljs-number">0</span>), <span class="hljs-string">&quot;Implementation not set&quot;</span>);<br>        <span class="hljs-comment">// 调用实现合约的方法</span><br>        assembly &#123;<br>            <span class="hljs-built_in">calldatacopy</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">calldatasize</span>())<br>            let result := <span class="hljs-built_in">delegatecall</span>(<span class="hljs-built_in">gas</span>(), impl, <span class="hljs-number">0</span>, <span class="hljs-built_in">calldatasize</span>(), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)<br>            let size := <span class="hljs-built_in">returndatasize</span>()<br>            <span class="hljs-built_in">returndatacopy</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, size)<br>            <span class="hljs-keyword">switch</span> result<br>            <span class="hljs-keyword">case</span> <span class="hljs-number">0</span> &#123; <span class="hljs-built_in">revert</span>(<span class="hljs-number">0</span>, size) &#125;<br>            <span class="hljs-keyword">default</span> &#123; <span class="hljs-built_in">return</span>(<span class="hljs-number">0</span>, size) &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br><span class="hljs-comment">// 初始合约</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract Initial &#123;<br>    uint256 <span class="hljs-keyword">private</span> value;<br><br>    <span class="hljs-function">function <span class="hljs-title">setValue</span><span class="hljs-params">(uint256 _value)</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        value = _value;<br>    &#125;<br><br>    <span class="hljs-function">function <span class="hljs-title">getValue</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(uint256)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> value;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br><span class="hljs-comment">// 升级合约</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./Initial.sol&quot;</span>;<br><br>contract Upgraded is Initial &#123;<br>    <span class="hljs-function">function <span class="hljs-title">incrementValue</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        value += <span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="时间锁合约"><a href="#时间锁合约" class="headerlink" title="时间锁合约"></a>时间锁合约</h2><p>题目: 实现一个时间锁合约，允许用户存入资金并设置锁定时间。实现 deposit(uint unlockTime) 和 withdraw() 函数。</p>
+<p>提示:<br>•    deposit(uint unlockTime)：存入以太并设置解锁时间。<br>•    withdraw()：在解锁后提取资金</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span><br>pragma solidity ^<span class="hljs-number">0.8</span><span class="hljs-number">.0</span>;<br><br>contract TimeLock &#123;<br>    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Deposit</span> &#123;<br>        uint256 amount;<br>        uint256 unlockTime;<br>    &#125;<br><br>    <span class="hljs-built_in">mapping</span>(address =&gt; Deposit) <span class="hljs-keyword">private</span> deposits;<br><br>    <span class="hljs-comment">// 存入资金并设置解锁时间</span><br>    <span class="hljs-function">function <span class="hljs-title">deposit</span><span class="hljs-params">(uint256 unlockTime)</span> <span class="hljs-keyword">public</span> payable </span>&#123;<br>        <span class="hljs-built_in">require</span>(msg.value &gt; <span class="hljs-number">0</span>, <span class="hljs-string">&quot;Deposit amount must be greater than zero&quot;</span>);<br>        <span class="hljs-built_in">require</span>(unlockTime &gt; block.timestamp, <span class="hljs-string">&quot;Unlock time must be in the future&quot;</span>);<br><br>        <span class="hljs-comment">// 更新用户存款信息</span><br>        deposits[msg.sender].amount += msg.value;<br>        deposits[msg.sender].unlockTime = unlockTime;<br>    &#125;<br><br>    <span class="hljs-comment">// 提取资金，只有在解锁后才允许</span><br>    <span class="hljs-function">function <span class="hljs-title">withdraw</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> </span>&#123;<br>        Deposit storage userDeposit = deposits[msg.sender];<br>        <span class="hljs-built_in">require</span>(block.timestamp &gt;= userDeposit.unlockTime, <span class="hljs-string">&quot;Funds are still locked&quot;</span>);<br>        <span class="hljs-built_in">require</span>(userDeposit.amount &gt; <span class="hljs-number">0</span>, <span class="hljs-string">&quot;No funds to withdraw&quot;</span>);<br><br>        uint256 amountToWithdraw = userDeposit.amount;<br>        userDeposit.amount = <span class="hljs-number">0</span>; <span class="hljs-comment">// 清空存款，避免重入攻击</span><br><br>        <span class="hljs-built_in">payable</span>(msg.sender).<span class="hljs-built_in">transfer</span>(amountToWithdraw);<br>    &#125;<br><br>    <span class="hljs-comment">// 查询当前用户的存款信息</span><br>    <span class="hljs-function">function <span class="hljs-title">getDepositInfo</span><span class="hljs-params">()</span> <span class="hljs-keyword">public</span> view <span class="hljs-title">returns</span> <span class="hljs-params">(uint256 amount, uint256 unlockTime)</span> </span>&#123;<br>        Deposit storage userDeposit = deposits[msg.sender];<br>        <span class="hljs-keyword">return</span> (userDeposit.amount, userDeposit.unlockTime);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/web3/" class="category-chain-item">web3</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/course/" class="print-no-link">#course</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>solidity</div>
+      <div>https://fogpost.top/2024/10/25/solidity/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>fogpost</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年10月25日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2026年1月17日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/10/27/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" title="反序列化例题">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">反序列化例题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/10/19/NSSCTFweb2/" title="NSSCTFweb2">
+                        <span class="hidden-mobile">NSSCTFweb2</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head><!-- hexo injector head_begin start --><meta name="referrer" content="no-referrer" /><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="fogpost">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="ctf_vm虚拟机最近打些大比赛果然都有这个虚拟机，但是本人学的不够精细，这次强网杯又有了，借此机会来开个新篇章让自己的技术和见识都涨涨 [HGAME 2023 week4]vm先借助去年的HGAME来了解一下，这个题非常好，因为已经有了较多的wp可以借助前人的智慧来分析分析，虚拟机题简单来讲就是利用伪代码，在程序中重新实现了一个虚拟机，其实就是把几个重要的汇编代码隐藏起来了而已，我们就要去分析在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ctf_vm虚拟机">
+<meta property="og:url" content="https://fogpost.top/2024/11/02/ctf-vm%E8%99%9A%E6%8B%9F%E6%9C%BA/index.html">
+<meta property="og:site_name" content="fogpost&#96;s little blog">
+<meta property="og:description" content="ctf_vm虚拟机最近打些大比赛果然都有这个虚拟机，但是本人学的不够精细，这次强网杯又有了，借此机会来开个新篇章让自己的技术和见识都涨涨 [HGAME 2023 week4]vm先借助去年的HGAME来了解一下，这个题非常好，因为已经有了较多的wp可以借助前人的智慧来分析分析，虚拟机题简单来讲就是利用伪代码，在程序中重新实现了一个虚拟机，其实就是把几个重要的汇编代码隐藏起来了而已，我们就要去分析在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021001405.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021004776.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021005546.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021021368.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021023687.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021026035.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021027121.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021031712.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021033928.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021034959.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021037299.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021037492.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021111059.png">
+<meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411021116697.png">
+<meta property="article:published_time" content="2024-11-02T09:56:22.000Z">
+<meta property="article:modified_time" content="2026-01-17T11:43:05.772Z">
+<meta property="article:author" content="fogpost">
+<meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gitee.com/fogpost/photo/raw/master/202411021001405.png">
+  
+  
+    <!-- <meta name="referrer" content="no-referrer-when-downgrade"> -->
+    <!-- <meta name="referrer" content="no-referrer" /> -->
+  
+  
+  <title>ctf_vm虚拟机 - fogpost`s little blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"fogpost.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="fogpost`s little blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/miku.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="ctf_vm虚拟机"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-11-02 09:56" pubdate>
+          2024年11月2日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">ctf_vm虚拟机</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2026-01-17T11:43:05+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="ctf-vm虚拟机"><a href="#ctf-vm虚拟机" class="headerlink" title="ctf_vm虚拟机"></a>ctf_vm虚拟机</h1><p>最近打些大比赛果然都有这个虚拟机，但是本人学的不够精细，这次强网杯又有了，借此机会来开个新篇章让自己的技术和见识都涨涨</p>
+<h2 id="HGAME-2023-week4-vm"><a href="#HGAME-2023-week4-vm" class="headerlink" title="[HGAME 2023 week4]vm"></a>[HGAME 2023 week4]vm</h2><p>先借助去年的HGAME来了解一下，这个题非常好，因为已经有了较多的wp可以借助前人的智慧来分析分析，虚拟机题简单来讲就是利用伪代码，在程序中重新实现了一个虚拟机，其实就是把几个重要的汇编代码隐藏起来了而已，我们就要去分析在哪发生了什么。</p>
+<ul>
+<li>查壳<br>可以看出这个是c++编写的64位EXE程序，没有壳<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021001405.png" srcset="/img/loading.gif" lazyload></li>
+<li>IDA分析<br>可见这个直接就是一个简单的判断我们直达vm虚拟机内部<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021004776.png" srcset="/img/loading.gif" lazyload><br>这代表这这个命令函数的最大值是255(0xff)<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021005546.png" srcset="/img/loading.gif" lazyload><br>进入虚拟机主要函数，逐步分析每个分支分别代表什么<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021021368.png" srcset="/img/loading.gif" lazyload><br>我们来看看每个函数的内部来了解发生了什么</li>
+</ul>
+<ol>
+<li>mov<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021023687.png" srcset="/img/loading.gif" lazyload></li>
+<li>push&amp;pop<br>这两个同理<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021026035.png" srcset="/img/loading.gif" lazyload><br><img src="https://gitee.com/fogpost/photo/raw/master/202411021027121.png" srcset="/img/loading.gif" lazyload></li>
+<li>mul数据计算单元<br>感觉和我们之前学的数电计算单元一样，单独分出了一个模块来运算操作，分别是【+、-、*、^、&lt;&lt;、&gt;&gt;、0】<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021031712.png" srcset="/img/loading.gif" lazyload></li>
+<li>cmp比较单元<br>直接看就看出来了，从cmp也是相同为0不同为1<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021033928.png" srcset="/img/loading.gif" lazyload></li>
+<li>jmp跳转单元<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021034959.png" srcset="/img/loading.gif" lazyload></li>
+<li>je和jne<br>相同跳转和不相同跳转<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021037299.png" srcset="/img/loading.gif" lazyload><br><img src="https://gitee.com/fogpost/photo/raw/master/202411021037492.png" srcset="/img/loading.gif" lazyload></li>
+</ol>
+<p>至此已分析完毕,很简单对不对，汇编语句总共就那么多条，常用且能用的就更少了我们只要仔细分析就行</p>
+<ul>
+<li>exp<br>直接抄的，这个其实涉及一些idc脚本的编写，之后我也会出一篇博客来讲，怎么利用idc脚本去进行SMC的解密以及花指令的去除<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><code class="hljs python">opcode = [<span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x03</span>,<span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>,<span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x32</span>,<span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>,<span class="hljs-number">0x01</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x64</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x03</span>,<span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>,<span class="hljs-number">0x00</span>, <span class="hljs-number">0x08</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x04</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x00</span>,<span class="hljs-number">0x03</span>, <span class="hljs-number">0x05</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>,<span class="hljs-number">0x00</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>,<span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x01</span>, <span class="hljs-number">0x28</span>,<span class="hljs-number">0x04</span>, <span class="hljs-number">0x06</span>, <span class="hljs-number">0x5F</span>, <span class="hljs-number">0x05</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>,<span class="hljs-number">0x01</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x96</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>,<span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x04</span>, <span class="hljs-number">0x07</span>, <span class="hljs-number">0x88</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x01</span>,<span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x03</span>,<span class="hljs-number">0x01</span>, <span class="hljs-number">0x28</span>, <span class="hljs-number">0x04</span>, <span class="hljs-number">0x07</span>, <span class="hljs-number">0x63</span>, <span class="hljs-number">0xFF</span>, <span class="hljs-number">0xFF</span>]<br>input1 = []<br>i = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> opcode[i] != <span class="hljs-number">0xFF</span>:<br>    <span class="hljs-keyword">match</span> opcode[i]:<br>        <span class="hljs-keyword">case</span> <span class="hljs-number">0x00</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i&#125;</span>&#x27;</span>, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>            o = i + <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> opcode[o]:<br>                <span class="hljs-keyword">match</span> opcode[o]:<br>                    <span class="hljs-keyword">case</span> <span class="hljs-number">0x01</span>:<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mov input[reg[2]], reg[0]&quot;</span>)<br>                    <span class="hljs-keyword">case</span> <span class="hljs-number">0x02</span>:<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mov reg[%d], reg[%d]&quot;</span> % (opcode[i+<span class="hljs-number">2</span>],opcode[i+<span class="hljs-number">3</span>]))<br>                    <span class="hljs-keyword">case</span> <span class="hljs-number">0x03</span>:<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mov reg[%d], %d&quot;</span> % (opcode[i+<span class="hljs-number">2</span>], opcode[i+<span class="hljs-number">3</span>]))<br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mov reg[0], input[reg[2]]&quot;</span>)<br>            i += <span class="hljs-number">4</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-number">0x01</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i&#125;</span>&#x27;</span>, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>            o = i + <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> opcode[o]:<br>                <span class="hljs-keyword">match</span> opcode[o]:<br>                    <span class="hljs-keyword">case</span> <span class="hljs-number">0x01</span>:<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;push reg[0]&quot;</span>)<br>                    <span class="hljs-keyword">case</span> <span class="hljs-number">0x02</span>:<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;push reg[2]&quot;</span>)<br>                    <span class="hljs-keyword">case</span> <span class="hljs-number">0x03</span>:<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;push reg[3]&quot;</span>)<br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;push reg[0]&quot;</span>)<br>            i += <span class="hljs-number">2</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-number">0x02</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i&#125;</span>&#x27;</span>, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>            o = i + <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> opcode[o]:<br>                <span class="hljs-keyword">match</span> opcode[o]:<br>                    <span class="hljs-keyword">case</span> <span class="hljs-number">0x01</span>:<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;pop reg[1]&quot;</span>)<br>                    <span class="hljs-keyword">case</span> <span class="hljs-number">0x02</span>:<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;pop reg[2]&quot;</span>)<br>                    <span class="hljs-keyword">case</span> <span class="hljs-number">0x03</span>:<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;pop reg[3]&quot;</span>)<br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;pop reg[0]&quot;</span>)<br>            i += <span class="hljs-number">2</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-number">0x03</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i&#125;</span>&#x27;</span>, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>            o = i + <span class="hljs-number">1</span><br>            <span class="hljs-keyword">match</span> opcode[o]:<br>                <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:<br>                    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;add reg[%d],reg[%d]&quot;</span> % (opcode[i + <span class="hljs-number">2</span>], opcode[i + <span class="hljs-number">3</span>]))<br>                <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<br>                    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;sup reg[%d],reg[%d]&quot;</span> % (opcode[i + <span class="hljs-number">2</span>], opcode[i + <span class="hljs-number">3</span>]))<br>                <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:<br>                    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;mul reg[%d],reg[%d]&quot;</span> % (opcode[i + <span class="hljs-number">2</span>], opcode[i + <span class="hljs-number">3</span>]))<br>                <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:<br>                    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;xor reg[%d],reg[%d]&quot;</span> % (opcode[i + <span class="hljs-number">2</span>], opcode[i + <span class="hljs-number">3</span>]))<br>                <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:<br>                    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;shl reg[%d],reg[%d]&quot;</span> % (opcode[i + <span class="hljs-number">2</span>], opcode[i + <span class="hljs-number">3</span>]))<br>                <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:<br>                    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;shr reg[%d],reg[%d]&quot;</span> % (opcode[i + <span class="hljs-number">2</span>], opcode[i + <span class="hljs-number">3</span>]))<br>            i += <span class="hljs-number">4</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-number">0x04</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i&#125;</span> cmp reg[0], reg[1]&#x27;</span>)<br>            i += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-number">0x05</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i&#125;</span> jmp %d &#x27;</span> % (opcode[i+<span class="hljs-number">1</span>]))<br>            i += <span class="hljs-number">2</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-number">0x06</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i&#125;</span> je %d &#x27;</span> % (opcode[i+<span class="hljs-number">1</span>]))<br>            i += <span class="hljs-number">2</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-number">0x07</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i&#125;</span> jne %d &#x27;</span> % (opcode[i+<span class="hljs-number">1</span>]))<br>            i += <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure></li>
+<li>输出和分析<br>0 mov reg[2], 0<br>4 add reg[2],reg[3]<br>8 mov reg[0], input[reg[2]]<br>12 mov reg[1], reg[0]<br>&#x2F;&#x2F;前四局  用于数据的初始化<br>16 mov reg[2], 50<br>20 add reg[2],reg[3]<br>24 mov reg[0], input[reg[2]]<br>28 add reg[1],reg[0]<br>&#x2F;&#x2F;以50为分界线，将新的数据与原来的reg[1]相加相当于数组之间全部加一遍<br>32 mov reg[2], 100<br>36 add reg[2],reg[3]<br>40 mov reg[0], input[reg[2]]<br>44 xor reg[1],reg[0]<br>&#x2F;&#x2F;以100为分界线，将新的数据与原来的reg[1]进行异或<br>48 mov reg[0], 8<br>52 mov reg[2], reg[1]<br>56 shl reg[1],reg[0]<br>60 shr reg[2],reg[0]<br>64 add reg[1],reg[2]<br>68 mov reg[0], reg[1]<br>72 push reg[0]<br>&#x2F;&#x2F;这一步是将reg[0]置为8，然后进行左移右移操作，最后将结果加到reg[1]上，并将结果压入栈中<br>74 mov reg[0], 1<br>78 add reg[3],reg[0]<br>82 mov reg[0], reg[3]<br>86 mov reg[1], 40<br>90 cmp reg[0], reg[1]<br>91 je 95<br>93 jmp 0<br>95 mov reg[3], 0<br>&#x2F;&#x2F;这个代表的是将上面的过程重复40次<br>99 pop reg[1]<br>101 mov reg[2], 150<br>105 add reg[2],reg[3]<br>109 mov reg[0], input[reg[2]]<br>113 cmp reg[0], reg[1]<br>114 jne 136<br>&#x2F;&#x2F;这个是将栈中的数据与150号位置的数据进行比较，如果相同则跳转到136，否则跳转到0<br>116 mov reg[0], 1<br>120 add reg[3],reg[0]<br>124 mov reg[0], reg[3]<br>128 mov reg[1], 40<br>132 cmp reg[0], reg[1]<br>133 jne 99<br>&#x2F;&#x2F;循环四十次回到99，好像是干扰项</li>
+</ul>
+<p>函数就是这个</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python">flag = []  <br>a1 = []  <br>a2 = []  <br>a3 = []  <br>k = a1 + flag  <br>k2 = a2 ^ k  <br>a3 = k2 &lt;&lt; <span class="hljs-number">8</span> + k2 &gt;&gt; <span class="hljs-number">8</span><br><span class="hljs-comment">#nixiang</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">40</span>):<br>    k2=((a3[i])&gt;&gt;<span class="hljs-number">8</span>)&amp;<span class="hljs-number">0xff</span>+((a3[i])&lt;&lt;<span class="hljs-number">8</span>)&amp;<span class="hljs-number">0xff</span><br>    k=k2^a2<br>    flag=k-a1<br></code></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs py">a1 = [<span class="hljs-number">155</span>, <span class="hljs-number">168</span>, <span class="hljs-number">2</span>, <span class="hljs-number">188</span>, <span class="hljs-number">172</span>, <span class="hljs-number">156</span>, <span class="hljs-number">206</span>, <span class="hljs-number">250</span>, <span class="hljs-number">2</span>, <span class="hljs-number">185</span>, <span class="hljs-number">255</span>, <span class="hljs-number">58</span>, <span class="hljs-number">116</span>, <span class="hljs-number">72</span>, <span class="hljs-number">25</span>, <span class="hljs-number">105</span>, <span class="hljs-number">232</span>, <span class="hljs-number">3</span>, <span class="hljs-number">203</span>, <span class="hljs-number">201</span>,<br>      <span class="hljs-number">255</span>, <span class="hljs-number">252</span>, <span class="hljs-number">128</span>, <span class="hljs-number">214</span>, <span class="hljs-number">141</span>, <span class="hljs-number">215</span>, <span class="hljs-number">114</span>, <span class="hljs-number">0</span>, <span class="hljs-number">167</span>, <span class="hljs-number">29</span>, <span class="hljs-number">61</span>, <span class="hljs-number">153</span>, <span class="hljs-number">136</span>, <span class="hljs-number">153</span>, <span class="hljs-number">191</span>, <span class="hljs-number">232</span>, <span class="hljs-number">150</span>, <span class="hljs-number">46</span>, <span class="hljs-number">93</span>, <span class="hljs-number">87</span>]<br>a2 = [<span class="hljs-number">201</span>, <span class="hljs-number">169</span>, <span class="hljs-number">189</span>, <span class="hljs-number">139</span>, <span class="hljs-number">23</span>, <span class="hljs-number">194</span>, <span class="hljs-number">110</span>, <span class="hljs-number">248</span>, <span class="hljs-number">245</span>, <span class="hljs-number">110</span>, <span class="hljs-number">99</span>, <span class="hljs-number">99</span>, <span class="hljs-number">213</span>, <span class="hljs-number">70</span>, <span class="hljs-number">93</span>, <span class="hljs-number">22</span>, <span class="hljs-number">152</span>, <span class="hljs-number">56</span>, <span class="hljs-number">48</span>, <span class="hljs-number">115</span>, <span class="hljs-number">56</span>,<br>      <span class="hljs-number">193</span>, <span class="hljs-number">94</span>, <span class="hljs-number">237</span>, <span class="hljs-number">176</span>, <span class="hljs-number">41</span>, <span class="hljs-number">90</span>, <span class="hljs-number">24</span>, <span class="hljs-number">64</span>, <span class="hljs-number">167</span>, <span class="hljs-number">253</span>, <span class="hljs-number">10</span>, <span class="hljs-number">30</span>, <span class="hljs-number">120</span>, <span class="hljs-number">139</span>, <span class="hljs-number">98</span>, <span class="hljs-number">219</span>, <span class="hljs-number">15</span>, <span class="hljs-number">143</span>, <span class="hljs-number">156</span>]<br>a3 = [<span class="hljs-number">18432</span>, <span class="hljs-number">61696</span>, <span class="hljs-number">16384</span>, <span class="hljs-number">8448</span>, <span class="hljs-number">13569</span>, <span class="hljs-number">25600</span>, <span class="hljs-number">30721</span>, <span class="hljs-number">63744</span>, <span class="hljs-number">6145</span>, <span class="hljs-number">20992</span>, <span class="hljs-number">9472</span>, <span class="hljs-number">23809</span>, <span class="hljs-number">18176</span>, <span class="hljs-number">64768</span>, <span class="hljs-number">26881</span>, <span class="hljs-number">23552</span>,<br>      <span class="hljs-number">44801</span>, <span class="hljs-number">45568</span>, <span class="hljs-number">60417</span>,<br>      <span class="hljs-number">20993</span>, <span class="hljs-number">20225</span>, <span class="hljs-number">6657</span>, <span class="hljs-number">20480</span>, <span class="hljs-number">34049</span>, <span class="hljs-number">52480</span>, <span class="hljs-number">8960</span>, <span class="hljs-number">63488</span>, <span class="hljs-number">3072</span>, <span class="hljs-number">52992</span>, <span class="hljs-number">15617</span>, <span class="hljs-number">17665</span>, <span class="hljs-number">33280</span>, <span class="hljs-number">53761</span>, <span class="hljs-number">10497</span>, <span class="hljs-number">54529</span>, <span class="hljs-number">1537</span>,<br>      <span class="hljs-number">41473</span>, <span class="hljs-number">56832</span>, <span class="hljs-number">42497</span>, <span class="hljs-number">51713</span>]<br>a4 = a3[::-<span class="hljs-number">1</span>]<br><span class="hljs-comment"># a4 = [51713, 42497, 56832, 41473, 1537, 54529, 10497, 53761, 33280, 17665, 15617, 52992, 3072, 63488, 8960, 52480, 34049, 20480, 6657, 20225, 20993, 60417, 45568, 44801, 23552, 26881, 64768, 18176, 23809, 9472, 20992, 6145, 63744, 30721, 25600, 13569, 8448, 16384, 61696, 18432]</span><br>flag = [<span class="hljs-number">0</span>] * <span class="hljs-number">40</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">40</span>):<br>    flag[i] = ((a4[i] &gt;&gt; <span class="hljs-number">8</span>) &amp; <span class="hljs-number">0xff</span> + (a4[i] &lt;&lt; <span class="hljs-number">8</span>))<br>    flag[i] ^= a2[i]<br>    flag[i] -= a1[i]<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&quot;</span>.join([<span class="hljs-built_in">chr</span>(a&amp;<span class="hljs-number">0xff</span>) <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> flag]))<br><br><span class="hljs-comment"># hgame&#123;y0ur_rever5e_sk1ll_i5_very_g0od!!&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="强网杯-2024-easy-vm"><a href="#强网杯-2024-easy-vm" class="headerlink" title="[强网杯 2024 easy_vm]"></a>[强网杯 2024 easy_vm]</h2><p>接触完了去年的我们来看看强网杯的vm吧</p>
+<ul>
+<li>查壳<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021111059.png" srcset="/img/loading.gif" lazyload></li>
+<li>ida分析<br><img src="https://gitee.com/fogpost/photo/raw/master/202411021116697.png" srcset="/img/loading.gif" lazyload><br>这次的区块有点大，我们逐段来分析一下</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/ctf/" class="print-no-link">#ctf</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>ctf_vm虚拟机</div>
+      <div>https://fogpost.top/2024/11/02/ctf-vm虚拟机/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>fogpost</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年11月2日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2026年1月17日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/11/05/%E9%80%86%E5%90%91%E5%87%BA%E9%A2%98%E8%AE%B0%E5%BD%95/" title="逆向出题记录">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">逆向出题记录</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/11/01/sicctfwp/" title="sicctfwp">
+                        <span class="hidden-mobile">sicctfwp</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
