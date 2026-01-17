@@ -112,7 +112,7 @@ feed:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://fogpost:${GH_PAT}@github.com/fogpost/hexo.git
+  repo: https://github.com/fogpost/hexo.git
   branch: Web
 
 #懒加载导致图片不出

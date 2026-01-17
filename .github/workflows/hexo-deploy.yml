@@ -1,6 +1,5 @@
 name: Hexo Deploy
 
-# 当 main 分支有 push 时触发
 on:
   push:
     branches:
@@ -11,35 +10,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 拉取仓库代码
-      - name: Checkout code
+      # 1. 拉取仓库
+      - name: Checkout
         uses: actions/checkout@v4
 
-      # 安装 Node.js 环境
-      - name: Setup Node.js
+      # 2. 安装 Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 配置 git 用户信息
+      # 3. 设置 git 用户信息
       - name: Setup Git
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      # 安装 Hexo 依赖
-      - name: Install dependencies
+      # 4. 安装依赖
+      - name: Install deps
         run: |
           cd blog
           npm install
 
-      # Hexo 清理、生成、部署
+      # 5. Hexo 清理、生成、部署
       - name: Hexo Deploy
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}  # 这里传入 Fine-grained token
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           cd blog
           npx hexo clean
           npx hexo generate
+          # ✅ 最关键：覆盖远程 URL，保证 push 使用 token
           git remote set-url origin https://fogpost:${GH_PAT}@github.com/fogpost/hexo.git
           npx hexo deploy
