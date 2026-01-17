@@ -43,7 +43,7 @@ jobs:
           cd blog
           npx hexo clean
           npx hexo generate
-          # 🔥 覆盖远程 URL，用用户名 + Fine-grained token
+          touch public/.nojekyll
           git remote set-url origin https://fogpost:${GH_PAT}@github.com/fogpost/hexo.git
           git add -A
           git commit -m "Deploy Hexo site" || echo "No changes to commit"
