@@ -197,11 +197,14 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "obsidian-importer:Open Importer": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
     }
   },
   "active": "6e59eb289ff3f386",
   "lastOpenFiles": [
+    "template",
+    "新建文件夹",
     "blog/source/_posts/wuai第八课.md",
     "blog/source/_posts/web中可执行的xml文件jelly.md",
     "blog/source/_drafts/webtest 1.md",
@@ -227,7 +230,6 @@
     "blog/source/_posts/php伪协议.md",
     "blog/source/_posts/php初识.md",
     "blog/source/_posts/PEcompact.md",
-    "blog/source/_posts/od脱壳脚本的使用与编写.md",
     "blog/source/img/20210610013504_b0e0d.jpeg",
     "blog/source/img/miku.png",
     "blog/source/image/LDAP.jpeg",
@@ -247,7 +249,6 @@
     "blog/public/archives/2025/01/index.html",
     "blog/public/archives/2025/01",
     "blog/public/archives/page/5/index.html",
-    "blog/public/archives/page/5",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
