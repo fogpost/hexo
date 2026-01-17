@@ -1,0 +1,44 @@
+name: Hexo Deploy
+
+permissions:
+  contents: write  # 允许插件推送到你的 web 分支
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          cd blog
+          npm install
+
+      - name: Build Hexo
+        run: |
+          cd blog
+          npx hexo clean
+          npx hexo generate
+          # 在生成的静态文件根目录生成这两个关键文件
+          touch public/.nojekyll
+          echo "你的域名.com" > public/CNAME  # 👈 这里填入你的真实域名
+
+      - name: Deploy to Web Branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用内置 Token 即可，无需手动配置 PAT
+          publish_dir: ./blog/public               # 👈 只发布这个目录下的内容
+          publish_branch: web                      # 👈 发布到 web 分支
+          force_modify: true                       # 强制覆盖
