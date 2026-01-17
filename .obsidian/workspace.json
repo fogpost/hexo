@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b8bcdc603ccf945b",
+        "id": "fe55d9f409957b92",
         "type": "tabs",
         "children": [
           {
-            "id": "6e59eb289ff3f386",
+            "id": "8b64e1f070b60a4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
+                "file": "blog/source/_posts/PEcompact.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "基于obsidian的自动化推送blog搭建"
+              "title": "PEcompact"
             }
           }
         ]
@@ -201,8 +201,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "6e59eb289ff3f386",
+  "active": "8b64e1f070b60a4c",
   "lastOpenFiles": [
+    "blog/source/_drafts/未命名.md",
+    "blog/source/_posts/未命名.md",
+    "template/template.js",
+    "未命名 1.base",
+    "template/template.md",
+    "template/新建 文本文档.txt",
+    "未命名.base",
+    "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "template",
     "新建文件夹",
     "blog/source/_posts/wuai第八课.md",
@@ -227,9 +235,6 @@
     "blog/source/_posts/pythonticke.md",
     "blog/source/_posts/pip下载.md",
     "blog/source/_posts/php一句话木马.md",
-    "blog/source/_posts/php伪协议.md",
-    "blog/source/_posts/php初识.md",
-    "blog/source/_posts/PEcompact.md",
     "blog/source/img/20210610013504_b0e0d.jpeg",
     "blog/source/img/miku.png",
     "blog/source/image/LDAP.jpeg",
@@ -242,13 +247,8 @@
     "blog/source/image/image 32.png",
     "blog/source/新建 文本文档.txt",
     "blog/新建 文本文档.txt",
-    "未命名.base",
-    "未命名 1.base",
     "blog/start.bat",
     "blog/_config.landscape.yml",
-    "blog/public/archives/2025/01/index.html",
-    "blog/public/archives/2025/01",
-    "blog/public/archives/page/5/index.html",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
