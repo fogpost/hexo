@@ -1,5 +1,8 @@
 name: Hexo Deploy
 
+permissions:
+  contents: write  
+
 on:
   push:
     branches:
@@ -10,32 +13,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ 拉取仓库
+
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2️⃣ 安装 Node.js
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 3️⃣ 配置 Git 用户信息
+
       - name: Configure Git
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      # 4️⃣ 安装 Hexo 依赖
+
       - name: Install dependencies
         run: |
           cd blog
           npm install
 
-      # 5️⃣ Hexo 生成 & 部署（兼容 Fine-grained token）
+
       - name: Hexo Deploy
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}  # Fine-grained token
+          GH_PAT: ${{ secrets.GH_PAT }} 
         run: |
           cd blog
           npx hexo clean

@@ -24,55 +24,48 @@ git push origin HEAD -u
 name: Hexo Deploy
 
 on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: write
-
+  push:
+    branches:
+      - main
+        
 jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+    steps:
+      # 1️⃣ 拉取仓库
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      # 2️⃣ 安装 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-      - name: Setup git identity
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      # 3️⃣ 配置 Git 用户信息
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
 
-      - name: Install dependencies
-        run: |
-          cd blog
-          npm install
+      # 4️⃣ 安装 Hexo 依赖
+      - name: Install dependencies
+        run: |
+          cd blog
+          npm install
 
-      # 关键修复 ①：先生成 public + deploy 仓库
-      - name: Hexo generate
-        run: |
-          cd blog
-          npx hexo clean
-          npx hexo generate
-
-      # 关键修复 ②：给 .deploy_git 强制写入带 token 的 remote
-      - name: Fix deploy git remote
-        run: |
-          cd blog/.deploy_git
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-
-      # 最终部署
-      - name: Hexo deploy
-        run: |
-          cd blog
-          npx hexo deploy
-
+      # 5️⃣ Hexo 生成 & 部署（兼容 Fine-grained token）
+      - name: Hexo Deploy
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}  # Fine-grained token
+        run: |
+          cd blog
+          npx hexo clean
+          npx hexo generate
+          # 🔥 覆盖远程 URL，用用户名 + Fine-grained token
+          git remote set-url origin https://fogpost:${GH_PAT}@github.com/fogpost/hexo.git
+          git add -A
+          git commit -m "Deploy Hexo site" || echo "No changes to commit"
+          git push origin HEAD:web --force
 ```
