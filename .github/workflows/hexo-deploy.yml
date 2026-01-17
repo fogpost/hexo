@@ -44,4 +44,4 @@ jobs:
           git remote set-url origin https://fogpost:${GH_PAT}@github.com/fogpost/hexo.git
           git add -A
           git commit -m "Deploy Hexo site" || echo "No changes to commit"
-          git push origin web --force
+          git push origin HEAD:web --force
