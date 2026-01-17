@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/电子榨菜.md",
+                "file": "Notion/文件检索与更新.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "电子榨菜"
+              "title": "文件检索与更新"
             }
           }
         ]
@@ -202,8 +202,10 @@
   },
   "active": "6e59eb289ff3f386",
   "lastOpenFiles": [
-    "blog/source/_posts/反序列化.md",
+    "Notion/文件检索阶段性学习.md",
+    "Notion/文件检索与更新.md",
     "blog/source/_posts/电子榨菜.md",
+    "blog/source/_posts/反序列化.md",
     "blog/source/_posts/常见的API.md",
     "blog/source/_posts/按钮事件.md",
     "blog/source/_posts/2025.md",
@@ -236,8 +238,6 @@
     "blog/source/_drafts/如何学习逆向.md",
     "blog/source/_drafts/我读过的逆向书.md",
     "blog/source/_drafts/易语言初识.md",
-    "blog/source/_drafts/draft.md",
-    "blog/source/_drafts/webtest.md",
     "blog/public/image/image.png",
     "blog/public/image/image 30.png",
     "blog/public/image/image 22.png",
