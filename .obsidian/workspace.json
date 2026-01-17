@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/《安全服务工程师网络安全工具与命令实战笔记.md",
+                "file": "blog/source/_posts/《安全服务工程师网络安全工具与命令实战笔记.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/《安全服务工程师网络安全工具与命令实战笔记.md",
+                "file": "blog/source/_posts/《安全服务工程师网络安全工具与命令实战笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -167,6 +167,16 @@
               "state": {},
               "icon": "git-pull-request",
               "title": "Source Control"
+            }
+          },
+          {
+            "id": "c77defa9e7eda7d4",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
             }
           }
         ],
@@ -189,11 +199,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d8573e2076395ba",
+  "active": "c77defa9e7eda7d4",
   "lastOpenFiles": [
+    "blog/source/_posts/《安全服务工程师网络安全工具与命令实战笔记.md",
     "未命名.base",
     "未命名 1.base",
-    "Notion/《安全服务工程师网络安全工具与命令实战笔记.md",
     "blog/source/_drafts/关于转专业想说的话.md",
     "blog/source/_drafts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_drafts/分支函数逆向.md",
