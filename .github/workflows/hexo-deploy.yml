@@ -43,8 +43,11 @@ jobs:
           cd blog
           npx hexo clean
           npx hexo generate
-          touch public/.nojekyll
+          cd public
+          git init
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git remote set-url origin https://fogpost:${GH_PAT}@github.com/fogpost/hexo.git
           git add -A
-          git commit -m "Deploy Hexo site" || echo "No changes to commit"
+          git commit -m "Deploy Hexo site (Static Content Only)"
           git push origin HEAD:web --force
