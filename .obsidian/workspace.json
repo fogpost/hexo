@@ -1,0 +1,266 @@
+{
+  "main": {
+    "id": "b57c1ce3523c3518",
+    "type": "split",
+    "children": [
+      {
+        "id": "b094e285793f0a1a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6b7094c716b1361",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b8ec3979cb77b551",
+    "type": "split",
+    "children": [
+      {
+        "id": "0db37d078941b01d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d8573e2076395ba",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "965949396a52113f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "ec44c1b17bb3b570",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0e498920733188c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "d159e136ea1c68ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "259b17eac79d58ca",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "79efd44fb4d83a92",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "f803ac1cd11ebe66",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "d65c4feba55af888",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "725173a74b3709ae",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-importer:Open Importer": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "floating": {
+    "id": "0cc50d69a81f8613",
+    "type": "floating",
+    "children": [
+      {
+        "id": "c42e1f4b6580f512",
+        "type": "window",
+        "children": [
+          {
+            "id": "f91c66335696a249",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "642dcc04be2ccc08",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/git-doc/Start+here",
+                    "title": "Start here - Git Documentation - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "Start here - Git Documentation - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 312,
+        "y": 95,
+        "width": 1031,
+        "height": 806,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "725173a74b3709ae",
+  "lastOpenFiles": [
+    "blog/source/_drafts/分支函数逆向.md",
+    "blog/themes/fluid/未命名",
+    "blog/themes/fluid/source/xml/local-search.xml",
+    "blog/themes/fluid/source/js/utils.js",
+    "blog/themes/fluid/source/js/umami-view.js",
+    "blog/themes/fluid/source/js/plugins.js",
+    "blog/themes/fluid/source/js/local-search.js",
+    "blog/themes/fluid/source/js/leancloud.js",
+    "blog/themes/fluid/source/js/img-lazyload.js",
+    "blog/themes/fluid/source/js/events.js",
+    "blog/themes/fluid/source/js/duration.js",
+    "blog/themes/fluid/source/img/fluid.png",
+    "blog/themes/fluid/README_en.md",
+    "blog/themes/fluid/README.md",
+    "themes/fluid/source/img/fluid.png",
+    "themes/fluid/README_en.md",
+    "themes/fluid/README.md",
+    "theme/fluid/source/img/fluid.png",
+    "theme/fluid/README_en.md",
+    "theme/fluid/README.md",
+    "blog/fluid/source/img/fluid.png",
+    "blog/fluid/README_en.md",
+    "blog/fluid/README.md",
+    "blog/source/_posts/逆向出题记录.md",
+    "blog/source/_posts/sqli练习.md",
+    "blog/source/_posts/sqli10-20.md",
+    "blog/source/_drafts/易语言初识.md",
+    "blog/source/_drafts/我读过的逆向书.md",
+    "blog/source/_drafts/如何学习逆向.md",
+    "blog/source/_drafts/如何使用od.md",
+    "blog/source/_drafts/如何使用idapro.md",
+    "blog/source/_drafts/基于obsidian的自动化推送blog搭建.md",
+    "blog/source/_drafts/关于转专业想说的话.md",
+    "blog/source/_drafts/win32读书笔记.md",
+    "blog/source/image/LDAP.jpeg",
+    "blog/source/image/image 8.png",
+    "blog/source/image/image.png",
+    "blog/source/image/image 9.png",
+    "blog/source/image/image 7.png",
+    "blog/source/image/image 6.png",
+    "blog/source/about/index.md",
+    "source/_posts/().md",
+    "source/_posts/逆向出题记录.md",
+    "source/_posts/脱壳教程第一课.md",
+    "source/_posts/脚本命令的改变.md",
+    "未命名.canvas",
+    "未命名 1.canvas"
+  ]
+}

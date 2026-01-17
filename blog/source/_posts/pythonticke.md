@@ -1,0 +1,42 @@
+---
+title: pymagic
+date: 2024-09-15 10:45:49
+categories: 工具
+tags: python
+---
+```
+enum PycMagic {
+    MAGIC_1_0 = 0x00999902,
+    MAGIC_1_1 = 0x00999903, /* Also covers 1.2 */
+    MAGIC_1_3 = 0x0A0D2E89,
+    MAGIC_1_4 = 0x0A0D1704,
+    MAGIC_1_5 = 0x0A0D4E99,
+    MAGIC_1_6 = 0x0A0DC4FC,
+ 
+    MAGIC_2_0 = 0x0A0DC687,
+    MAGIC_2_1 = 0x0A0DEB2A,
+    MAGIC_2_2 = 0x0A0DED2D,
+    MAGIC_2_3 = 0x0A0DF23B,
+    MAGIC_2_4 = 0x0A0DF26D,
+    MAGIC_2_5 = 0x0A0DF2B3,
+    MAGIC_2_6 = 0x0A0DF2D1,
+    MAGIC_2_7 = 0x0A0DF303,
+ 
+    MAGIC_3_0 = 0x0A0D0C3A,
+    MAGIC_3_1 = 0x0A0D0C4E,
+    MAGIC_3_2 = 0x0A0D0C6C,
+    MAGIC_3_3 = 0x0A0D0C9E,
+    MAGIC_3_4 = 0x0A0D0CEE,
+    MAGIC_3_5 = 0x0A0D0D16,
+    MAGIC_3_5_3 = 0x0A0D0D17,
+    MAGIC_3_6 = 0x0A0D0D33,
+    MAGIC_3_7 = 0x0A0D0D42,
+    MAGIC_3_8 = 0x0A0D0D55,
+    MAGIC_3_9 = 0x0A0D0D61,
+    MAGIC_3_10 = 0x0A0D0D6F,
+    MAGIC_3_11 = 0x0A0D0DA7,
+    MAGIC_3_12 = 0x0A0D0DCB,
+ 
+    INVALID = 0,
+};
+```
