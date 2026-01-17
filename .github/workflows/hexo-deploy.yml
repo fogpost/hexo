@@ -1,53 +1,44 @@
 name: Hexo Deploy
 
+# 当 main 分支有 push 时触发
 on:
   push:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      # 拉取仓库代码
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
+      # 安装 Node.js 环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Setup git identity
+      # 配置 git 用户信息
+      - name: Setup Git
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
 
+      # 安装 Hexo 依赖
       - name: Install dependencies
         run: |
           cd blog
           npm install
 
-      # 关键修复 ①：先生成 public + deploy 仓库
-      - name: Hexo generate
+      # Hexo 清理、生成、部署
+      - name: Hexo Deploy
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}  # 这里传入 Fine-grained token
         run: |
           cd blog
           npx hexo clean
           npx hexo generate
-
-      # 关键修复 ②：给 .deploy_git 强制写入带 token 的 remote
-      - name: Fix deploy git remote
-        run: |
-          cd blog/.deploy_git
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-
-      # 最终部署
-      - name: Hexo deploy
-        run: |
-          cd blog
           npx hexo deploy

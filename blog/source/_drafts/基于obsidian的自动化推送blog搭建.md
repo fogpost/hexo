@@ -19,7 +19,7 @@ git push origin HEAD -u
 
 ```
 
-完成推送后两种方案，一种github自带的githubaction，或者vercal单独设构建都行我们采取第一种，并利用obsdian的git插件实现自动化,不行不行这个不用密钥的太搞了，建议各位想要搭建的去用vercel或者直接用密钥。
+完成推送后两种方案，一种github自带的githubaction，或者vercal单独设构建都行我们采取第一种，并利用obsdian的git插件实现自动化,不行不行这个不用密钥的太搞了，建议各位想要搭建的去用vercel或者直接用密钥。原因就是这个方案外面一层main的要识别身份，内层更新web页面也需要识别身份所以有两次检验，有密钥就不需要了。
 ``` 
 name: Hexo Deploy
 

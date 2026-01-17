@@ -104,7 +104,7 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/fogpost/hexo.git
+  repo: https://fogpost:${GH_PAT}@github.com/fogpost/hexo.git
   branch: web
 
 rss: /atom.xml
