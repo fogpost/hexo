@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "blog/source/_drafts/基于obsidian的自动化推送blog搭建.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -200,7 +200,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "725173a74b3709ae",
+  "active": "840182e87ea50281",
   "lastOpenFiles": [
     "blog/source/_posts/test.md",
     "2026-01-17.md",

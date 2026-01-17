@@ -19,7 +19,7 @@ git push origin HEAD -u
 
 ```
 
-完成推送后两种方案，一种github自带的githubaction，或者vercal单独设构建都行我们采取第一种，并利用obsdian的git插件实现自动化
+完成推送后两种方案，一种github自带的githubaction，或者vercal单独设构建都行我们采取第一种，并利用obsdian的git插件实现自动化,不行不行这个不用密钥的太搞了，建议各位想要搭建的去用vercel或者直接用密钥。
 ``` 
 name: Hexo Deploy
 
@@ -36,42 +36,43 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. 拉取 main 分支代码
       - name: Checkout source
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2. 准备 Node.js 环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 3. 配置 git（使用 GITHUB_TOKEN，关键步骤）
-      - name: Setup git with GITHUB_TOKEN
+      - name: Setup git identity
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global credential.helper store
 
-      # 4. 强制把 remote 改成带 token 的 HTTPS（核心兜底）
-      - name: Force git remote with GITHUB_TOKEN
-        run: |
-          cd blog
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-
-      # 5. 安装 Hexo 依赖
       - name: Install dependencies
         run: |
           cd blog
           npm install
 
-      # 6. Hexo 构建 + 部署到 web 分支
-      - name: Hexo deploy
+      # 关键修复 ①：先生成 public + deploy 仓库
+      - name: Hexo generate
         run: |
           cd blog
           npx hexo clean
+          npx hexo generate
+
+      # 关键修复 ②：给 .deploy_git 强制写入带 token 的 remote
+      - name: Fix deploy git remote
+        run: |
+          cd blog/.deploy_git
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+      # 最终部署
+      - name: Hexo deploy
+        run: |
+          cd blog
           npx hexo deploy
 
 ```
