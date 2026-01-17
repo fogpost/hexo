@@ -112,8 +112,8 @@ feed:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:fogpost/fogpost.github.io.git
-  branch: master
+  repo: https://github.com/fogpost/hexo.git
+  branch: Web
 
 #懒加载导致图片不出
 lazyload:
