@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1e97d9e03f52c543",
+        "id": "b8bcdc603ccf945b",
         "type": "tabs",
         "children": [
           {
-            "id": "840182e87ea50281",
+            "id": "6e59eb289ff3f386",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
+                "file": "blog/source/_posts/电子榨菜.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "基于obsidian的自动化推送blog搭建"
-            }
-          },
-          {
-            "id": "6344a050bf011434",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "基于obsidian的自动化推送blog搭建"
+              "title": "电子榨菜"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -225,21 +200,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d8573e2076395ba",
+  "active": "6e59eb289ff3f386",
   "lastOpenFiles": [
-    "blog/source/_posts/可恶的gitee吃掉外链了.md",
+    "blog/source/_posts/反序列化.md",
+    "blog/source/_posts/电子榨菜.md",
+    "blog/source/_posts/常见的API.md",
+    "blog/source/_posts/按钮事件.md",
+    "blog/source/_posts/2025.md",
+    "blog/source/_posts/服务器更新计划和流程.md",
+    "blog/source/_posts/脱壳教程第一课.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
+    "blog/source/_drafts/分支函数逆向.md",
+    "blog/source/_drafts/关于转专业想说的话.md",
+    "blog/source/_posts/可恶的gitee吃掉外链了.md",
     "blog/source/_posts/obsdian自动化测试.md",
     "blog/source/新建 文本文档.txt",
     "blog/新建 文本文档.txt",
     "2026-01-17.md",
-    "blog/source/_posts/2025.md",
-    "blog/source/_posts/按钮事件.md",
     "Notion/《安全服务工程师网络安全工具与命令实战笔记.md",
     "未命名.base",
     "未命名 1.base",
-    "blog/source/_drafts/关于转专业想说的话.md",
-    "blog/source/_drafts/分支函数逆向.md",
     "《安全服务工程师网络安全工具与命令实战笔记.md",
     "blog/start.bat",
     "blog/_config.landscape.yml",
@@ -258,17 +238,12 @@
     "blog/source/_drafts/易语言初识.md",
     "blog/source/_drafts/draft.md",
     "blog/source/_drafts/webtest.md",
-    "blog/source/_drafts/win32读书笔记.md",
-    "blog/source/_drafts/如何使用idapro.md",
     "blog/public/image/image.png",
     "blog/public/image/image 30.png",
     "blog/public/image/image 22.png",
     "blog/public/image/image 2.png",
     "blog/public/img/fluid.png",
     "blog/public/img/avatar.png",
-    "node_modules/htmlparser2/README.md",
-    "node_modules/hexo-fs/node_modules/dom-serializer/README.md",
-    "node_modules/cross-spawn/README.md",
     "node_modules/highlight.js/styles/pojoaque.jpg",
     "blog/themes/fluid/source/img/fluid.png",
     "themes/fluid/source/img/fluid.png",
