@@ -18,3 +18,55 @@ git push origin HEAD -u
 
 
 ```
+
+完成推送后两种方案，一种github自带的githubaction，或者vercal单独设构建都行我们采取第一种，并利用obsdian的git插件实现自动化
+``` 
+#vault/.github/hexo-deploy.yml
+name: Hexo Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+  
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+  
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+  
+      - name: Install dependencies
+        run: |
+          cd blog
+          npm install
+
+  
+      - name: Build Hexo
+        run: |
+          cd blog
+          npx hexo clean
+          npx hexo generate
+  
+      - name: Deploy to web branch
+        run: |
+          cd blog
+          npx hexo deploy
+          
+        env:
+          GIT_AUTHOR_NAME: github-actions
+          GIT_AUTHOR_EMAIL: github-actions@github.com
+          GIT_COMMITTER_NAME: github-actions
+          GIT_COMMITTER_EMAIL: github-actions@github.com
+```

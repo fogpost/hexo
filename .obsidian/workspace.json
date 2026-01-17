@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/test.md",
+                "file": "blog/source/_drafts/基于obsidian的自动化推送blog搭建.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "test"
+              "title": "基于obsidian的自动化推送blog搭建"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_posts/test.md",
+                "file": "blog/source/_drafts/基于obsidian的自动化推送blog搭建.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "test 的大纲"
+              "title": "基于obsidian的自动化推送blog搭建 的大纲"
             }
           },
           {
@@ -201,8 +201,8 @@
   },
   "active": "840182e87ea50281",
   "lastOpenFiles": [
-    "2026-01-17.md",
     "blog/source/_posts/test.md",
+    "2026-01-17.md",
     "blog/source/_posts/2025.md",
     "blog/source/_posts/按钮事件.md",
     "Notion/《安全服务工程师网络安全工具与命令实战笔记.md",
