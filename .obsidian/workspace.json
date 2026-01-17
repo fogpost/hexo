@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/wuai第八课.md",
+                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "wuai第八课"
+              "title": "基于obsidian的自动化推送blog搭建"
             }
           }
         ]
@@ -200,10 +200,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d8573e2076395ba",
+  "active": "6e59eb289ff3f386",
   "lastOpenFiles": [
-    "blog/source/_posts/web中可执行的xml文件jelly.md",
     "blog/source/_posts/wuai第八课.md",
+    "blog/source/_posts/web中可执行的xml文件jelly.md",
     "blog/source/_drafts/webtest 1.md",
     "blog/source/_posts/web杂项.md",
     "blog/source/_posts/web十大基础漏洞.md",
