@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/《安全服务工程师网络安全工具与命令实战笔记.md",
+                "file": "blog/source/_posts/test.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "《安全服务工程师网络安全工具与命令实战笔记"
+              "title": "test"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_posts/《安全服务工程师网络安全工具与命令实战笔记.md",
+                "file": "blog/source/_posts/test.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "《安全服务工程师网络安全工具与命令实战笔记 的大纲"
+              "title": "test 的大纲"
             }
           },
           {
@@ -199,9 +199,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c77defa9e7eda7d4",
+  "active": "840182e87ea50281",
   "lastOpenFiles": [
-    "blog/source/_posts/《安全服务工程师网络安全工具与命令实战笔记.md",
+    "2026-01-17.md",
+    "blog/source/_posts/test.md",
+    "blog/source/_posts/2025.md",
+    "blog/source/_posts/按钮事件.md",
+    "Notion/《安全服务工程师网络安全工具与命令实战笔记.md",
     "未命名.base",
     "未命名 1.base",
     "blog/source/_drafts/关于转专业想说的话.md",
@@ -239,9 +243,6 @@
     "node_modules/hexo-fs/node_modules/dom-serializer/README.md",
     "node_modules/cross-spawn/README.md",
     "node_modules/deepmerge/readme.md",
-    "node_modules/tslib/SECURITY.md",
-    "node_modules/is-glob/README.md",
-    "node_modules/to-regex-range/README.md",
     "node_modules/highlight.js/styles/pojoaque.jpg",
     "blog/themes/fluid/source/img/fluid.png",
     "themes/fluid/source/img/fluid.png",
