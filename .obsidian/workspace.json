@@ -156,8 +156,8 @@
                 "showSearch": false,
                 "searchQuery": ""
               },
-              "icon": "lucide-archive",
-              "title": "添加笔记属性"
+              "icon": "lucide-ghost",
+              "title": "all-properties"
             }
           },
           {
