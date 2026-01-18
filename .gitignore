@@ -6,3 +6,4 @@ node_modules/
 blog/public/
 blog/.deploy_git/
 _multiconfig.yml
+.obsidian/
