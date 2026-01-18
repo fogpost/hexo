@@ -11,10 +11,24 @@
             "id": "a34d8af575a65d12",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "blog/source/_drafts/逆向导学PPT制作.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "逆向导学PPT制作"
             }
           }
         ]
@@ -90,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "blog/source/_drafts/逆向导学PPT制作.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "逆向导学PPT制作 的反向链接列表"
             }
           },
           {
@@ -190,10 +205,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d7e5de6f28be6c43",
+  "active": "a34d8af575a65d12",
   "lastOpenFiles": [
-    "未命名 1.canvas",
     "未命名.canvas",
+    "blog/source/_drafts/逆向导学PPT制作.md",
+    "未命名 1.canvas",
     "Notion/过去的想法/Web安全/知识点/知识点.md",
     "未命名.base",
     "未命名 1.base",
@@ -233,7 +249,6 @@
     "blog/source/_posts/web十大基础漏洞.md",
     "blog/source/_posts/web中可执行的xml文件jelly.md",
     "blog/source/_posts/tea.md",
-    "blog/source/_posts/ssrf.md",
     "blog/source/img/20210610013504_b0e0d.jpeg",
     "blog/source/img/miku.png",
     "blog/source/image/LDAP.jpeg",
