@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b982879f98f3cada",
+        "id": "57d1132f41a9a02f",
         "type": "tabs",
         "children": [
           {
-            "id": "317de81db3a5d135",
+            "id": "a34d8af575a65d12",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -90,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "欢迎.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "欢迎 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -160,13 +159,23 @@
               "icon": "lucide-list",
               "title": "欢迎 的大纲"
             }
+          },
+          {
+            "id": "dc3d9f5680895c4f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,11 +185,16 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
     }
   },
   "active": "d7e5de6f28be6c43",
   "lastOpenFiles": [
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "Notion/过去的想法/Web安全/知识点/知识点.md",
     "未命名.base",
     "未命名 1.base",
     "template/template.js",
@@ -191,7 +205,6 @@
     "blog/themes/fluid/source/css/_pages/_base/_widget/pagination.styl",
     "blog/themes/fluid/source/css/_pages/_base/_widget/noscript.styl",
     "blog/themes/fluid/source/css/_pages/_base/_widget/qrcode.styl",
-    "blog/themes/fluid/source/css/_pages/_base/_widget/header.styl",
     "blog/themes/fluid/source/img/police_beian.png",
     "blog/themes/fluid/source/img/loading.gif",
     "blog/themes/fluid/source/img/fluid.png",
@@ -221,7 +234,6 @@
     "blog/source/_posts/web中可执行的xml文件jelly.md",
     "blog/source/_posts/tea.md",
     "blog/source/_posts/ssrf.md",
-    "blog/source/_posts/vulhub搭建.md",
     "blog/source/img/20210610013504_b0e0d.jpeg",
     "blog/source/img/miku.png",
     "blog/source/image/LDAP.jpeg",

@@ -1,7 +1,5 @@
 [
-  "obsidian-importer",
-  "obsidian-image-auto-upload-plugin",
-  "global-proxy",
   "obsidian-git",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-image-auto-upload-plugin"
 ]
