@@ -5,4 +5,3 @@ tags:
 categories:
 ---
 
-# <% tp.file.title %>
