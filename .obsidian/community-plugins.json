@@ -1,5 +1,7 @@
 [
   "obsidian-git",
   "templater-obsidian",
-  "obsidian-image-auto-upload-plugin"
+  "obsidian-image-auto-upload-plugin",
+  "remotely-save",
+  "quickadd"
 ]

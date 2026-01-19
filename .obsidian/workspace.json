@@ -11,10 +11,24 @@
             "id": "a34d8af575a65d12",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "template/hexo-post.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "hexo-post"
             }
           }
         ]
@@ -198,15 +212,20 @@
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "remotely-save:Remotely Save": false
     }
   },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
+    "blog/_draft/quickadd_test.md",
+    "blog/_draft",
+    "123.md",
+    "template/hexo-post.md",
+    "template",
     "blog/source/_drafts/123.md",
     "blog/source/_drafts/1223.md",
     "blog/source/_drafts/逆向导学ppt.md",
-    "template/hexo-post.md",
     "blog/source/_posts/2025.md",
     "blog/source/_posts/日记.md",
     "Notion/过去的想法/Web安全/工具/wpscan.md",
@@ -219,10 +238,8 @@
     "未命名 1.canvas",
     "Notion/过去的想法/Web安全/知识点/知识点.md",
     "template/template.js",
-    "template",
     "blog/themes/fluid/source/css/_pages/_base/_widget/toc.styl",
     "blog/themes/fluid/source/css/_pages/_base/_widget/search.styl",
-    "blog/themes/fluid/source/css/_pages/_base/_widget/scroll-btn.styl",
     "blog/themes/fluid/source/img/police_beian.png",
     "blog/themes/fluid/source/img/loading.gif",
     "blog/themes/fluid/source/img/fluid.png",
@@ -244,8 +261,6 @@
     "blog/source/_posts/区块链2.md",
     "blog/source/_posts/反序列化.md",
     "blog/source/_posts/wuai第八课.md",
-    "blog/source/_posts/web简单利用.md",
-    "blog/source/_posts/web杂项.md",
     "blog/source/img/20210610013504_b0e0d.jpeg",
     "blog/source/img/miku.png",
     "blog/source/image/LDAP.jpeg",
