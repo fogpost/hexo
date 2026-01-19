@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "template/hexo-post.md",
+                "file": "blog/source/_drafts/逆向导学ppt.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "hexo-post"
+              "title": "逆向导学ppt"
             }
           }
         ]
