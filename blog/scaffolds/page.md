@@ -1,4 +1,8 @@
 ---
-title: {{ title }}
-date: {{ date }}
+title:
+  "{ title }":
+date:
+  "{ date }":
+crated: 2026-01-18T12:49
+updated: 2026-01-20T15:54
 ---

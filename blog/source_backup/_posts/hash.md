@@ -3,6 +3,8 @@ title: hash
 date: 2024-10-28 19:36:46
 categories: 逆向算法
 tags: reverse
+crated: 2026-01-20T15:50
+updated: 2026-01-20T15:39
 ---
 # hash算法
 打算了解一下各个hash算法的细节，防止在看到伪代码时不认识

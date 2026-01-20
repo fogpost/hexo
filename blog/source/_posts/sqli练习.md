@@ -3,6 +3,8 @@ title: sqli1-10练习
 date: 2024-11-24 17:12:33
 categories: SQL
 tags: sql
+created: 2026-01-18T12:49
+updated: 2024-11-24 17:12:33
 ---
 
 # sqli开头简介

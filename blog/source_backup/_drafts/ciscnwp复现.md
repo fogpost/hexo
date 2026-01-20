@@ -3,6 +3,8 @@ title: ciscnwp复现
 date: 2025-01-10 14:33:04
 categories: CTF
 tags: ctf
+crated: 2026-01-20T15:50
+updated: 2026-01-20T15:39
 ---
 
 # 简介

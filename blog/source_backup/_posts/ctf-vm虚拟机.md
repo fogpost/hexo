@@ -3,6 +3,8 @@ title: ctf_vm虚拟机
 date: 2024-11-02 09:56:22
 cat额gories: CTF
 tags: ctf
+crated: 2026-01-20T15:50
+updated: 2026-01-20T15:39
 ---
 
 # ctf_vm虚拟机

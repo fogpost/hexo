@@ -1,5 +1,6 @@
 ---
-
+crated: 2026-01-18T12:49
+updated: 2026-01-20T15:39
 ---
 HTTP Webservice 几乎总是位于服务器的 80 端口。HTTPS Webservice 位于 443 端口。Windows NETBIOS 位于 139 端口，SMB 位于 445 端口
 

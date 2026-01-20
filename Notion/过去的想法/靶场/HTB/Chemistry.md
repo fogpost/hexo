@@ -1,5 +1,7 @@
 ---
 cover: "[[source/image/Chemistry.jpeg]]"
+crated: 2026-01-18T12:49
+updated: 2026-01-20T15:39
 ---
 启动openvpn之后，我们尝试利用nmap来扫描全部的开放端口，我看这不是开放了四个端口么，但是只有上面两个是开放的
 

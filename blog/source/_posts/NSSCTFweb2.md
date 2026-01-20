@@ -3,6 +3,8 @@ title: NSSCTFweb2
 date: 2024-10-19 23:46:57
 categories: CTF
 tags: web
+created: 2026-01-18T12:49
+updated: 2024-10-19 23:46:57
 ---
 
 The future

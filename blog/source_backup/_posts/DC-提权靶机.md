@@ -3,6 +3,8 @@ title: DC-提权靶机
 date: 2024-11-19 11:58:32
 tags: web
 categories: 省投测试
+crated: 2026-01-20T15:50
+updated: 2026-01-20T15:39
 ---
 
 # 简介

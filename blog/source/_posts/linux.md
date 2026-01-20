@@ -3,6 +3,8 @@ title: linux换源
 date: 2024-10-28 12:39:55
 categories: tool
 tags: linux
+created: 2026-01-18T12:49
+updated: 2024-10-28 12:39:55
 ---
 
 镜像省的搜

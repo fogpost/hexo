@@ -4,6 +4,7 @@ date: 2024-09-15 10:45:49
 categories: 工具
 tags: python
 updated: 2026-01-20T15:50
+crated: 2026-01-20T15:50
 ---
 ```
 enum PycMagic {
