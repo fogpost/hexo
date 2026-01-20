@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/反序列化.md",
+                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "反序列化"
+              "title": "基于obsidian的自动化推送blog搭建"
             }
           }
         ]
@@ -218,6 +218,7 @@
   },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
+    "blog/source/_posts/反序列化.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/2025.md",
     "Templates/hexo-post.md",
@@ -263,7 +264,6 @@
     "blog/node_modules/path-is-absolute/readme.md",
     "blog/node_modules/fs.realpath/README.md",
     "blog/node_modules/css-what/readme.md",
-    "blog/node_modules/ansi-regex/readme.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
