@@ -302,6 +302,19 @@
             <h1 id="seo-header">按钮事件</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-10-18T14:42:10+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <p>在我们进行逆向时普遍会遇到出现弹窗，但是我们没有办法搜索到字符串完成定位点的问题，这个时候我们可以利用按钮时间来到达对应的输入断点<br><img src="https://gitee.com/fogpost/photo/raw/master/202410181444105.png" srcset="/img/loading.gif" lazyload><br>在我们这图中，在输入完数之后我们不点登录在od中查找二进制字符串，如下<br><img src="https://gitee.com/fogpost/photo/raw/master/202410181449498.png" srcset="/img/loading.gif" lazyload><br>之后我们会到达此处，此处的断点便是易语言的按钮事件断点<br><img src="https://gitee.com/fogpost/photo/raw/master/202410181450283.png" srcset="/img/loading.gif" lazyload></p>
@@ -590,6 +603,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

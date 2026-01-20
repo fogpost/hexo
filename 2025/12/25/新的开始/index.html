@@ -298,6 +298,19 @@
             <h1 id="seo-header">新的开始</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2025-12-25T15:49:59+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h2 id="过去的总结"><a href="#过去的总结" class="headerlink" title="过去的总结"></a>过去的总结</h2><p>目前也算是把考研结束了接下来还有许多事情要看先定个基调，blog还是要转换到这个hexo上面来才行，之前Notion上面虽然好用但感觉还是有部分不足，果然还是原生本位的好用，用马哲的话来讲就是否定之否定了。</p>
@@ -586,6 +599,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

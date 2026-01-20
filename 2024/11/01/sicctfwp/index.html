@@ -303,6 +303,19 @@
             <h1 id="seo-header">sicctfwp</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-11-01T22:15:18+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="Sigin"><a href="#Sigin" class="headerlink" title="Sigin"></a>Sigin</h2><p>打开网页后出现这个页面<br><img src="https://gitee.com/fogpost/photo/raw/master/202411012216221.png" srcset="/img/loading.gif" lazyload><br>典型的robots协议，访问robots.txt<br>按照提示进入，发现一下界面<br><img src="https://gitee.com/fogpost/photo/raw/master/202411012217411.png" srcset="/img/loading.gif" lazyload><br>在本地弄一个php环境跑一下出了这个</p>
@@ -617,6 +630,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

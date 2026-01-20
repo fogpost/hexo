@@ -298,6 +298,19 @@
             <h1 id="seo-header">Hook</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-10-16T10:19:04+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="Hook"><a href="#Hook" class="headerlink" title="Hook"></a>Hook</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>Hook是一种技术，它允许一个程序监视和修改另一个程序的运行。Hook技术通常用于调试、修改程序行为、保护程序等目的。</p>
@@ -591,6 +604,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

@@ -300,6 +300,19 @@
             <h1 id="seo-header">tea.dm</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-09-10T18:33:20+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="tea"><a href="#tea" class="headerlink" title="tea"></a>tea</h1><p>终于自己做出一道tea了乐<br>看原题<br><img src="http://gitee.com/fogpost/photo/raw/master/202409122053979.png" srcset="/img/loading.gif" lazyload><br>&emsp;典型的tea直接套模板，但是有问题，就是py中不会限定为32位所以最后的答案会超级大，我们就要去进行一个&amp;ffffffff的操作使数值正确<br>&emsp;然后就是关于题目中的小问题，首先就是delta，标准的tea是0x9E3779B9，但是在ida中总是会出现变成-0x61c88647的问题需要注意，然后就是最后的v5怎么求,就是一个偏移相加，在exp中有了</p>
@@ -583,6 +596,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

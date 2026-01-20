@@ -303,6 +303,19 @@
             <h1 id="seo-header">电子榨菜</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-11-18T23:46:37+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="电子榨菜"><a href="#电子榨菜" class="headerlink" title="电子榨菜"></a>电子榨菜</h1><h2 id="2024-10-26-23-06-28"><a href="#2024-10-26-23-06-28" class="headerlink" title="2024-10-26 23:06:28"></a>2024-10-26 23:06:28</h2><p>写写干了什么，现在好想玩星际啊，不想写东西了，直接开完，这个geekcode还会接我话好玩的，星际推荐玩星际酒馆，不过在写这个东西的时候突然发现，一个功能，就是vscode的自动换行功能直接搜就行好用的，会根据现在的页面大小自动换行，星际战役好贵啊250，早十年玩就好了，还会送的，要不要写写明天干什么呢。，加个评论，看看这些好玩吧<br><img src="https://gitee.com/fogpost/photo/raw/master/202410262318542.png" srcset="/img/loading.gif" lazyload></p>
@@ -595,6 +608,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

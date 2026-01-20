@@ -321,6 +321,19 @@
             <h1 id="seo-header">DC-2</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-11-28T22:46:20+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="DC-2"><a href="#DC-2" class="headerlink" title="DC-2"></a>DC-2</h1><p>今天无所事事，又来搞靶机了，少搞这个，打算搞完DC系列再去加深学习一下，该学习学习eviden师傅的fofa教程了</p>
@@ -348,7 +361,7 @@
 <p><img src="https://gitee.com/fogpost/photo/raw/master/202411282328174.png" srcset="/img/loading.gif" lazyload></p>
 <p>尝试用jerry登录，发现flag2，并提示我们使用ssh登录<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282330516.png" srcset="/img/loading.gif" lazyload><br><img src="https://gitee.com/fogpost/photo/raw/master/202411282330233.png" srcset="/img/loading.gif" lazyload></p>
 <h3 id="ssh登录"><a href="#ssh登录" class="headerlink" title="ssh登录"></a>ssh登录</h3><blockquote>
-<p>ssh <a href="mailto:&#116;&#111;&#109;&#64;&#x31;&#x39;&#x32;&#x2e;&#x31;&#54;&#56;&#x2e;&#53;&#54;&#x2e;&#49;&#x34;&#55;">&#116;&#111;&#109;&#64;&#x31;&#x39;&#x32;&#x2e;&#x31;&#54;&#56;&#x2e;&#53;&#54;&#x2e;&#49;&#x34;&#55;</a> -p 7744<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282333534.png" srcset="/img/loading.gif" lazyload><br>成功登录，发现在本地有flag3，但是只有vi可用，这个叫我们提权<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282335807.png" srcset="/img/loading.gif" lazyload></p>
+<p>ssh <a href="mailto:&#x74;&#x6f;&#x6d;&#64;&#x31;&#57;&#50;&#46;&#49;&#54;&#x38;&#x2e;&#x35;&#x36;&#x2e;&#x31;&#52;&#55;">&#x74;&#x6f;&#x6d;&#64;&#x31;&#57;&#50;&#46;&#49;&#54;&#x38;&#x2e;&#x35;&#x36;&#x2e;&#x31;&#52;&#55;</a> -p 7744<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282333534.png" srcset="/img/loading.gif" lazyload><br>成功登录，发现在本地有flag3，但是只有vi可用，这个叫我们提权<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282335807.png" srcset="/img/loading.gif" lazyload></p>
 </blockquote>
 <h3 id="rbash提权"><a href="#rbash提权" class="headerlink" title="rbash提权"></a>rbash提权</h3><p>查看当前权限的软件</p>
 <p><img src="https://gitee.com/fogpost/photo/raw/master/202411282337342.png" srcset="/img/loading.gif" lazyload></p>
@@ -660,6 +673,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

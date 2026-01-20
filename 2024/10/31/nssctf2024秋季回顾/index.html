@@ -316,6 +316,19 @@
             <h1 id="seo-header">nssctf2024秋季回顾</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-10-31T20:18:03+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="nssctf2024秋季回顾"><a href="#nssctf2024秋季回顾" class="headerlink" title="nssctf2024秋季回顾"></a>nssctf2024秋季回顾</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这个比赛也算是打的比较舒服的一个比赛，不过后期有点懈怠了，有许多题都没有看主要是没有什么想法吧，回顾主要是把不会的和想学习的写一下，已经出来的就不打算再写了</p>
@@ -631,6 +644,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

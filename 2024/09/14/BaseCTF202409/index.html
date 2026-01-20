@@ -315,6 +315,19 @@
             <h1 id="seo-header">BaseCTF202409</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-09-14T11:05:39+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h2 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h2><h3 id="UPX-mini"><a href="#UPX-mini" class="headerlink" title="UPX mini"></a>UPX mini</h3><p>既然是UPX那必须先DIE查壳<br><img src="https://gitee.com/fogpost/photo/raw/master/202409141119212.png" srcset="/img/loading.gif" lazyload><br>一看就不对劲，upx最多只见过3.96的，不过这里先用upx自己脱一下可以脱<br>直接继续查，64位无壳，进入ida<br><img src="https://gitee.com/fogpost/photo/raw/master/202409141122619.png" srcset="/img/loading.gif" lazyload><br>明显的base64直接，解密<br><img src="https://gitee.com/fogpost/photo/raw/master/202409141123562.png" srcset="/img/loading.gif" lazyload><br>秒解<br>BaseCTF{Hav3_@_g0od_t1m3!!!}</p>
@@ -611,6 +624,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

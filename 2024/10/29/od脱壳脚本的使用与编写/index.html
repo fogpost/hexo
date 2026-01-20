@@ -307,6 +307,19 @@
             <h1 id="seo-header">od脱壳脚本的使用与编写</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-10-29T22:44:22+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="od脱壳脚本的使用与编写"><a href="#od脱壳脚本的使用与编写" class="headerlink" title="od脱壳脚本的使用与编写"></a>od脱壳脚本的使用与编写</h1><p>我们的软件取自<a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-422100-1-1.html">52破解</a><br>第一步查壳，并且丢到idapro中看看有什么<br><img src="https://gitee.com/fogpost/photo/raw/master/202410292248198.png" srcset="/img/loading.gif" lazyload><br>可见这个软件是由tElock压缩过的<br><img src="https://gitee.com/fogpost/photo/raw/master/202410292249831.png" srcset="/img/loading.gif" lazyload><br>Idapro也是不负众望的啥也没扫出来，我们od加载一下，这里注意看一下内存加载，基地址是400000，这代表了我们关闭了ALSR这点对我们后面的脱壳很重要<br><img src="https://gitee.com/fogpost/photo/raw/master/202410292251590.png" srcset="/img/loading.gif" lazyload><br>在单步运行到这里时，我们程序会直接跑飞<br><img src="https://gitee.com/fogpost/photo/raw/master/202410292253699.png" srcset="/img/loading.gif" lazyload><br>下断点键入后，逐步步过，发现出现下面这个弹窗，表示本程序是有程序自校验，这里有两个方法，一是找到自校验方式nop掉，二是在每次键入时将断点取消，这也是一个好习惯<br><img src="https://gitee.com/fogpost/photo/raw/master/202410292254330.png" srcset="/img/loading.gif" lazyload><br>看下图发现，此程序还有对调试器的检测，我们这里开启了od的内核插件，但是好像在win10不起作用，没有防止检测，可以选择用win7，来加载<br><img src="https://gitee.com/fogpost/photo/raw/master/202410292303768.png" srcset="/img/loading.gif" lazyload><br>我们重新加载文件，在此处发现对od检测的jmp函数我们将这个函数进行nop即可正常进入软件<br><img src="https://gitee.com/fogpost/photo/raw/master/202410292321969.png" srcset="/img/loading.gif" lazyload><br>如果刚刚没有nop那么我们在下面这个图便会跳转到exitprocess进程结束<br><img src="https://gitee.com/fogpost/photo/raw/master/202410292321971.png" srcset="/img/loading.gif" lazyload></p>
@@ -595,6 +608,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

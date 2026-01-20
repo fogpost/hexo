@@ -301,6 +301,19 @@
             <h1 id="seo-header">sqli10-20</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-12-09T19:45:38+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="sqli11-20"><a href="#sqli11-20" class="headerlink" title="sqli11-20"></a>sqli11-20</h1><h2 id="11"><a href="#11" class="headerlink" title="11"></a>11</h2><p>输入1’出现报错显示，存在注入<br><img src="https://gitee.com/fogpost/photo/raw/master/202412091947957.png" srcset="/img/loading.gif" lazyload><br>构造1’ or 1&#x3D;1 #成功，1’union select 1,2#成功注入，同sqli1<br><img src="https://gitee.com/fogpost/photo/raw/master/202412091949999.png" srcset="/img/loading.gif" lazyload></p>
@@ -597,6 +610,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

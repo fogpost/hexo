@@ -300,6 +300,19 @@
             <h1 id="seo-header">vulhub搭建</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-11-21T19:22:56+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>涉及一些经典的漏洞和靶场环境，如果有现成的可以下载固然很好，但是当需要我们自己复现和搭建环境时便会出现许多的bug，这时便需要一个较好的工具来实现便捷的靶场环境构建，这个工具便是vulhub，它是一个基于docker的漏洞环境集合，方便我们快速搭建漏洞环境，作者是p牛也是人尽皆知的离别歌，可以去看看人家的博客网</p>
@@ -595,6 +608,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

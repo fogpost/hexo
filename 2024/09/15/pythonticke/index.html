@@ -298,6 +298,19 @@
             <h1 id="seo-header">pymagic</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-09-15T10:45:49+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs x86asm">enum PycMagic &#123;<br>    MAGIC_1_0 = <span class="hljs-number">0x00999902</span>,<br>    MAGIC_1_1 = <span class="hljs-number">0x00999903</span>, /* Also covers <span class="hljs-number">1.2</span> */<br>    MAGIC_1_3 = <span class="hljs-number">0x0A0D2E89</span>,<br>    MAGIC_1_4 = <span class="hljs-number">0x0A0D1704</span>,<br>    MAGIC_1_5 = <span class="hljs-number">0x0A0D4E99</span>,<br>    MAGIC_1_6 = <span class="hljs-number">0x0A0DC4FC</span>,<br> <br>    MAGIC_2_0 = <span class="hljs-number">0x0A0DC687</span>,<br>    MAGIC_2_1 = <span class="hljs-number">0x0A0DEB2A</span>,<br>    MAGIC_2_2 = <span class="hljs-number">0x0A0DED2D</span>,<br>    MAGIC_2_3 = <span class="hljs-number">0x0A0DF23B</span>,<br>    MAGIC_2_4 = <span class="hljs-number">0x0A0DF26D</span>,<br>    MAGIC_2_5 = <span class="hljs-number">0x0A0DF2B3</span>,<br>    MAGIC_2_6 = <span class="hljs-number">0x0A0DF2D1</span>,<br>    MAGIC_2_7 = <span class="hljs-number">0x0A0DF303</span>,<br> <br>    MAGIC_3_0 = <span class="hljs-number">0x0A0D0C3A</span>,<br>    MAGIC_3_1 = <span class="hljs-number">0x0A0D0C4E</span>,<br>    MAGIC_3_2 = <span class="hljs-number">0x0A0D0C6C</span>,<br>    MAGIC_3_3 = <span class="hljs-number">0x0A0D0C9E</span>,<br>    MAGIC_3_4 = <span class="hljs-number">0x0A0D0CEE</span>,<br>    MAGIC_3_5 = <span class="hljs-number">0x0A0D0D16</span>,<br>    MAGIC_3_5_3 = <span class="hljs-number">0x0A0D0D17</span>,<br>    MAGIC_3_6 = <span class="hljs-number">0x0A0D0D33</span>,<br>    MAGIC_3_7 = <span class="hljs-number">0x0A0D0D42</span>,<br>    MAGIC_3_8 = <span class="hljs-number">0x0A0D0D55</span>,<br>    MAGIC_3_9 = <span class="hljs-number">0x0A0D0D61</span>,<br>    MAGIC_3_10 = <span class="hljs-number">0x0A0D0D6F</span>,<br>    MAGIC_3_11 = <span class="hljs-number">0x0A0D0DA7</span>,<br>    MAGIC_3_12 = <span class="hljs-number">0x0A0D0DCB</span>,<br> <br>    INVALID = <span class="hljs-number">0</span>,<br>&#125;<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
@@ -586,6 +599,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

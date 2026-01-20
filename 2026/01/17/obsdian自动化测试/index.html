@@ -297,6 +297,19 @@
             <h1 id="seo-header">自动化ceshi</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2026-01-17T00:00:00+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <p>如果看到这篇，就说明自动化成功。也是终于成功了，接下来的目标是更新一下博客页面让信息有价值一点，然后就是rss距离上次说要搞rss也过了快半个月了，今天晚上回去写逆向ppt，孩子们我们也来搞个入门班，收一学分每人，🥰。伴随着这个测试的完成obsdian的自动化搭建也是写完了，不用vercel搭建的话少了一个步骤不过更加麻烦，到头来好像连私钥都没用上用的社区工具好像是，不过不用vercel进行构建的话我们的博客就不能匿名了孩子们。</p>
@@ -557,6 +570,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202601171958945.png">
 <meta property="article:published_time" content="2026-01-17T20:13:37.000Z">
-<meta property="article:modified_time" content="2026-01-17T20:13:37.000Z">
+<meta property="article:modified_time" content="2026-01-20T17:53:03.000Z">
 <meta property="article:author" content="fogpost">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
@@ -300,6 +300,19 @@
             <h1 id="seo-header">基于obsidian的自动化推送blog搭建</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2026-01-20T17:53:03+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <p>(这个好蠢呀，突然发现没标题没标签，难搞，难不成每次还要复制，看来下一下还要搞个什么自动化创建标签才行)</p>
@@ -308,7 +321,7 @@
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">git init                                                <span class="hljs-comment">#初始化git  </span><br>git remote <span class="hljs-keyword">add </span><span class="hljs-keyword">origin </span>`github仓库链接`  <span class="hljs-comment">#与远程仓库建立连接  </span><br>git <span class="hljs-keyword">add </span>.                                               <span class="hljs-comment">#至暂存区  </span><br>git commit -m <span class="hljs-string">&quot;初始化&quot;</span>                                   <span class="hljs-comment">#添加至本地仓库  </span><br>git push -u <span class="hljs-keyword">origin </span>main                                 <br><span class="hljs-comment">#推送至远程的main分支,这是生成后的我们要展示的网页分支</span><br>  <br>git checkout -<span class="hljs-keyword">b </span>hexo             <span class="hljs-comment">#该命令相当于 git branch hexo 以及 git checkout hexo，前者是创建分支 hexo，后者是切换到 hexo分支。  </span><br>  <br>git push <span class="hljs-keyword">origin </span>HEAD -u<br><br><br></code></pre></td></tr></table></figure>
 
 <p>完成推送后两种方案，一种github自带的githubaction，或者vercal单独设构建都行我们采取第一种，并利用obsdian的git插件实现自动化,不行不行这个不用密钥的太搞了，建议各位想要搭建的去用vercel或者直接用密钥。原因就是这个方案外面一层main的要识别身份，内层更新web页面也需要识别身份所以有两次检验，有密钥就不需要了。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Hexo</span> <span class="hljs-string">Deploy</span><br><span class="hljs-attr">permissions:</span><br>  <span class="hljs-attr">contents:</span> <span class="hljs-string">write</span>  <span class="hljs-comment"># 允许插件推送到你的 web 分支</span><br>  <br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">main</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">deploy:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Checkout</span> <span class="hljs-string">code</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v4</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Setup</span> <span class="hljs-string">Node.js</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v4</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">node-version:</span> <span class="hljs-number">20</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">dependencies</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br>          <span class="hljs-string">cd</span> <span class="hljs-string">blog</span><br>          <span class="hljs-string">npm</span> <span class="hljs-string">install</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">Hexo</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br>          <span class="hljs-string">cd</span> <span class="hljs-string">blog</span><br>          <span class="hljs-string">npx</span> <span class="hljs-string">hexo</span> <span class="hljs-string">clean</span><br>          <span class="hljs-string">npx</span> <span class="hljs-string">hexo</span> <span class="hljs-string">generate</span><br>          <span class="hljs-comment"># 在生成的静态文件根目录生成这两个关键文件</span><br>          <span class="hljs-comment"># touch public/.nojekyll</span><br>          <span class="hljs-comment"># echo &quot;你的域名.com&quot; &gt; public/CNAME  # 👈 这里填入你的真实域名</span><br>          <br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Deploy</span> <span class="hljs-string">to</span> <span class="hljs-string">Web</span> <span class="hljs-string">Branch</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">peaceiris/actions-gh-pages@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">github_token:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span> <br>          <span class="hljs-comment"># 使用内置 Token 即可，无需手动配置 PAT</span><br>          <span class="hljs-attr">publish_dir:</span> <span class="hljs-string">./blog/public</span>               <span class="hljs-comment"># 👈 只发布这个目录下的内容</span><br>          <span class="hljs-attr">publish_branch:</span> <span class="hljs-string">web</span>                      <span class="hljs-comment"># 👈 发布到 web 分支</span><br>          <span class="hljs-attr">force_modify:</span> <span class="hljs-literal">true</span>                       <span class="hljs-comment"># 强制覆盖</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs nix"><span class="hljs-params">name:</span> Hexo Deploy<br><span class="hljs-params">permissions:</span><br>  <span class="hljs-params">contents:</span> write  <span class="hljs-comment"># 允许插件推送到你的 web 分支</span><br>  <br><span class="hljs-params">on:</span><br>  <span class="hljs-params">push:</span><br>    <span class="hljs-params">branches:</span><br>      <span class="hljs-operator">-</span> main<br><br><span class="hljs-params">jobs:</span><br>  <span class="hljs-params">deploy:</span><br>    <span class="hljs-params">runs-on:</span> ubuntu-latest<br><br>    <span class="hljs-params">steps:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> Checkout code<br>        <span class="hljs-params">uses:</span> actions<span class="hljs-operator">/</span>checkout@v4<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> Setup Node.js<br>        <span class="hljs-params">uses:</span> actions<span class="hljs-operator">/</span>setup-node@v4<br>        <span class="hljs-params">with:</span><br>          <span class="hljs-params">node-version:</span> <span class="hljs-number">20</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> Install dependencies<br>        <span class="hljs-params">run:</span> |<br>          cd blog<br>          npm install<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> Build Hexo<br>        <span class="hljs-params">run:</span> |<br>          cd blog<br>          npx hexo clean<br>          npx hexo generate<br>          <span class="hljs-comment"># 在生成的静态文件根目录生成这两个关键文件</span><br>          <span class="hljs-comment"># touch public/.nojekyll</span><br>          <span class="hljs-comment"># echo &quot;你的域名.com&quot; &gt; public/CNAME  # 👈 这里填入你的真实域名</span><br>          <br>      <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> Deploy to Web Branch<br>        <span class="hljs-params">uses:</span> peaceiris<span class="hljs-operator">/</span>actions-gh-pages@v3<br>        <span class="hljs-params">with:</span><br>          <span class="hljs-params">github_token:</span> $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125; <br>          <span class="hljs-comment"># 使用内置 Token 即可，无需手动配置 PAT</span><br>          <span class="hljs-params">publish_dir:</span> <span class="hljs-symbol">./blog/public</span>               <span class="hljs-comment"># 👈 只发布这个目录下的内容</span><br>          <span class="hljs-params">publish_branch:</span> web                      <span class="hljs-comment"># 👈 发布到 web 分支</span><br>          <span class="hljs-params">force_modify:</span> <span class="hljs-literal">true</span>                       <span class="hljs-comment"># 强制覆盖</span><br></code></pre></td></tr></table></figure>
 
 <p>下面是成功的显示<br><img src="https://gitee.com/fogpost/photo/raw/master/202601171958945.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这下就行了可以看到我们的两步走在mian备份完全部文件后在web分支下完成页面部署实现了自动化，下次想在其他电脑上面部署就可以直接git clone了</p>
 <p>需要注意的是刚刚才发现要配图床，图床这个我之前就讲过了[[可恶的gitee吃掉外链了]] 放外链的方式也有直接用就行，不过本地不能够离线看图片确实有点，但是其实你知道么，所有考win+shift+s截的图全会在你的个人用户的图片下面不会删掉，但是因为像素不高几百张好像就几十MB也不大留着就行。</p>
@@ -356,6 +369,11 @@
           <div>2026年1月17日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2026年1月20日</div>
+        </div>
       
       
         <div class="license-meta-item">
@@ -580,6 +598,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

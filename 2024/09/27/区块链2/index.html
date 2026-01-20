@@ -313,6 +313,19 @@
             <h1 id="seo-header">区块链2</h1>
             
             
+            
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-09-27T10:24:18+00:00
+                  
+                  
+
+                
+              </p>
+            
+            
               <div class="markdown-body">
                 
                 <h1 id="区块链技术实验2"><a href="#区块链技术实验2" class="headerlink" title="区块链技术实验2"></a>区块链技术实验2</h1><h2 id="安装以太坊"><a href="#安装以太坊" class="headerlink" title="安装以太坊"></a>安装以太坊</h2><p>sudo apt clear cache<br>sudo apt update<br>sudo apt-get install golang<br>sudo apt-get install make<br>sudo apt-get install git<br>sudo apt install build-essential<br>sudo apt-get install libltdl-dev<br>wget <a target="_blank" rel="noopener" href="https://github.com/ethereum/go-ethereum/archive/refs/tags/v1.9.25.tar.gz">https://github.com/ethereum/go-ethereum/archive/refs/tags/v1.9.25.tar.gz</a><br>tar zxvf v1.9.25.tar.gz<br>获取压缩文件，并解压<br><img src="https://gitee.com/fogpost/photo/raw/master/202409250917601.png" srcset="/img/loading.gif" lazyload></p>
@@ -606,6 +619,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   
