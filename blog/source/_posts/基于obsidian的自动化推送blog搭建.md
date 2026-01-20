@@ -3,6 +3,7 @@ title: 基于obsidian的自动化推送blog搭建
 date: 2026-01-17 20:13:37
 tags:
   - blog
+updated: <% tp.file.last_modified() %>
 ---
 
 (这个好蠢呀，突然发现没标题没标签，难搞，难不成每次还要复制，看来下一下还要搞个什么自动化创建标签才行)

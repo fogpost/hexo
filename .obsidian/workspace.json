@@ -11,14 +11,24 @@
             "id": "a34d8af575a65d12",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "blog/source/_drafts/分支函数逆向.md",
-                "bFile": "blog/source/_drafts/分支函数逆向.md",
-                "aRef": ""
+                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: 分支函数逆向  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "基于obsidian的自动化推送blog搭建"
             }
           }
         ]
@@ -206,50 +216,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "floating": {
-    "id": "f0d3668cdf73575d",
-    "type": "floating",
-    "children": [
-      {
-        "id": "aadcecf2101553eb",
-        "type": "window",
-        "children": [
-          {
-            "id": "a3eaeaa6aaee6d82",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "801be599b35e5920",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://github.com/beaussan/update-time-on-edit-obsidian/issues",
-                    "title": "Issues · beaussan/update-time-on-edit-obsidian · GitHub",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "Issues · beaussan/update-time-on-edit-obsidian · GitHub"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 567,
-        "y": 143,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
     "blog/source/_drafts/分支函数逆向.md",
-    "blog/source/_drafts/简单的远控木马啊.md",
     "blog/source/_drafts/服务器更新计划和流程.md",
+    "blog/source/_drafts/简单的远控木马啊.md",
     "blog/source/_drafts/关于转专业想说的话.md",
     "blog/source/_drafts/利用quickadd自动化新建重命名笔记.md",
     "blog/source/_drafts/逆向导学ppt.md",
