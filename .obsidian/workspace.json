@@ -11,24 +11,14 @@
             "id": "bfa33f1bc58c4909",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "blog/source/_posts/Diary.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
+                "bFile": "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Diary"
+              "icon": "diff",
+              "title": "Diff: GHCTF  (Working Tree)"
             }
           }
         ]
@@ -225,8 +215,54 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "bfa33f1bc58c4909",
+  "floating": {
+    "id": "0a57311a5de63d2c",
+    "type": "floating",
+    "children": [
+      {
+        "id": "6eedb56cee5e76c6",
+        "type": "window",
+        "children": [
+          {
+            "id": "3e493ff37be65649",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3e5db635badde840",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://account.live.com/consent/Edit?client_id=000000004493E277",
+                    "title": "Microsoft 帐户",
+                    "mode": "blank"
+                  },
+                  "icon": "globe-2",
+                  "title": "Microsoft 帐户"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 448,
+        "y": 140,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "3e5db635badde840",
   "lastOpenFiles": [
+    "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
+    "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
+    "Notion/过去的想法/CTF/GHCTF/公钥ssh登录.md",
+    "Notion/过去的想法/CTF/GHCTF/解决方案.md",
+    "Notion/过去的想法/CTF/GHCTF/双重MD5绕过.md",
+    "Notion/过去的想法/CTF/GHCTF/造成两次编码不一致的关键点.md",
+    "blog/source/_posts/Diary.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/日记.md",
     "blog/source/_drafts/win32读书笔记.md",
@@ -247,13 +283,6 @@
     "blog/node_modules/node-addon-api/README.md",
     "blog/node_modules/ms/license.md",
     "copilot/copilot-custom-prompts/Clip Web Page.md",
-    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
-    "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts/Make longer.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Home",
