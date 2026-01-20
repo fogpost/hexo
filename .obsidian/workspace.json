@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/如何学习逆向.md",
+                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "如何学习逆向"
+              "title": "基于obsidian的自动化推送blog搭建"
             }
           }
         ]
@@ -218,8 +218,8 @@
   },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
-    "blog/source/_drafts/未命名.md",
     "blog/source/_drafts/如何学习逆向.md",
+    "blog/source/_drafts/未命名.md",
     "blog/source/_drafts/如何使用od.md",
     "blog/source/_drafts/如何使用idapro.md",
     "blog/source/_drafts/逆向导学ppt.md",
