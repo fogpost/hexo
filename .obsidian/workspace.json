@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "template/hexo-post.md",
+                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "hexo-post"
+              "title": "基于obsidian的自动化推送blog搭建"
             }
           }
         ]
@@ -218,8 +218,13 @@
   },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
+    "blog/source/_posts/2025.md",
     "blog/source/_drafts/逆向导学ppt.md",
     "blog/source/_drafts/利用quickadd自动化新建重命名笔记.md",
+    "blog/source/_drafts/关于转专业想说的话.md",
+    "blog/source/_drafts/简单的远控木马啊.md",
+    "blog/source/_drafts/服务器更新计划和流程.md",
+    "blog/source/_drafts/分支函数逆向.md",
     "template/hexo-post.md",
     "blog/source/_drafts/ciscnwp复现.md",
     "blog/source/_draft/123.md",
@@ -231,7 +236,6 @@
     "template",
     "blog/source/_drafts/123.md",
     "blog/source/_drafts/1223.md",
-    "blog/source/_posts/2025.md",
     "blog/source/_posts/日记.md",
     "Notion/过去的想法/Web安全/工具/wpscan.md",
     "未命名.base",
@@ -257,10 +261,6 @@
     "blog/source/_posts/脚本命令的改变.md",
     "blog/source/_posts/按钮事件.md",
     "blog/source/_posts/爬虫初识.md",
-    "blog/source/_posts/新的开始.md",
-    "blog/source/_posts/可恶的gitee吃掉外链了.md",
-    "blog/source/_posts/常见的API.md",
-    "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/img/20210610013504_b0e0d.jpeg",
     "blog/source/img/miku.png",
     "blog/source/image/LDAP.jpeg",
