@@ -3,8 +3,8 @@ title: flask模板注入
 date: 2025-01-10 14:50:20
 categories: WEB
 tags: web
+updated: 2025-01-10 14:50:20
 ---
-
 # flask模板注入
 
 作为 Web 中的难点还是有必要涉猎一番  

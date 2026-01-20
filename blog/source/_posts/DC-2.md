@@ -3,8 +3,8 @@ title: DC-2
 date: 2024-11-28 22:46:20
 tags: web
 categories: 渗透测试
+updated: 2024-11-28 22:46:20
 ---
-
 # DC-2
 今天无所事事，又来搞靶机了，少搞这个，打算搞完DC系列再去加深学习一下，该学习学习eviden师傅的fofa教程了
 

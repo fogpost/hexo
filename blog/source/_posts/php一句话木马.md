@@ -3,8 +3,8 @@ title: php一句话木马
 date: 2024-10-09 10:52:03
 categories: 网络
 tags: php
+updated: 2024-10-09 10:52:03
 ---
-
 了解一下php的include函数顺便了解一句话木马的各种形式
 ## include函数
 在php中，include函数用于引入一个文件，如果引入的文件不存在，则会抛出一个警告，但程序会继续执行。

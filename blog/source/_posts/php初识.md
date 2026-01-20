@@ -3,6 +3,7 @@ title: php函数初识
 date: 2024-09-30 10:11:50
 category: 网络
 tags: php
+updated: 2024-09-30 10:11:50
 ---
 本文讲对php的部分可能引起漏洞的部分函数进行讲解
 <!--more-->

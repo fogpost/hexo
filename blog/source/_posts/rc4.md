@@ -3,6 +3,7 @@ title: rc4
 date: 2024-10-28 21:13:17
 categories: 逆向算法
 tags: reverse
+updated: 2024-10-28 21:13:17
 ---
 # RC4
 写题过程中会出现像rc4这种简单的对称加密算法，在此留下对应的解密脚本

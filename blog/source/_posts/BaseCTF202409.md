@@ -3,6 +3,7 @@ title: BaseCTF202409
 date: 2024-09-14 11:05:39
 categories: CTF
 tags: reverse
+updated: 2024-09-14 11:05:39
 ---
 ## Reverse
 ### UPX mini

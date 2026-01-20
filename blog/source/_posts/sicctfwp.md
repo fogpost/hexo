@@ -3,8 +3,8 @@ title: sicctfwp
 date: 2024-11-01 22:15:18
 categories: CTF
 tags: ctf
+updated: 2024-11-01 22:15:18
 ---
-
 # web
 ## Sigin
 打开网页后出现这个页面

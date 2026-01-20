@@ -3,8 +3,8 @@ title: web中可执行的xml文件jelly
 date: 2024-12-11 14:03:29
 category: 网络
 tags: web
+updated: 2024-12-11 14:03:29
 ---
-
 # 简介
 好久没有写东西了，最近的ctf中有遇到一个jelly的题目，记录一下，题目是国成杯的web题，题目描述如下：
 

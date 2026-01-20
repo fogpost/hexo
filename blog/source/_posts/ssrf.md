@@ -3,8 +3,8 @@ title: ssrf
 date: 2024-11-07 19:31:44
 categories: CTF
 tags: web
+updated: 2024-11-07 19:31:44
 ---
-
 # 介绍
 SSRF (Server-Side Request Forgery,服务器端请求伪造)是一种由攻击者构造请求，由服务端发起请求的安全漏洞。一般情况下，SSRF攻击的目标是外网无法访问的内部系统(正因为请求是由服务端发起的，所以服务端能请求到与自身相连而与外网隔离的内部系统)。  
 [SSRF漏洞（原理、挖掘点、漏洞利用、修复建议](https://www.cnblogs.com/miruier/p/13907150.html)  

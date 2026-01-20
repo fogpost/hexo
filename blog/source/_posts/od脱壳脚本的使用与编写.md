@@ -3,6 +3,7 @@ title: od脱壳脚本的使用与编写
 date: 2024-10-29 22:44:22
 categories: 逆向
 tags: reverse
+updated: 2024-10-29 22:44:22
 ---
 # od脱壳脚本的使用与编写
 我们的软件取自[52破解](https://www.52pojie.cn/thread-422100-1-1.html)

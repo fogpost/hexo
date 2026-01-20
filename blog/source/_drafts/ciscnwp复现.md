@@ -3,8 +3,8 @@ title: ciscnwp复现
 date: 2025-01-10 14:33:04
 categories: CTF
 tags: ctf
+updated: 2025-01-10 14:33:04
 ---
-
 # 简介
 鼓起勇气面对ciscn，慢慢的对着wp复现，加油加油加油
 

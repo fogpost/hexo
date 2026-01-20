@@ -3,8 +3,8 @@ title: linux换源
 date: 2024-10-28 12:39:55
 categories: tool
 tags: linux
+updated: 2024-10-28 12:39:55
 ---
-
 镜像省的搜
 
 >sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup

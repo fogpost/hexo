@@ -3,6 +3,7 @@ title: bindiff
 date: 2024-10-28 14:58:37
 categories: 逆向
 tags: tool
+updated: 2024-10-28 14:58:37
 ---
 # 用bindiff来显示二进制文件的区别
 你是否在面对收到攻击的二进制文件无法比对，看着两个文件而陷入迷茫，不知如何分析，沉沦在函数之海无法自拔，找不到patcher前后的区别，那么bindiff可以帮助你。

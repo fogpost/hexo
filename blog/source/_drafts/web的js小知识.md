@@ -3,8 +3,8 @@ title: web的js小知识
 date: 2025-01-11 10:51:32
 categories: WEB
 tags: web
+updated: 2025-01-11 10:51:32
 ---
-
 # 简介
 javacript教程，在许多网页小游戏中，就用到了js，类似的还有js
 JavaScript 是 web 开发人员必须学习的 3 门语言中的一门：

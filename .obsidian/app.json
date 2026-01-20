@@ -4,6 +4,6 @@
   "newLinkFormat": "shortest",
   "attachmentFolderPath": "source/image",
   "promptDelete": false,
-  "showUnsupportedFiles": false,
+  "showUnsupportedFiles": true,
   "alwaysUpdateLinks": true
 }

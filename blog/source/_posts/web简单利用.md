@@ -3,6 +3,7 @@ title: web简单利用
 date: 2024-09-18 19:54:55
 categories: CTF
 tags: web
+updated: 2024-09-18 19:54:55
 ---
 最近写一些垃圾web用到了不知道的知识，在此记录，首先是头文件绕过
 
