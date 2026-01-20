@@ -4,5 +4,6 @@
   "obsidian-image-auto-upload-plugin",
   "remotely-save",
   "quickadd",
-  "frontmatter-modified-date"
+  "frontmatter-modified-date",
+  "global-proxy"
 ]
