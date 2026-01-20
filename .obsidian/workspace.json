@@ -11,24 +11,14 @@
             "id": "a34d8af575a65d12",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "blog/source/_drafts/分支函数逆向.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": "blog/source/_drafts/分支函数逆向.md",
+                "bFile": "blog/source/_drafts/分支函数逆向.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "分支函数逆向"
+              "icon": "diff",
+              "title": "Diff: 分支函数逆向  (Working Tree)"
             }
           }
         ]
@@ -216,17 +206,61 @@
       "remotely-save:Remotely Save": false
     }
   },
+  "floating": {
+    "id": "f0d3668cdf73575d",
+    "type": "floating",
+    "children": [
+      {
+        "id": "aadcecf2101553eb",
+        "type": "window",
+        "children": [
+          {
+            "id": "a3eaeaa6aaee6d82",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "801be599b35e5920",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://github.com/beaussan/update-time-on-edit-obsidian/issues",
+                    "title": "Issues · beaussan/update-time-on-edit-obsidian · GitHub",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "Issues · beaussan/update-time-on-edit-obsidian · GitHub"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 567,
+        "y": 143,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
-    "blog/source/_drafts/服务器更新计划和流程.md",
     "blog/source/_drafts/分支函数逆向.md",
+    "blog/source/_drafts/简单的远控木马啊.md",
+    "blog/source/_drafts/服务器更新计划和流程.md",
+    "blog/source/_drafts/关于转专业想说的话.md",
+    "blog/source/_drafts/利用quickadd自动化新建重命名笔记.md",
+    "blog/source/_drafts/逆向导学ppt.md",
+    "template/hexo-post.md",
+    "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/按钮事件.md",
     "blog/source/_posts/2025.md",
     "blog/source/_posts/常见的API.md",
     "blog/source/_posts/电子榨菜.md",
     "blog/source/_posts/markdown语法.md",
     "blog/source/_posts/反序列化.md",
-    "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/脚本命令的改变.md",
     "blog/source/_posts/爬虫初识.md",
     "blog/pyscript/copy.py",
@@ -241,12 +275,7 @@
     "blog/source/_drafts/我读过的逆向书.md",
     "blog/source/_drafts/如何学习逆向.md",
     "blog/source/_drafts/如何使用idapro.md",
-    "blog/source/_drafts/逆向导学ppt.md",
-    "blog/source/_drafts/利用quickadd自动化新建重命名笔记.md",
-    "blog/source/_drafts/简单的远控木马啊.md",
-    "blog/source/_drafts/关于转专业想说的话.md",
     "blog/pyscript/del.py",
-    "blog/pyscript/2025.md",
     "blog/pyscript",
     "blog/source_backup/_posts",
     "blog/source_backup/_drafts",
