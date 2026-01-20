@@ -3,8 +3,6 @@ title: DC-2
 date: 2024-11-28 22:46:20
 tags: web
 categories: 渗透测试
-created: 2026-01-18T12:49
-updated: 2024-11-28 22:46:20
 ---
 
 # DC-2

@@ -3,8 +3,6 @@ title: MSG脱壳过程中的IAT修复
 categories: 逆向
 date: 2024-09-12 14:59:07
 tags: reverse
-created: 2026-01-18T12:49
-updated: 2024-09-12 14:59:07
 ---
 ### FSG脱壳过程中的IAT修复
 进行手动查找和IAT修复

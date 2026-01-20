@@ -3,8 +3,6 @@ title: php一句话木马
 date: 2024-10-09 10:52:03
 categories: 网络
 tags: php
-created: 2026-01-18T12:49
-updated: 2024-10-09 10:52:03
 ---
 
 了解一下php的include函数顺便了解一句话木马的各种形式

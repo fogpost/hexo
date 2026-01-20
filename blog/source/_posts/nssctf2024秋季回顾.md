@@ -3,8 +3,6 @@ title: nssctf2024秋季回顾
 date: 2024-10-31 20:18:03
 categories: CTF
 tags: ctf
-created: 2026-01-18T12:49
-updated: 2024-10-31 20:18:03
 ---
 # nssctf2024秋季回顾
 ## 前言

@@ -3,8 +3,6 @@ title: ssrf
 date: 2024-11-07 19:31:44
 categories: CTF
 tags: web
-created: 2026-01-18T12:49
-updated: 2024-11-07 19:31:44
 ---
 
 # 介绍

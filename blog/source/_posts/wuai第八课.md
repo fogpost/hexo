@@ -3,8 +3,6 @@ title: wuai第八课
 date: 2024-10-15 23:06:10
 categories: 课程
 tags: reverse
-created: 2026-01-18T12:49
-updated: 2024-10-15 23:06:10
 ---
 
 # .bss节区

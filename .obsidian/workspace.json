@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/反序列化.md",
+                "file": "blog/source/_drafts/分支函数逆向.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "反序列化"
+              "title": "分支函数逆向"
             }
           }
         ]
@@ -218,14 +218,17 @@
   },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
+    "blog/source/_drafts/服务器更新计划和流程.md",
+    "blog/source/_drafts/分支函数逆向.md",
+    "blog/source/_posts/按钮事件.md",
+    "blog/source/_posts/2025.md",
+    "blog/source/_posts/常见的API.md",
+    "blog/source/_posts/电子榨菜.md",
+    "blog/source/_posts/markdown语法.md",
+    "blog/source/_posts/反序列化.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/脚本命令的改变.md",
-    "blog/source/_posts/电子榨菜.md",
-    "blog/source/_posts/常见的API.md",
-    "blog/source/_posts/按钮事件.md",
-    "blog/source/_posts/反序列化.md",
     "blog/source/_posts/爬虫初识.md",
-    "blog/source/_posts/2025.md",
     "blog/pyscript/copy.py",
     "blog/pyscript/新建文本文档.txt",
     "blog/source/_drafts/webtest 1.md",
@@ -242,12 +245,9 @@
     "blog/source/_drafts/利用quickadd自动化新建重命名笔记.md",
     "blog/source/_drafts/简单的远控木马啊.md",
     "blog/source/_drafts/关于转专业想说的话.md",
-    "blog/source/_drafts/服务器更新计划和流程.md",
-    "blog/source/_drafts/分支函数逆向.md",
     "blog/pyscript/del.py",
     "blog/pyscript/2025.md",
     "blog/pyscript",
-    "blog/source_backup/_drafts/分支函数逆向.md",
     "blog/source_backup/_posts",
     "blog/source_backup/_drafts",
     "blog/source_backup/pyscript/del.py",

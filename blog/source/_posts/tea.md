@@ -3,8 +3,6 @@ title: tea.dm
 categories: 逆向
 date: 2024-09-10 18:33:20
 tags: reverse
-created: 2026-01-18T12:49
-updated: 2024-09-10 18:33:20
 ---
 # tea
 终于自己做出一道tea了乐

@@ -3,8 +3,6 @@ title: bypass
 date: 2025-01-09 10:43:20
 categories: CTF
 tags: ctf
-created: 2026-01-18T12:49
-updated: 2025-01-09 10:43:20
 ---
 
 # 简介

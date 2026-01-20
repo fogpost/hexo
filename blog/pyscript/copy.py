@@ -35,7 +35,7 @@ def process_file(file_path):
                 continue
 
             # 找到 updated 字段，把值替换成 date
-            updated_match = re.match(r'^\s*updated:\s*(.*)', line)
+            updated_match = re.match(r'^\s*created:\s*(.*)', line)
             if updated_match:
                 if date_value:
                     new_lines.append(f"updated: {date_value}\n")

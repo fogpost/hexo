@@ -3,8 +3,6 @@ title: web的js小知识
 date: 2025-01-11 10:51:32
 categories: WEB
 tags: web
-created: 2026-01-18T12:49
-updated: 2025-01-11 10:51:32
 ---
 
 # 简介

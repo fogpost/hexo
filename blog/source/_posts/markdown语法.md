@@ -3,8 +3,6 @@ title: markdown语法
 date: 2024-09-14 23:16:49
 categories: 工具
 tags: tool
-created: 2026-01-18T12:49
-updated: 2024-09-14 23:16:49
 ---
 ```
 language	key

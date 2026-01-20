@@ -3,8 +3,6 @@ title: pip下载
 date: 2024-11-07 20:34:56
 categrories: python
 tags: tool
-created: 2026-01-18T12:49
-updated: 2024-11-07 20:34:56
 ---
 
 # pip下载
