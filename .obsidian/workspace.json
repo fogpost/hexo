@@ -11,14 +11,24 @@
             "id": "bfa33f1bc58c4909",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "blog/source_backup/_posts/基于obsidian的自动化推送blog搭建.md",
-                "bFile": "blog/source_backup/_posts/基于obsidian的自动化推送blog搭建.md",
-                "aRef": ""
+                "file": "blog/source/_posts/Diary.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: 基于obsidian的自动化推送blog搭建  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Diary"
             }
           }
         ]
@@ -142,12 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "blog/source/_posts/Diary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "Diary 的大纲"
             }
           },
           {
@@ -185,7 +196,9 @@
             "type": "leaf",
             "state": {
               "type": "footnotes",
-              "state": {},
+              "state": {
+                "file": "blog/source/_posts/Diary.md"
+              },
               "icon": "lucide-file-signature",
               "title": "脚注"
             }
@@ -214,6 +227,8 @@
   },
   "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
+    "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
+    "blog/source/_posts/日记.md",
     "blog/source/_drafts/win32读书笔记.md",
     "copilot/copilot-conversations/帮我把所有的文本优化一下@20260120_202641.md",
     "blog/source/_posts/区块链2.md",
@@ -239,8 +254,6 @@
     "copilot/copilot-custom-prompts/Generate glossary.md",
     "copilot/copilot-custom-prompts/Generate table of contents.md",
     "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Make shorter.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Home",
