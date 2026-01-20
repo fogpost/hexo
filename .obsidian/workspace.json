@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
+                "file": "Templates/Time_Stamp.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "基于obsidian的自动化推送blog搭建"
+              "title": "Time_Stamp"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": " ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -218,12 +218,17 @@
   },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
-    "blog/source/_posts/反序列化.md",
+    "blog/source/_posts/diary-2026-1-4.md",
+    "Templates/Time_Stamp.md",
+    "Templates/新建文本文档.txt",
+    "Templates/~建 Microsoft Excel 工作表.tmp",
+    "Templates/新建 Microsoft Excel 工作表.xlsx",
+    "blog/source/_posts/日记.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
+    "blog/source/_posts/反序列化.md",
     "blog/source/_posts/2025.md",
     "Templates/hexo-post.md",
     "blog/source/_posts/脱壳教程第一课.md",
-    "blog/source/_posts/日记.md",
     "blog/source/_posts/区块链2.md",
     "blog/source/_posts/区块链.md",
     "blog/source/_posts/1234.md",
@@ -241,13 +246,10 @@
     "blog/public/img/avatar.png",
     "blog/public/image/image 4.png",
     "blog/public/tags/course/index.html",
-    "blog/public/tags/course",
     "blog/public/image/image 28.png",
     "blog/public/image/image 34.png",
     "blog/public/image/image 3.png",
     "blog/public/image/image 27.png",
-    "blog/public/404.html",
-    "blog/public/CNAME",
     "blog/node_modules/fresh/README.md",
     "blog/node_modules/fresh/HISTORY.md",
     "blog/node_modules/toidentifier/README.md",
@@ -262,8 +264,6 @@
     "blog/node_modules/on-finished/HISTORY.md",
     "blog/node_modules/wrappy/README.md",
     "blog/node_modules/path-is-absolute/readme.md",
-    "blog/node_modules/fs.realpath/README.md",
-    "blog/node_modules/css-what/readme.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]

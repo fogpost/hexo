@@ -1,5 +1,5 @@
 {
-  "enableProxy": false,
+  "enableProxy": true,
   "httpProxy": "",
   "httpsProxy": "",
   "socksProxy": "127.0.0.1:7890",
