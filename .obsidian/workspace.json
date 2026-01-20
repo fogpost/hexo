@@ -1,34 +1,20 @@
 {
   "main": {
-    "id": "33b184487386c810",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "57d1132f41a9a02f",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "a34d8af575a65d12",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/source/_posts/2025.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2025"
+              "title": "新标签页"
             }
           }
         ]
@@ -204,6 +190,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "homepage:Open homepage": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -213,11 +200,33 @@
       "bases:新建数据库": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "copilot:Open Copilot Chat": false
     }
   },
-  "active": "a34d8af575a65d12",
+  "active": "d7e5de6f28be6c43",
   "lastOpenFiles": [
+    "copilot/copilot-custom-prompts/Clip Web Page.md",
+    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot/copilot-custom-prompts/Remove URLs.md",
+    "copilot/copilot-custom-prompts/Generate glossary.md",
+    "copilot/copilot-custom-prompts/Generate table of contents.md",
+    "copilot/copilot-custom-prompts/Make longer.md",
+    "copilot/copilot-custom-prompts/Make shorter.md",
+    "copilot/copilot-custom-prompts/Emojify.md",
+    "copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "copilot/copilot-custom-prompts/Simplify.md",
+    "copilot/copilot-custom-prompts/Summarize.md",
+    "copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "copilot/copilot-custom-prompts",
+    "copilot",
+    "Home",
+    "blog/source/_posts/2025.md",
     "blog/source/_posts/按钮事件.md",
     "Templates/Time_Stamp.md",
     "blog/source/_posts/diary-2026-1-4.md",
@@ -227,43 +236,24 @@
     "blog/source/_posts/日记.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/反序列化.md",
-    "blog/source/_posts/2025.md",
     "Templates/hexo-post.md",
     "blog/source/_posts/脱壳教程第一课.md",
     "blog/source/_posts/区块链2.md",
     "blog/source/_posts/区块链.md",
-    "blog/source/_posts/1234.md",
     "blog/public/2026/01/20/1234/index.html",
     "blog/public/2026/01/20/1234",
-    "test.md",
     "blog/public/2026/01/20/未命名/index.html",
     "blog/public/2026/01/20/未命名",
-    "blog/public/2026/01/20",
-    "blog/db.json",
     "blog/public/img/fluid.png",
     "blog/public/img/police_beian.png",
     "blog/public/image/image 5.png",
     "blog/public/image/image 7.png",
     "blog/public/img/avatar.png",
     "blog/public/image/image 4.png",
-    "blog/public/tags/course/index.html",
     "blog/public/image/image 28.png",
     "blog/public/image/image 34.png",
     "blog/public/image/image 3.png",
     "blog/public/image/image 27.png",
-    "blog/node_modules/fresh/README.md",
-    "blog/node_modules/fresh/HISTORY.md",
-    "blog/node_modules/toidentifier/README.md",
-    "blog/node_modules/toidentifier/HISTORY.md",
-    "blog/node_modules/mime/README.md",
-    "blog/node_modules/mime/CHANGELOG.md",
-    "blog/node_modules/morgan/README.md",
-    "blog/node_modules/morgan/HISTORY.md",
-    "blog/node_modules/negotiator/README.md",
-    "blog/node_modules/negotiator/HISTORY.md",
-    "blog/node_modules/on-finished/README.md",
-    "blog/node_modules/on-finished/HISTORY.md",
-    "blog/node_modules/wrappy/README.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
