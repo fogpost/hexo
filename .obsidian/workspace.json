@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Time_Stamp.md",
+                "file": "blog/source/_posts/2025.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Time_Stamp"
+              "title": "2025"
             }
           }
         ]
@@ -218,8 +218,9 @@
   },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
-    "blog/source/_posts/diary-2026-1-4.md",
+    "blog/source/_posts/按钮事件.md",
     "Templates/Time_Stamp.md",
+    "blog/source/_posts/diary-2026-1-4.md",
     "Templates/新建文本文档.txt",
     "Templates/~建 Microsoft Excel 工作表.tmp",
     "Templates/新建 Microsoft Excel 工作表.xlsx",
@@ -263,7 +264,6 @@
     "blog/node_modules/on-finished/README.md",
     "blog/node_modules/on-finished/HISTORY.md",
     "blog/node_modules/wrappy/README.md",
-    "blog/node_modules/path-is-absolute/readme.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
