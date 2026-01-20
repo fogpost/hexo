@@ -23,7 +23,7 @@ pretty_urls:
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
-source_dir: C:\Users\fogpost\OneDrive\source
+source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
@@ -82,7 +82,7 @@ meta_generator: false
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: 'empty'
 
 # Pagination
 ## Set per_page to 0 to disable pagination

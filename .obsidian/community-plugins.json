@@ -3,5 +3,6 @@
   "templater-obsidian",
   "obsidian-image-auto-upload-plugin",
   "remotely-save",
-  "quickadd"
+  "quickadd",
+  "global-proxy"
 ]
