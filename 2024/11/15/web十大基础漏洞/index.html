@@ -27,7 +27,7 @@
 <meta property="og:description" content="简介搞渗透，挖漏洞，应该了解这些知识基础，我现在对这些东西的理解还不是很清晰，特此来写这一篇文章，逆向方面的话，可能就会比较晚了，感觉reverse-wiki不知到什么时候才可以开张 OWASP（开放式Web应用程序安全项目）是一个开放的社区，由非营利组织 OWASP基金会支持的项目。对所有致力于改进应用程序安全的人士开放，旨在提高对应用程序安全性的认识。其最具权威的就是“10项最严重的Web 应">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-15T22:13:28.000Z">
-<meta property="article:modified_time" content="2026-01-19T11:52:10.565Z">
+<meta property="article:modified_time" content="2024-11-15T22:13:28.000Z">
 <meta property="article:author" content="fogpost">
 <meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary_large_image">
@@ -297,16 +297,6 @@
           <article class="post-content mx-auto">
             <h1 id="seo-header">owasp top10 十大常见漏洞</h1>
             
-              <p id="updated-time" class="note note-info" style="display: none">
-                
-                  
-                    本文最后更新于 2026-01-19T11:52:10+00:00
-                  
-                  
-
-                
-              </p>
-            
             
               <div class="markdown-body">
                 
@@ -383,11 +373,6 @@
           <div>2024年11月15日</div>
         </div>
       
-      
-        <div class="license-meta-item license-meta-date">
-          <div>更新于</div>
-          <div>2026年1月19日</div>
-        </div>
       
       
         <div class="license-meta-item">
@@ -612,33 +597,6 @@
   
 
 
-
-
-  
-<script>
-  var relativeDate = function() {
-    var updatedTime = document.getElementById('updated-time');
-    if (updatedTime) {
-      var text = updatedTime.textContent;
-      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
-      var matchs = text.match(reg);
-      if (matchs) {
-        var relativeTime = moment(matchs[0]).fromNow();
-        updatedTime.textContent = text.replace(reg, relativeTime);
-      }
-      updatedTime.style.display = '';
-    }
-  };
-  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
-    if (!'zh-cn'.startsWith('en')) {
-      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
-        relativeDate();
-      });
-    } else {
-      relativeDate();
-    }
-  });
-</script>
 
 
   
