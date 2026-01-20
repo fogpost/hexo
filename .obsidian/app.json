@@ -4,6 +4,12 @@
   "newLinkFormat": "shortest",
   "attachmentFolderPath": "source/image",
   "promptDelete": false,
-  "showUnsupportedFiles": true,
-  "alwaysUpdateLinks": true
+  "showUnsupportedFiles": false,
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "Templates/",
+    "blog/public/",
+    "blog/node_modules/",
+    "copilot/"
+  ]
 }

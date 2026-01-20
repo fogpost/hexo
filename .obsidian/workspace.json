@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "eb44b974e1049d8a",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "bfa33f1bc58c4909",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "blog/source_backup/_posts/基于obsidian的自动化推送blog搭建.md",
+                "bFile": "blog/source_backup/_posts/基于obsidian的自动化推送blog搭建.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: 基于obsidian的自动化推送blog搭建  (Working Tree)"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": " ",
+                "query": "tag:#copilot-conversation",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +65,7 @@
             }
           },
           {
-            "id": "91db7167b65e1265",
+            "id": "14a9ef9e22442b90",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -133,32 +137,17 @@
             }
           },
           {
-            "id": "f0cd73567db0eaad",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-ghost",
-              "title": "all-properties"
-            }
-          },
-          {
             "id": "7efab45a138c88e3",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "欢迎.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "欢迎 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -180,9 +169,29 @@
               "icon": "history",
               "title": "History"
             }
+          },
+          {
+            "id": "5a6c2fde7ad24c7a",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          },
+          {
+            "id": "d2fd872b8793a5ce",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {},
+              "icon": "lucide-file-signature",
+              "title": "脚注"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -203,8 +212,25 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "d7e5de6f28be6c43",
+  "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
+    "blog/source/_drafts/win32读书笔记.md",
+    "copilot/copilot-conversations/帮我把所有的文本优化一下@20260120_202641.md",
+    "blog/source/_posts/区块链2.md",
+    "blog/source/_posts/linux.md",
+    "blog/source/_posts/sqli10-20.md",
+    "blog/source/_posts/sqli练习.md",
+    "copilot/copilot-conversations",
+    "blog/source/_posts/sql.md",
+    "blog/source_backup/_posts/sql.md",
+    "blog/source_backup/_posts/sqli练习.md",
+    "Notion/新的开始/学会py脚本写个项目.md",
+    "Notion/新的开始/新的开始.md",
+    "Notion/过去的想法/Web安全/知识点/数据库/Sqlite.md",
+    "Notion/过去的想法/Web安全/知识点/数据库/数据库.md",
+    "Notion/过去的想法/Web安全/知识点/知识点.md",
+    "blog/node_modules/node-addon-api/README.md",
+    "blog/node_modules/ms/license.md",
     "copilot/copilot-custom-prompts/Clip Web Page.md",
     "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
@@ -215,32 +241,15 @@
     "copilot/copilot-custom-prompts/Make longer.md",
     "copilot/copilot-custom-prompts/Make shorter.md",
     "copilot/copilot-custom-prompts/Emojify.md",
-    "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Simplify.md",
-    "copilot/copilot-custom-prompts/Summarize.md",
-    "copilot/copilot-custom-prompts/Translate to Chinese.md",
-    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Home",
-    "blog/source/_posts/2025.md",
-    "blog/source/_posts/按钮事件.md",
-    "Templates/Time_Stamp.md",
-    "blog/source/_posts/diary-2026-1-4.md",
     "Templates/新建文本文档.txt",
     "Templates/~建 Microsoft Excel 工作表.tmp",
     "Templates/新建 Microsoft Excel 工作表.xlsx",
-    "blog/source/_posts/日记.md",
-    "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
-    "blog/source/_posts/反序列化.md",
-    "Templates/hexo-post.md",
-    "blog/source/_posts/脱壳教程第一课.md",
-    "blog/source/_posts/区块链2.md",
-    "blog/source/_posts/区块链.md",
     "blog/public/2026/01/20/1234/index.html",
     "blog/public/2026/01/20/1234",
     "blog/public/2026/01/20/未命名/index.html",
-    "blog/public/2026/01/20/未命名",
     "blog/public/img/fluid.png",
     "blog/public/img/police_beian.png",
     "blog/public/image/image 5.png",
