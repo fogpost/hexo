@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/逆向导学ppt.md",
+                "file": "template/hexo-post.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "逆向导学ppt"
+              "title": "hexo-post"
             }
           }
         ]
@@ -218,6 +218,7 @@
   },
   "active": "a34d8af575a65d12",
   "lastOpenFiles": [
+    "blog/source/_drafts/逆向导学ppt.md",
     "blog/source/_drafts/利用quickadd自动化新建重命名笔记.md",
     "template/hexo-post.md",
     "blog/source/_drafts/ciscnwp复现.md",
@@ -230,7 +231,6 @@
     "template",
     "blog/source/_drafts/123.md",
     "blog/source/_drafts/1223.md",
-    "blog/source/_drafts/逆向导学ppt.md",
     "blog/source/_posts/2025.md",
     "blog/source/_posts/日记.md",
     "Notion/过去的想法/Web安全/工具/wpscan.md",
