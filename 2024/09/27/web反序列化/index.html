@@ -27,6 +27,7 @@
 <meta property="og:description" content="本人在学习php反序列化时，深感无力，发现并不能将发序列化作为一个小点，要从php底层开始理解 先了解一下php的魔术方法  __construct()	类的构造函数，在类实例化对象时自动调用构造函数__destruct()	类的析构函数，在对象销毁之前自动调用析构函数__sleep()	在对象被序列化（使用 serialize() 函数）之前自动调用，可以在此方法中指定需要被序列化的属性，返回一">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-27T08:00:57.000Z">
+<meta property="article:modified_time" content="2024-09-27T08:00:57.000Z">
 <meta property="article:author" content="fogpost">
 <meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary_large_image">
@@ -295,16 +296,6 @@
         <div id="board">
           <article class="post-content mx-auto">
             <h1 id="seo-header">web反序列化</h1>
-            
-              <p id="updated-time" class="note note-info" style="display: none">
-                
-                  
-                    本文最后更新于 2026-01-20T08:44:56+00:00
-                  
-                  
-
-                
-              </p>
             
             
               <div class="markdown-body">
@@ -642,33 +633,6 @@
   
 
 
-
-
-  
-<script>
-  var relativeDate = function() {
-    var updatedTime = document.getElementById('updated-time');
-    if (updatedTime) {
-      var text = updatedTime.textContent;
-      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
-      var matchs = text.match(reg);
-      if (matchs) {
-        var relativeTime = moment(matchs[0]).fromNow();
-        updatedTime.textContent = text.replace(reg, relativeTime);
-      }
-      updatedTime.style.display = '';
-    }
-  };
-  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
-    if (!'zh-cn'.startsWith('en')) {
-      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
-        relativeDate();
-      });
-    } else {
-      relativeDate();
-    }
-  });
-</script>
 
 
   

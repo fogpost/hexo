@@ -27,6 +27,7 @@
 <meta property="og:description" content="简介好久没有写东西了，最近的ctf中有遇到一个jelly的题目，记录一下，题目是国成杯的web题，题目描述如下： Jelly简介Jelly的官方介绍 Jelly是Java Server Pages XML的简称，它是一种基于XML的脚本语言，用于在Java EE应用程序中生成动态内容。Jelly是一种基于XML的脚本语言，它允许开发人员使用XML标记来编写Java代码，从而实现动态内容的生成。 J">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-11T14:03:29.000Z">
+<meta property="article:modified_time" content="2024-12-11T14:03:29.000Z">
 <meta property="article:author" content="fogpost">
 <meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary_large_image">
@@ -295,16 +296,6 @@
         <div id="board">
           <article class="post-content mx-auto">
             <h1 id="seo-header">web中可执行的xml文件jelly</h1>
-            
-              <p id="updated-time" class="note note-info" style="display: none">
-                
-                  
-                    本文最后更新于 2026-01-20T08:44:56+00:00
-                  
-                  
-
-                
-              </p>
             
             
               <div class="markdown-body">
@@ -606,33 +597,6 @@
   
 
 
-
-
-  
-<script>
-  var relativeDate = function() {
-    var updatedTime = document.getElementById('updated-time');
-    if (updatedTime) {
-      var text = updatedTime.textContent;
-      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
-      var matchs = text.match(reg);
-      if (matchs) {
-        var relativeTime = moment(matchs[0]).fromNow();
-        updatedTime.textContent = text.replace(reg, relativeTime);
-      }
-      updatedTime.style.display = '';
-    }
-  };
-  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
-    if (!'zh-cn'.startsWith('en')) {
-      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
-        relativeDate();
-      });
-    } else {
-      relativeDate();
-    }
-  });
-</script>
 
 
   

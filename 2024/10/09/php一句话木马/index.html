@@ -27,6 +27,7 @@
 <meta property="og:description" content="了解一下php的include函数顺便了解一句话木马的各种形式 include函数在php中，include函数用于引入一个文件，如果引入的文件不存在，则会抛出一个警告，但程序会继续执行。 1234&lt;?phpinclude &#x27;test.php&#x27;;echo &#x27;hello world&#x27;;?&gt; 如果test.php不存在，则会抛出一个警告，但程序会继续">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-09T10:52:03.000Z">
+<meta property="article:modified_time" content="2024-10-09T10:52:03.000Z">
 <meta property="article:author" content="fogpost">
 <meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary_large_image">
@@ -295,16 +296,6 @@
         <div id="board">
           <article class="post-content mx-auto">
             <h1 id="seo-header">php一句话木马</h1>
-            
-              <p id="updated-time" class="note note-info" style="display: none">
-                
-                  
-                    本文最后更新于 2026-01-20T08:44:56+00:00
-                  
-                  
-
-                
-              </p>
             
             
               <div class="markdown-body">
@@ -604,33 +595,6 @@
   
 
 
-
-
-  
-<script>
-  var relativeDate = function() {
-    var updatedTime = document.getElementById('updated-time');
-    if (updatedTime) {
-      var text = updatedTime.textContent;
-      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
-      var matchs = text.match(reg);
-      if (matchs) {
-        var relativeTime = moment(matchs[0]).fromNow();
-        updatedTime.textContent = text.replace(reg, relativeTime);
-      }
-      updatedTime.style.display = '';
-    }
-  };
-  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
-    if (!'zh-cn'.startsWith('en')) {
-      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
-        relativeDate();
-      });
-    } else {
-      relativeDate();
-    }
-  });
-</script>
 
 
   
