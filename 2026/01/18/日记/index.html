@@ -27,7 +27,6 @@
 <meta property="og:description" content="（这个开头标题到底要不要呢后面还得看看具体）今天一大早也是就开始看漫画，我去我还没吃早饭先去吃个早饭，我去今天上午起来本来打算写逆向ppt的但是群友发了炎拳ai动画看漫画去了，看到12点看完了， 战斗比较少，但是令人思考的地方比较多，挺有意思的作品，于是忘记写ppt了，下午三点多回老家了也没时间写gg。晚上跑步回来直到11：30才继续写这个文章。有点晚了，先铲一把😁，明天要练车喽，rss和视频也">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-01-18T12:56:00.000Z">
-<meta property="article:modified_time" content="2026-01-18T12:56:00.000Z">
 <meta property="article:author" content="fogpost">
 <meta property="article:tag" content="diary">
 <meta name="twitter:card" content="summary_large_image">
@@ -297,6 +296,16 @@
           <article class="post-content mx-auto">
             <h1 id="seo-header">日记</h1>
             
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2026-01-20T07:32:29+00:00
+                  
+                  
+
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
@@ -559,6 +568,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   

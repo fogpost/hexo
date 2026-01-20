@@ -27,7 +27,6 @@
 <meta property="og:description" content="hash算法打算了解一下各个hash算法的细节，防止在看到伪代码时不认识 MD5MD5加密原理步骤 在MD5算法中，首先需要对信息进行填充，使其位长对512求余的结果等于448，并且填充必须进行(N*512+448) 初始化变量,以大端字节序来表示，他们分别为： A&#x3D;0x01234567，B&#x3D;0x89ABCDEF，C&#x3D;0xFEDCBA98，D&#x3D;0x76543">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-28T19:36:46.000Z">
-<meta property="article:modified_time" content="2024-10-28T19:36:46.000Z">
 <meta property="article:author" content="fogpost">
 <meta property="article:tag" content="reverse">
 <meta name="twitter:card" content="summary_large_image">
@@ -296,6 +295,16 @@
         <div id="board">
           <article class="post-content mx-auto">
             <h1 id="seo-header">hash</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2026-01-20T07:32:29+00:00
+                  
+                  
+
+                
+              </p>
             
             
               <div class="markdown-body">
@@ -596,6 +605,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   
