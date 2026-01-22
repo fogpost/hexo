@@ -11,14 +11,24 @@
             "id": "bfa33f1bc58c4909",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
-                "bFile": "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
-                "aRef": ""
+                "file": "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: GHCTF  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "反弹shell的🐎"
             }
           }
         ]
@@ -215,53 +225,14 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "floating": {
-    "id": "0a57311a5de63d2c",
-    "type": "floating",
-    "children": [
-      {
-        "id": "6eedb56cee5e76c6",
-        "type": "window",
-        "children": [
-          {
-            "id": "3e493ff37be65649",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "3e5db635badde840",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://account.live.com/consent/Edit?client_id=000000004493E277",
-                    "title": "Microsoft 帐户",
-                    "mode": "blank"
-                  },
-                  "icon": "globe-2",
-                  "title": "Microsoft 帐户"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 448,
-        "y": 140,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "3e5db635badde840",
+  "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
+    "Notion/过去的想法/CTF/GHCTF/公钥ssh登录.md",
+    "Notion/过去的想法/CTF/GHCTF/双重MD5绕过.md",
+    "Notion/过去的想法/CTF/GHCTF/解决方案.md",
+    "Notion/过去的想法/CTF/GHCTF/造成两次编码不一致的关键点.md",
     "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
     "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
-    "Notion/过去的想法/CTF/GHCTF/公钥ssh登录.md",
-    "Notion/过去的想法/CTF/GHCTF/解决方案.md",
-    "Notion/过去的想法/CTF/GHCTF/双重MD5绕过.md",
-    "Notion/过去的想法/CTF/GHCTF/造成两次编码不一致的关键点.md",
     "blog/source/_posts/Diary.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/日记.md",
