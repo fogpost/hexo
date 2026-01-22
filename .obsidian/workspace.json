@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
+                "file": "blog/source/_posts/Diary.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "GHCTF"
+              "title": "Diary"
             }
           },
           {
@@ -285,13 +285,13 @@
   "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
     "blog/source/_posts/Diary.md",
+    "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
     "blog/source/_drafts/逆向导学ppt.md",
     "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
     "Notion/过去的想法/CTF/GHCTF/公钥ssh登录.md",
     "Notion/过去的想法/CTF/GHCTF/双重MD5绕过.md",
     "Notion/过去的想法/CTF/GHCTF/解决方案.md",
     "Notion/过去的想法/CTF/GHCTF/造成两次编码不一致的关键点.md",
-    "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/日记.md",
     "blog/source/_drafts/win32读书笔记.md",
