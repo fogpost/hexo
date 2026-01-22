@@ -3,7 +3,7 @@ title: 逆向ppt
 date: 2026-01-19T18:49:00
 tags:
   - ctf
-updated: 2026-01-22 16:38:53
+updated: 2026-01-22 17:16:11
 ---
 # 开篇想说的话
 我去刚刚准备写ppt的时候发现我obsidian没有重命名和自动化创建标签的功能，不过还好社区的template和quickadd给我们提出了解决办法，不过现在还是先来好好写我们的ppt吧，下午本来三点中想写的不过睡了一觉就到6点了🤭。之后还要写毕设呢，不然脑袋痛
@@ -27,6 +27,11 @@ updated: 2026-01-22 16:38:53
 初学者要了解的主要是工具的种类和用法，同web工具而言，逆向也有以下几个步骤，我顺带将各个流程工具写上
 
 - 信息收集。（IDE，PEinfo）
+IDE
+![image.png](https://gitee.com/fogpost/photo/raw/master/202601221717345.png) 
+PEinfo
+![image.png](https://gitee.com/fogpost/photo/raw/master/202601221717988.png)
+
 - 过程分析。(静态IDA/Ghidra,动态x64dbg/ollydbg)
 - 漏洞利用。（python脚本，idc，动态调试）
 
@@ -82,24 +87,22 @@ updated: 2026-01-22 16:38:53
     }
     cout << "Correct!" << endl;
 ```
-👉 在 IDA 里对应哪几行？  
+👉 在 IDA 里对应哪几行？
+利用F5可以看到主函数的伪代码
+![image.png](https://gitee.com/fogpost/photo/raw/master/202601221715777.png)
+
 👉 怎么一眼看出这是 XOR 校验？
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202601221640600.png)
-
-
-
-### 3️⃣ 常见校验结构总结（非常重要）
-
-- strcmp / memcmp
-- for 循环逐字节校验
-- 加密后比较
-- 长度校验
 
 ### 4️⃣ 实战小题
 - xor + for 循环
 - flag 存在 data 段
 - 轻度反编译即可还原
-
+```python
+cipher=[0x13,0x39,0x34,0x32,0x2e,0x1d,0x30,0x39,0x39,0x3a,0x0a,0x16,0x01,0x13,0x28]
+for i in cipher:
+    print(chr(i^0x55),end="")
+```
 🎯 本章产出
 
 > 学员能做到：  

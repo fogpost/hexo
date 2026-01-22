@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
+                "file": "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,19 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "反弹shell的🐎"
+              "title": "GHCTF"
+            }
+          },
+          {
+            "id": "21a7b0e2ae8951aa",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.11.5"
             }
           },
           {
@@ -258,14 +270,13 @@
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
       "remotely-save:Remotely Save": false,
-      "copilot:Open Copilot Chat": false,
-      "darlal-switcher-plus:Open in Headings Mode": false,
-      "darlal-switcher-plus:Open Symbols for the active editor": false
+      "copilot:Open Copilot Chat": false
     }
   },
-  "active": "5b7a311fbcae1f43",
+  "active": "21a7b0e2ae8951aa",
   "lastOpenFiles": [
     "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
+    "blog/source/_drafts/逆向导学ppt.md",
     "Notion/过去的想法/CTF/GHCTF/公钥ssh登录.md",
     "Notion/过去的想法/CTF/GHCTF/双重MD5绕过.md",
     "Notion/过去的想法/CTF/GHCTF/解决方案.md",
@@ -291,7 +302,6 @@
     "Notion/过去的想法/Web安全/知识点/知识点.md",
     "blog/node_modules/node-addon-api/README.md",
     "blog/node_modules/ms/license.md",
-    "copilot/copilot-custom-prompts/Clip Web Page.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Home",
