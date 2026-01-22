@@ -3,7 +3,7 @@ title: php伪协议
 categories: 网络
 date: 2024-09-11 14:59:07
 tags: php
-updated: 2024-09-11 14:59:07
+updated: 2024-09-11T14:59:07+08:00
 ---
 # php伪协议
 

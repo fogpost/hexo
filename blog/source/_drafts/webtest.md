@@ -2,7 +2,7 @@
 title: webtest
 date: 2025-01-05 20:13:40
 tags:
-updated: 2025-01-05 20:13:40
+updated: 2025-01-05T20:13:40+08:00
 ---
 # JSFUCK
 ```

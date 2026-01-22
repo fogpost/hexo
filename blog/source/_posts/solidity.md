@@ -3,7 +3,7 @@ title: solidity
 date: 2024-10-25 08:45:51
 category: web3
 tags: course
-updated: 2024-10-25 08:45:51
+updated: 2024-10-25T08:45:51+08:00
 ---
 # Solidity代码块
 真不想写这个啊，没见过的代码，直接搜的到时候背就行,一下代码都是Solidity代码块，为了便于查看用的是c++格式解析，因为sd根本就没有自带解析，也懒得找了

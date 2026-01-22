@@ -3,7 +3,7 @@ title: pymagic
 date: 2024-09-15 10:45:49
 categories: 工具
 tags: python
-updated: 2024-09-15 10:45:49
+updated: 2024-09-15T10:45:49+08:00
 ---
 ```
 enum PycMagic {

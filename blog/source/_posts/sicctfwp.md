@@ -3,7 +3,7 @@ title: sicctfwp
 date: 2024-11-01 22:15:18
 categories: CTF
 tags: ctf
-updated: 2024-11-01 22:15:18
+updated: 2024-11-01T22:15:18+08:00
 ---
 # web
 ## Sigin

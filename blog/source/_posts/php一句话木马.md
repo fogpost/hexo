@@ -3,7 +3,7 @@ title: php一句话木马
 date: 2024-10-09 10:52:03
 categories: 网络
 tags: php
-updated: 2024-10-09 10:52:03
+updated: 2024-10-09T10:52:03+08:00
 ---
 了解一下php的include函数顺便了解一句话木马的各种形式
 ## include函数

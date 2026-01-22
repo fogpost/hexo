@@ -3,7 +3,7 @@ title: web的js小知识
 date: 2025-01-11 10:51:32
 categories: WEB
 tags: web
-updated: 2025-01-11 10:51:32
+updated: 2025-01-11T10:51:32+08:00
 ---
 # 简介
 javacript教程，在许多网页小游戏中，就用到了js，类似的还有js

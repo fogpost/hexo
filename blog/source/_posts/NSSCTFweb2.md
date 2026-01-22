@@ -3,7 +3,7 @@ title: NSSCTFweb2
 date: 2024-10-19 23:46:57
 categories: CTF
 tags: web
-updated: 2024-10-19 23:46:57
+updated: 2024-10-19T23:46:57+08:00
 ---
 The future
 ```php

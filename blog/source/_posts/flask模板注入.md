@@ -3,7 +3,7 @@ title: flask模板注入
 date: 2025-01-10 14:50:20
 categories: WEB
 tags: web
-updated: 2025-01-10 14:50:20
+updated: 2025-01-10T14:50:20+08:00
 ---
 # flask模板注入
 

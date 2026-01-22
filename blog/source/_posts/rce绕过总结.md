@@ -3,7 +3,7 @@ title: waf绕过总结
 date: 2024-12-11 15:39:59
 categories: 网络
 tags: web
-updated: 2024-12-11 15:39:59
+updated: 2024-12-11T15:39:59+08:00
 ---
 # waf绕过总结
 ## ping
