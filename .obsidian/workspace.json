@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "反弹shell的🐎"
             }
+          },
+          {
+            "id": "5b7a311fbcae1f43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/source/_drafts/逆向导学ppt.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "逆向导学ppt"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -50,7 +75,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -83,8 +108,19 @@
               "icon": "lucide-bookmark",
               "title": "书签"
             }
+          },
+          {
+            "id": "dfd9030025492a51",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -222,17 +258,19 @@
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
       "remotely-save:Remotely Save": false,
-      "copilot:Open Copilot Chat": false
+      "copilot:Open Copilot Chat": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false
     }
   },
-  "active": "bfa33f1bc58c4909",
+  "active": "dfd9030025492a51",
   "lastOpenFiles": [
+    "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
     "Notion/过去的想法/CTF/GHCTF/公钥ssh登录.md",
     "Notion/过去的想法/CTF/GHCTF/双重MD5绕过.md",
     "Notion/过去的想法/CTF/GHCTF/解决方案.md",
     "Notion/过去的想法/CTF/GHCTF/造成两次编码不一致的关键点.md",
     "Notion/过去的想法/CTF/GHCTF/GHCTF.md",
-    "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
     "blog/source/_posts/Diary.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/日记.md",
