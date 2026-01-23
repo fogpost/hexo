@@ -30,54 +30,6 @@
               "icon": "lucide-file",
               "title": "wuai第八课"
             }
-          },
-          {
-            "id": "21a7b0e2ae8951aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/source/_posts/Diary.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Diary"
-            }
-          },
-          {
-            "id": "5b7a311fbcae1f43",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/source/_drafts/逆向导学ppt.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "逆向导学ppt"
-            }
           }
         ]
       }
@@ -284,6 +236,8 @@
   },
   "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
+    "blog/source/_posts/Diary.md",
+    "blog/source/_posts/wuai第八课.md",
     "blog/source/_posts/rc4.md",
     "blog/source/_posts/sql.md",
     "blog/source/_posts/web中可执行的xml文件jelly.md",
@@ -291,14 +245,12 @@
     "blog/source/_posts/sqli10-20.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "blog/source/_posts/新的开始.md",
-    "blog/source/_posts/Diary.md",
     "blog/source/_posts/逆向出题记录.md",
     "blog/source/_posts/脱壳教程第一课.md",
     "blog/source/_posts/脚本命令的改变.md",
     "blog/source/_posts/区块链2.md",
     "blog/source/_posts/可恶的gitee吃掉外链了.md",
     "blog/source/_posts/区块链.md",
-    "blog/source/_posts/wuai第八课.md",
     "blog/source/_posts/web简单利用.md",
     "blog/source/_posts/web杂项.md",
     "blog/source/_posts/web安全流程.md",
