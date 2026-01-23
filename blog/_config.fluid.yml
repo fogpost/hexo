@@ -6,7 +6,7 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    - { key: "rss", link: "javascript:;", icon: "iconfont icon-rss", class: "nav-rss-copy" }
+    - { key: "rss", link: "/rss.xml", icon: "iconfont icon-rss", name: "订阅" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 lazyload:
@@ -14,6 +14,3 @@ lazyload:
   loading_img: /img/loading.gif
   onlypost: true
   offset_factor: 2
-
-custom_js:
-  - /js/rss-copy.js
