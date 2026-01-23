@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/about/index.md",
+                "file": "blog/source/_posts/Diary.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Diary"
             }
           }
         ]
@@ -236,6 +236,7 @@
   },
   "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
+    "blog/source/about/index.md",
     "blog/public/categories/电子榨菜/index.html",
     "blog/public/categories/电子榨菜",
     "blog/public/categories/教程/index.html",
@@ -246,7 +247,6 @@
     "blog/public/categories/课程",
     "blog/public/categories/SQL/index.html",
     "blog/public/categories/SQL",
-    "blog/public/categories/网络/index.html",
     "blog/public/image/image.png",
     "blog/public/image/image 30.png",
     "blog/public/image/image 1.png",
@@ -257,7 +257,6 @@
     "blog/public/img/miku.png",
     "blog/public/img/avatar.png",
     "blog/public/img/police_beian.png",
-    "blog/source/about/index.md",
     "blog/source/_posts/Diary.md",
     "Templates/Time_Stamp.md",
     "blog/source/_posts/wuai第八课.md",
