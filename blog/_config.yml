@@ -112,7 +112,9 @@ deploy:
 feed:
   type: rss2
   path: rss.xml
+  limit: 20
   content: true
+  render: false
   
 iconfont: //at.alicdn.com/t/c/font_1736178_k526ubmyhba.css
 

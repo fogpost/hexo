@@ -14,3 +14,11 @@ navbar:
 #   loading_img: /img/loading.gif
 #   onlypost: true
 #   offset_factor: 2
+
+rss:
+  enable: true
+  limit: 20
+  content: true
+  # 👇 关键
+  highlight: false
+
