@@ -106,6 +106,8 @@ feed:
   limit: 20
   hub:
 
+navbar:
+  rss: true
 
 
 # Deployment

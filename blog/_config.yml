@@ -99,6 +99,8 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: fluid
+theme_config:
+  fluid: config_fluid.yml
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -107,4 +109,7 @@ deploy:
   repo: https://github.com/fogpost/hexo.git
   branch: web
 
-rss: /atom.xml
+feed:
+  type: rss2
+  path: rss.xml
+  content: true
