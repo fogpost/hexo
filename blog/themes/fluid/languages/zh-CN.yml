@@ -1,5 +1,7 @@
 name: '简体中文'
 
+rss: 订阅
+
 home:
   menu: '首页'
   title: '首页'

@@ -1,11 +1,19 @@
 navbar:
   blog_title: "Fogpost"
-  rss: 
-    enable: true
-  menu: []
+  menu:
+    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
+    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
+    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { key: "rss", link: "javascript:;", icon: "iconfont icon-rss", class: "nav-rss-copy" }
+    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 lazyload:
   enable: true
   loading_img: /img/loading.gif
   onlypost: true
   offset_factor: 2
+
+custom_js:
+  - /js/rss-copy.js
