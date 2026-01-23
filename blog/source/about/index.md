@@ -1,6 +1,7 @@
 ---
 title: fogpost`s little blog
 date: 2024-09-12 21:08:11
-updated: 2024-09-12T21:08:11+08:00
+updated: 2026-01-23T11:38:00+08:00
 ---
-大三才开始创建自己的博客现在才刚刚起步，之前学逆向的但是还没入门，现在又要开始学一点web了，但是总感觉写一些md就能让我动力满满，s(study)属性大爆发喽
+路要慢慢走，饭要口口吃
+![image.png](https://gitee.com/fogpost/photo/raw/master/202601231138780.png)

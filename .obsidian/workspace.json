@@ -11,24 +11,12 @@
             "id": "bfa33f1bc58c4909",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "blog/source/_posts/wuai第八课.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "blog/source/image/Chemistry.jpeg"
               },
-              "icon": "lucide-file",
-              "title": "wuai第八课"
+              "icon": "lucide-image",
+              "title": "Chemistry"
             }
           }
         ]
@@ -236,7 +224,10 @@
   },
   "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
+    "blog/source/image/LDAP.jpeg",
+    "blog/source/about/index.md",
     "blog/source/_posts/Diary.md",
+    "Templates/Time_Stamp.md",
     "blog/source/_posts/wuai第八课.md",
     "blog/source/_posts/rc4.md",
     "blog/source/_posts/sql.md",
@@ -259,9 +250,6 @@
     "blog/source/_posts/tea.md",
     "blog/source/_posts/vulhub搭建.md",
     "blog/source/_posts/sqli练习.md",
-    "blog/source/_posts/solidity.md",
-    "blog/source/_posts/rce绕过总结.md",
-    "blog/source/_posts/sicctfwp.md",
     "blog/source_backup/_posts",
     "blog/source_backup/_drafts",
     "blog/source_backup/img/miku.png",
