@@ -9,8 +9,8 @@ navbar:
     - { key: "rss", link: "/rss.xml", icon: "iconfont icon-rss", name: "订阅" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
-lazyload:
-  enable: true
-  loading_img: /img/loading.gif
-  onlypost: true
-  offset_factor: 2
+# lazyload:
+#   enable: true
+#   loading_img: /img/loading.gif
+#   onlypost: true
+#   offset_factor: 2

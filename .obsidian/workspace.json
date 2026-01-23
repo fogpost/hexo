@@ -234,8 +234,10 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "bfa33f1bc58c4909",
+  "active": "d7e5de6f28be6c43",
   "lastOpenFiles": [
+    "blog/node_modules/hexo-theme-fluid/source/xml/local-search.xml",
+    "blog/node_modules/hexo-theme-fluid/source/xml",
     "blog/source/about/index.md",
     "blog/public/categories/电子榨菜/index.html",
     "blog/public/categories/电子榨菜",
@@ -246,7 +248,6 @@
     "blog/public/categories/课程/index.html",
     "blog/public/categories/课程",
     "blog/public/categories/SQL/index.html",
-    "blog/public/categories/SQL",
     "blog/public/image/image.png",
     "blog/public/image/image 30.png",
     "blog/public/image/image 1.png",
