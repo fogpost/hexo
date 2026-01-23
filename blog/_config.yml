@@ -113,3 +113,6 @@ feed:
   type: rss2
   path: rss.xml
   content: true
+  
+iconfont: //at.alicdn.com/t/c/font_1736178_k526ubmyhba.css
+

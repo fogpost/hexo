@@ -1,5 +1,8 @@
 navbar:
-  rss: true
+  blog_title: "Fogpost"
+  rss: 
+    enable: true
+  menu: []
 
 lazyload:
   enable: true
