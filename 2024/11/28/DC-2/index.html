@@ -98,7 +98,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"fogpost.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"fogpost.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -373,7 +373,7 @@
 <p><img src="https://gitee.com/fogpost/photo/raw/master/202411282328174.png" srcset="/img/loading.gif" lazyload></p>
 <p>尝试用jerry登录，发现flag2，并提示我们使用ssh登录<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282330516.png" srcset="/img/loading.gif" lazyload><br><img src="https://gitee.com/fogpost/photo/raw/master/202411282330233.png" srcset="/img/loading.gif" lazyload></p>
 <h3 id="ssh登录"><a href="#ssh登录" class="headerlink" title="ssh登录"></a>ssh登录</h3><blockquote>
-<p>ssh <a href="mailto:&#116;&#x6f;&#x6d;&#x40;&#49;&#57;&#50;&#46;&#x31;&#54;&#56;&#46;&#x35;&#54;&#x2e;&#49;&#52;&#55;">&#116;&#x6f;&#x6d;&#x40;&#49;&#57;&#50;&#46;&#x31;&#54;&#56;&#46;&#x35;&#54;&#x2e;&#49;&#52;&#55;</a> -p 7744<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282333534.png" srcset="/img/loading.gif" lazyload><br>成功登录，发现在本地有flag3，但是只有vi可用，这个叫我们提权<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282335807.png" srcset="/img/loading.gif" lazyload></p>
+<p>ssh <a href="mailto:&#x74;&#111;&#109;&#x40;&#49;&#x39;&#50;&#x2e;&#49;&#x36;&#56;&#46;&#53;&#x36;&#x2e;&#x31;&#52;&#55;">&#x74;&#111;&#109;&#x40;&#49;&#x39;&#50;&#x2e;&#49;&#x36;&#56;&#46;&#53;&#x36;&#x2e;&#x31;&#52;&#55;</a> -p 7744<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282333534.png" srcset="/img/loading.gif" lazyload><br>成功登录，发现在本地有flag3，但是只有vi可用，这个叫我们提权<br><img src="https://gitee.com/fogpost/photo/raw/master/202411282335807.png" srcset="/img/loading.gif" lazyload></p>
 </blockquote>
 <h3 id="rbash提权"><a href="#rbash提权" class="headerlink" title="rbash提权"></a>rbash提权</h3><p>查看当前权限的软件</p>
 <p><img src="https://gitee.com/fogpost/photo/raw/master/202411282337342.png" srcset="/img/loading.gif" lazyload></p>
@@ -684,9 +684,7 @@
 
 
   
-    
-      <script  src="/js/img-lazyload.js" ></script>
-    
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
