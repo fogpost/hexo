@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/about/index.md",
+                "file": "blog/source/_drafts/逆向导学ppt.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "逆向导学ppt"
             }
           }
         ]
@@ -237,6 +237,7 @@
   },
   "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
+    "blog/source/about/index.md",
     "blog/source/_drafts/逆向导学ppt.md",
     "blog/source/_posts/Diary.md",
     "blog/db.json",
@@ -259,7 +260,6 @@
     "blog/public/404.html",
     "blog/public/categories/SQL/index.html",
     "blog/public/categories/SQL",
-    "blog/source/about/index.md",
     "Templates/Time_Stamp.md",
     "blog/source/_posts/wuai第八课.md",
     "blog/source/_posts/rc4.md",
