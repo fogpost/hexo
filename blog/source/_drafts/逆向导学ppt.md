@@ -3,7 +3,7 @@ title: 逆向ppt
 date: 2026-01-19T18:49:00
 tags:
   - ctf
-updated: 2026-01-22T17:16:11+08:00
+updated: 2026-01-24T13:39:39+08:00
 ---
 # 开篇想说的话
 我去刚刚准备写ppt的时候发现我obsidian没有重命名和自动化创建标签的功能，不过还好社区的template和quickadd给我们提出了解决办法，不过现在还是先来好好写我们的ppt吧，下午本来三点中想写的不过睡了一觉就到6点了🤭。之后还要写毕设呢，不然脑袋痛
@@ -40,19 +40,6 @@ PEinfo
 - main / WinMain
 - 函数调用关系
 - 下断点 / 单步 / 看寄存器
-
-## 第一个完整 demo（强烈建议现场）
-**例子**
-- 输入 flag → strcmp → 输出 correct / wrong
-教会：
-- 找 main
-- 跟到校验点
-- 直接看明文 / patch
-
-🎯 本章产出
-> 学员能回答：  
-> **“我拿到一个 exe/elf，第一步我该干嘛？”**
-
 # 汇编不是敌人（逆向核心能力）
 汇编这个东西目前来说就8086汇编后面的win32汇编和arm汇编都可放后面一点（我怎么总记得还有一个和8086不一样的int汇编，但是这不是一家的么）
 
@@ -60,9 +47,31 @@ PEinfo
 - x86/x64 基础
 - 常见指令：
     - mov / lea / cmp / jmp / call / test
-- 栈、寄存器、函数调用
+```
 
-📌 不讲理论，直接对着反编译代码讲
+mov eax, 1        ; eax = 1
+mov ebx, eax      ; ebx = eax
+mov eax, [ebp-4]  ; 从内存读到寄存器
+mov [ebp-8], eax  ; 从寄存器写到内存
+
+lea eax, [ebp-4]      ; eax = &var
+lea eax, [eax+4]      ; eax = eax + 4
+lea eax, [eax*2+10]   ; eax = eax*2 + 10
+
+cmp eax, 5
+cmp eax, ebx
+cmp [ebp-4], 0
+
+jmp 0x401000
+jmp short loc_123
+
+call 0x401050
+call eax
+
+test eax, eax
+test al, 1
+```
+- 栈、寄存器、函数调用
 
 ## 举例从 C → 汇编 → 反编译
 
@@ -96,17 +105,13 @@ PEinfo
 
 ### 4️⃣ 实战小题
 - xor + for 循环
-- flag 存在 data 段
+- flag 存在 cipher 段
 - 轻度反编译即可还原
 ```python
 cipher=[0x13,0x39,0x34,0x32,0x2e,0x1d,0x30,0x39,0x39,0x3a,0x0a,0x16,0x01,0x13,0x28]
 for i in cipher:
     print(chr(i^0x55),end="")
 ```
-🎯 本章产出
-
-> 学员能做到：  
-> **“我能看懂一段校验逻辑，并自己写脚本算 flag”**
 
 ---
 
@@ -182,12 +187,3 @@ for i in cipher:
 - 死磕汇编
 - 不下断点
 - 不利用程序自身
-
----
-
-### 4️⃣ 进阶学习路线（为你后续课程铺路）
-
-- 进阶 RE
-- 壳 / 反调试
-- 混淆 / 虚拟机
-- Malware / 实战逆向
