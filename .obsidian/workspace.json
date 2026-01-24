@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/逆向导学ppt.md",
+                "file": "blog/source/about/index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "逆向导学ppt"
+              "title": "index"
             }
           }
         ]
