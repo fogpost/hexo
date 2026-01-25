@@ -3,7 +3,7 @@ title: 逆向ppt
 date: 2026-01-19T18:49:00
 tags:
   - ctf
-updated: 2026-01-24T14:36:50+08:00
+updated: 2026-01-25T17:55:54+08:00
 ---
 # 开篇想说的话
 我去刚刚准备写ppt的时候发现我obsidian没有重命名和自动化创建标签的功能，不过还好社区的template和quickadd给我们提出了解决办法，不过现在还是先来好好写我们的ppt吧，下午本来三点中想写的不过睡了一觉就到6点了🤭。之后还要写毕设呢，不然脑袋痛
@@ -17,7 +17,9 @@ updated: 2026-01-24T14:36:50+08:00
 一句话解释就是CTF逆向就是在静态程序中获取flag的检查逻辑，然后利用获取逻辑反推出逆向的flag。
 ## 常见的CTF形态
 - crackme/flag校验
+
 - 算法还原（base / xor / crc / 自定义 hash）
+- 简单 VM / 花指令（点到为止）
 ## 工具（Windows方向）
 初学者要了解的主要是工具的种类和用法，同web工具而言，逆向也有以下几个步骤，我顺带将各个流程工具写上
 - 信息收集。（IDE，PEinfo）
@@ -25,6 +27,12 @@ IDE
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202601221717345.png) 
 PEinfo
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202601221717988.png)
+
+- 静态：
+    - IDA / Ghidra（函数、字符串、交叉引用）
+- 动态：
+    - x64dbg（Windows）
+    - gdb + pwndbg（Linux）
 
 目前用到的主要功能
 - Strings
