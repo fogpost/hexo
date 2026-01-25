@@ -3,7 +3,7 @@ title: 逆向ppt
 date: 2026-01-19T18:49:00
 tags:
   - ctf
-updated: 2026-01-25T20:36:19+08:00
+updated: 2026-01-25T20:59:48+08:00
 ---
 # 开篇想说的话
 我去刚刚准备写ppt的时候发现我obsidian没有重命名和自动化创建标签的功能，不过还好社区的template和quickadd给我们提出了解决办法，不过现在还是先来好好写我们的ppt吧，下午本来三点中想写的不过睡了一觉就到6点了🤭。之后还要写毕设呢，不然脑袋痛
@@ -39,7 +39,7 @@ PEinfo
     - x64dbg（Windows）
     - gdb + pwndbg（Linux）
 
-我们Windows电脑主要用的就是ida和x64的组合，x64有很多插件
+我们Windows电脑主要用的就是ida和x64的组合，x64有很多插件现在文件中的是纯净版
 目前用到的主要功能
 - Strings
 - main / WinMain
