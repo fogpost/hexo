@@ -232,11 +232,15 @@
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
       "copilot:Open Copilot Chat": false,
-      "publish:发布更改": false
+      "publish:发布更改": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
   "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
+    "blog/source/_drafts/简单的远控木马啊.md",
     "blog/source/_drafts/逆向导学ppt.md",
     "blog/source/about/index.md",
     "blog/source/_posts/Diary.md",
@@ -282,7 +286,6 @@
     "blog/source/_posts/ssrf.md",
     "blog/source/_posts/tea.md",
     "blog/source/_posts/vulhub搭建.md",
-    "blog/source/_posts/sqli练习.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
