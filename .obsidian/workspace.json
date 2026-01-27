@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "blog/source/_drafts/逆向导学ppt.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -237,8 +237,8 @@
   },
   "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
-    "blog/source/about/index.md",
     "blog/source/_drafts/逆向导学ppt.md",
+    "blog/source/about/index.md",
     "blog/source/_posts/Diary.md",
     "blog/db.json",
     "blog/public/img/miku.png",
