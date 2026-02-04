@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/毕设日志.md",
+                "file": "blog/source/_drafts/论文checklist.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "毕设日志"
+              "title": "论文checklist"
             }
           }
         ]
@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/source/_drafts/毕设日志.md",
+                "file": "blog/source/_drafts/论文checklist.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +154,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "毕设日志 的反向链接列表"
+              "title": "论文checklist 的反向链接列表"
             }
           },
           {
@@ -163,12 +163,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/source/_drafts/毕设日志.md",
+                "file": "blog/source/_drafts/论文checklist.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "毕设日志 的出链列表"
+              "title": "论文checklist 的出链列表"
             }
           },
           {
@@ -192,13 +192,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_drafts/毕设日志.md",
+                "file": "blog/source/_drafts/论文checklist.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "毕设日志 的大纲"
+              "title": "论文checklist 的大纲"
             }
           },
           {
@@ -237,7 +237,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "blog/source/_drafts/毕设日志.md"
+                "file": "blog/source/_drafts/论文checklist.md"
               },
               "icon": "lucide-file-signature",
               "title": "脚注"
@@ -268,10 +268,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "9cd74aafb48a4a4b",
+  "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
-    "blog/source/_posts/Diary.md",
     "blog/source/_drafts/毕设日志.md",
+    "blog/source/_drafts/论文checklist.md",
+    "blog/source/_drafts/未命名.md",
+    "blog/source/_posts/Diary.md",
     "blog/source/_drafts/逆向导学ppt.md",
     "blog/source/_drafts/简单的远控木马啊.md",
     "blog/source/about/index.md",
@@ -314,7 +316,6 @@
     "blog/source/_posts/web杂项.md",
     "blog/source/_posts/web安全流程.md",
     "blog/source/_posts/web反序列化.md",
-    "blog/source/_posts/ssrf.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
