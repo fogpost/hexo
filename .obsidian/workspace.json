@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/论文checklist.md",
+                "file": "blog/source/_drafts/网站总结.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "论文checklist"
+              "title": "网站总结"
             }
           }
         ]
@@ -192,13 +192,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_drafts/论文checklist.md",
+                "file": "blog/source/_drafts/网站总结.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "论文checklist 的大纲"
+              "title": "网站总结 的大纲"
             }
           },
           {
@@ -271,6 +271,7 @@
   "active": "bfa33f1bc58c4909",
   "lastOpenFiles": [
     "blog/source/_drafts/毕设日志.md",
+    "blog/source/_drafts/网站总结.md",
     "blog/source/_drafts/论文checklist.md",
     "blog/source/_drafts/未命名.md",
     "blog/source/_posts/Diary.md",
@@ -315,7 +316,6 @@
     "blog/source/_posts/web简单利用.md",
     "blog/source/_posts/web杂项.md",
     "blog/source/_posts/web安全流程.md",
-    "blog/source/_posts/web反序列化.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
