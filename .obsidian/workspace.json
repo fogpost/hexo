@@ -192,13 +192,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_drafts/网站总结.md",
+                "file": "blog/source/_drafts/毕设日志.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "网站总结 的大纲"
+              "title": "毕设日志 的大纲"
             }
           },
           {
@@ -268,11 +268,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "bfa33f1bc58c4909",
+  "active": "9cd74aafb48a4a4b",
   "lastOpenFiles": [
-    "blog/source/_drafts/毕设日志.md",
     "blog/source/_drafts/网站总结.md",
     "blog/source/_drafts/论文checklist.md",
+    "blog/source/_drafts/毕设日志.md",
     "blog/source/_drafts/未命名.md",
     "blog/source/_posts/Diary.md",
     "blog/source/_drafts/逆向导学ppt.md",
