@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/找实习.md",
+                "file": "blog/source/_drafts/draft.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "找实习"
+              "title": "draft"
             }
           }
         ]
@@ -162,13 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_drafts/找实习.md",
+                "file": "blog/source/_drafts/draft.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "找实习 的大纲"
+              "title": "draft 的大纲"
             }
           },
           {
@@ -240,24 +240,32 @@
   },
   "active": "c3e0ade001d96223",
   "lastOpenFiles": [
-    "blog/source/_drafts/webtest.md",
-    "blog/source/_drafts/test.md",
-    "blog/source/_drafts/找实习.md",
-    "blog/source/_drafts/od命令.md",
-    "blog/source/_drafts/day01.md",
-    "blog/source/_drafts/webtest 1.md",
-    "blog/source/_drafts/web的js小知识.md",
-    "blog/source/_drafts/论文checklist.md",
-    "Untitled 1.md",
-    "blog/source/_drafts/毕设日志.md",
+    "blog/source/_drafts/ciscnwp复现.md",
+    "blog/source/_drafts/dvwa全解.md",
+    "blog/source/_drafts/win32读书笔记.md",
     "blog/source/_drafts/逆向导学ppt.md",
+    "blog/source/_drafts/一些工具的使用方法.md",
+    "blog/source/_drafts/关于转专业想说的话.md",
+    "blog/source/_drafts/分支函数逆向.md",
+    "blog/source/_drafts/利用quickadd自动化新建重命名笔记.md",
+    "blog/source/_drafts/如何使用idapro.md",
+    "blog/source/_drafts/如何使用od.md",
+    "blog/source/_drafts/如何学习逆向.md",
+    "blog/source/_drafts/我读过的逆向书.md",
+    "blog/source/_drafts/易语言初识.md",
+    "blog/source/_drafts/熊猫烧香分析.md",
+    "blog/source/_drafts/服务器更新计划和流程.md",
+    "blog/source/_drafts/简单的远控木马啊.md",
+    "blog/source/_drafts/论文checklist.md",
     "blog/source/_drafts/网站总结.md",
     "blog/source/_drafts/电视机顶盒改造.md",
-    "Untitled.md",
-    "blog/source/_drafts/未命名.md",
-    "blog/source/_posts/Diary.md",
-    "blog/source/_drafts/简单的远控木马啊.md",
-    "blog/source/about/index.md",
+    "blog/source/_drafts/毕设日志.md",
+    "blog/source/_drafts/test.md",
+    "blog/source/_drafts/od命令.md",
+    "blog/source/_drafts/webtest.md",
+    "blog/source/_drafts/web的js小知识.md",
+    "blog/source/_drafts/webtest 1.md",
+    "blog/source/_drafts/day01.md",
     "blog/db.json",
     "blog/public/img/miku.png",
     "blog/public/image/image 10.png",
@@ -278,14 +286,6 @@
     "blog/public/404.html",
     "blog/public/categories/SQL/index.html",
     "blog/public/categories/SQL",
-    "Templates/Time_Stamp.md",
-    "blog/source/_posts/wuai第八课.md",
-    "blog/source/_posts/rc4.md",
-    "blog/source/_posts/sql.md",
-    "blog/source/_posts/web中可执行的xml文件jelly.md",
-    "blog/source/_posts/web十大基础漏洞.md",
-    "blog/source/_posts/sqli10-20.md",
-    "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
