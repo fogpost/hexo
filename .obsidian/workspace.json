@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "78260e87bf7dcb01",
+        "id": "b80817e4edb3bb92",
         "type": "tabs",
         "children": [
           {
-            "id": "6de96b7a066a6c55",
+            "id": "c3e0ade001d96223",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/毕设日志.md",
+                "file": "blog/source/_drafts/找实习.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,37 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "毕设日志"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e2d8dc4701dabf28",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "807f1b0ec8c97317",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/source/_drafts/毕设日志.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "毕设日志"
+              "title": "找实习"
             }
           }
         ]
@@ -192,13 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_drafts/毕设日志.md",
+                "file": "blog/source/_drafts/找实习.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "毕设日志 的大纲"
+              "title": "找实习 的大纲"
             }
           },
           {
@@ -268,12 +238,20 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "7efab45a138c88e3",
+  "active": "c3e0ade001d96223",
   "lastOpenFiles": [
-    "blog/source/_drafts/逆向导学ppt.md",
+    "blog/source/_drafts/webtest.md",
+    "blog/source/_drafts/test.md",
+    "blog/source/_drafts/找实习.md",
+    "blog/source/_drafts/od命令.md",
+    "blog/source/_drafts/day01.md",
+    "blog/source/_drafts/webtest 1.md",
+    "blog/source/_drafts/web的js小知识.md",
     "blog/source/_drafts/论文checklist.md",
-    "blog/source/_drafts/网站总结.md",
+    "Untitled 1.md",
     "blog/source/_drafts/毕设日志.md",
+    "blog/source/_drafts/逆向导学ppt.md",
+    "blog/source/_drafts/网站总结.md",
     "blog/source/_drafts/电视机顶盒改造.md",
     "Untitled.md",
     "blog/source/_drafts/未命名.md",
@@ -308,14 +286,6 @@
     "blog/source/_posts/web十大基础漏洞.md",
     "blog/source/_posts/sqli10-20.md",
     "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
-    "blog/source/_posts/新的开始.md",
-    "blog/source/_posts/逆向出题记录.md",
-    "blog/source/_posts/脱壳教程第一课.md",
-    "blog/source/_posts/脚本命令的改变.md",
-    "blog/source/_posts/区块链2.md",
-    "blog/source/_posts/可恶的gitee吃掉外链了.md",
-    "blog/source/_posts/区块链.md",
-    "blog/source/_posts/web简单利用.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
