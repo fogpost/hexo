@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/面经.md",
+                "file": "blog/source/_drafts/每日计划.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "面经"
+              "title": "每日计划"
             }
           }
         ]
@@ -162,13 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_drafts/面经.md",
+                "file": "blog/source/_drafts/每日计划.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "面经 的大纲"
+              "title": "每日计划 的大纲"
             }
           },
           {
@@ -240,8 +240,8 @@
   },
   "active": "c3e0ade001d96223",
   "lastOpenFiles": [
-    "blog/source/_drafts/每日计划.md",
     "blog/source/_drafts/面经.md",
+    "blog/source/_drafts/每日计划.md",
     "blog/source/_drafts/未命名.md",
     "blog/source/_drafts/ciscnwp复现.md",
     "blog/source/_drafts/draft.md",
