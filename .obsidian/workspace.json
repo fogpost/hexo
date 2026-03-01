@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/draft.md",
+                "file": "blog/source/_drafts/面经.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "draft"
+              "title": "面经"
             }
           }
         ]
@@ -162,13 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_drafts/draft.md",
+                "file": "blog/source/_drafts/面经.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "draft 的大纲"
+              "title": "面经 的大纲"
             }
           },
           {
@@ -241,6 +241,8 @@
   "active": "c3e0ade001d96223",
   "lastOpenFiles": [
     "blog/source/_drafts/ciscnwp复现.md",
+    "blog/source/_drafts/面经.md",
+    "blog/source/_drafts/draft.md",
     "blog/source/_drafts/dvwa全解.md",
     "blog/source/_drafts/win32读书笔记.md",
     "blog/source/_drafts/逆向导学ppt.md",
@@ -264,8 +266,6 @@
     "blog/source/_drafts/od命令.md",
     "blog/source/_drafts/webtest.md",
     "blog/source/_drafts/web的js小知识.md",
-    "blog/source/_drafts/webtest 1.md",
-    "blog/source/_drafts/day01.md",
     "blog/db.json",
     "blog/public/img/miku.png",
     "blog/public/image/image 10.png",
