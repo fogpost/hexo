@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/每日计划.md",
+                "file": "Notion/过去的想法/靶场/靶场.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "每日计划"
+              "title": "靶场"
+            }
+          },
+          {
+            "id": "9b5c626368011950",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notion/过去的想法/靶场/HTB/HTB.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "HTB"
+            }
+          },
+          {
+            "id": "d19392a506d819c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "CVE-2024-2961"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -162,13 +211,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_drafts/每日计划.md",
+                "file": "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "每日计划 的大纲"
+              "title": "CVE-2024-2961 的大纲"
             }
           },
           {
@@ -238,34 +287,34 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c3e0ade001d96223",
+  "active": "d19392a506d819c0",
   "lastOpenFiles": [
+    "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961 POC.md",
+    "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961.md",
+    "Notion/过去的想法/CVE/CVE-2021-40341·.md",
+    "Notion/过去的想法/CVE/CVE-2025-24813.md",
+    "Notion/过去的想法/CVE/CVE-2023-26326.md",
+    "Notion/过去的想法/CVE/CVE-2024-23346.md",
+    "Notion/过去的想法/CVE/CVE.md",
+    "Notion/过去的想法/靶场/HTB/Redis数据库简单应用.md",
+    "Notion/过去的想法/靶场/HTB/HTB.md",
+    "Notion/过去的想法/靶场/靶场.md",
+    "Notion/过去的想法/靶场/红日靶场.md",
+    "Notion/过去的想法/靶场/Tryhackme/Cyber Kill Chain.md",
+    "Notion/过去的想法/靶场/Tryhackme/Tryhackme.md",
+    "Notion/过去的想法/靶场/Tryhackme/TryHack3M Bricks Heist.md",
+    "Notion/过去的想法/靶场/HTB/Chemistry.md",
+    "Notion/过去的想法/靶场/HTB/Dog.md",
+    "Notion/过去的想法/靶场/HTB/Unrested.md",
+    "Notion/过去的想法/靶场/DC系列/DC系列.md",
+    "Notion/过去的想法/靶场/DC系列/DC-1.md",
+    "blog/source/_posts/rce绕过总结.md",
+    "blog/source/_posts/vulhub搭建.md",
+    "blog/source/_drafts/每日计划.md",
     "blog/source/_drafts/msf靶场.md",
     "blog/source/_drafts/面经.md",
-    "blog/source/_drafts/每日计划.md",
     "blog/source/_drafts/未命名.md",
     "blog/source/_drafts/ciscnwp复现.md",
-    "blog/source/_drafts/draft.md",
-    "blog/source/_drafts/dvwa全解.md",
-    "blog/source/_drafts/win32读书笔记.md",
-    "blog/source/_drafts/逆向导学ppt.md",
-    "blog/source/_drafts/一些工具的使用方法.md",
-    "blog/source/_drafts/关于转专业想说的话.md",
-    "blog/source/_drafts/分支函数逆向.md",
-    "blog/source/_drafts/利用quickadd自动化新建重命名笔记.md",
-    "blog/source/_drafts/如何使用idapro.md",
-    "blog/source/_drafts/如何使用od.md",
-    "blog/source/_drafts/如何学习逆向.md",
-    "blog/source/_drafts/我读过的逆向书.md",
-    "blog/source/_drafts/易语言初识.md",
-    "blog/source/_drafts/熊猫烧香分析.md",
-    "blog/source/_drafts/服务器更新计划和流程.md",
-    "blog/source/_drafts/简单的远控木马啊.md",
-    "blog/source/_drafts/论文checklist.md",
-    "blog/source/_drafts/网站总结.md",
-    "blog/source/_drafts/电视机顶盒改造.md",
-    "blog/source/_drafts/毕设日志.md",
-    "blog/source/_drafts/test.md",
     "blog/db.json",
     "blog/public/img/miku.png",
     "blog/public/image/image 10.png",
