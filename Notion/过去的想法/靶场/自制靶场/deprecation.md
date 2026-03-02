@@ -38,5 +38,5 @@
 ```
 代码缺少安全措施，无直接漏洞
 ## 漏洞获取
-在登录页面尝试sql注入和暴力破解发现admin为主账户之一
+在登录页面尝试sql注入和暴力破解发现admin和test为主账户之一
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603021120372.png)
