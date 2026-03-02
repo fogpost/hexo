@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961.md",
+                "file": "blog/source/_posts/sqli10-20.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CVE-2024-2961"
+              "title": "sqli10-20"
             }
           }
         ],
@@ -211,13 +211,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961.md",
+                "file": "blog/source/_posts/sqli10-20.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CVE-2024-2961 的大纲"
+              "title": "sqli10-20 的大纲"
             }
           },
           {
@@ -289,8 +289,10 @@
   },
   "active": "d19392a506d819c0",
   "lastOpenFiles": [
-    "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961 POC.md",
+    "Notion/过去的想法/靶场/自制靶场/deprecation.md",
     "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961.md",
+    "Notion/过去的想法/靶场/自制靶场",
+    "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961 POC.md",
     "Notion/过去的想法/CVE/CVE-2021-40341·.md",
     "Notion/过去的想法/CVE/CVE-2025-24813.md",
     "Notion/过去的想法/CVE/CVE-2023-26326.md",
@@ -314,7 +316,6 @@
     "blog/source/_drafts/msf靶场.md",
     "blog/source/_drafts/面经.md",
     "blog/source/_drafts/未命名.md",
-    "blog/source/_drafts/ciscnwp复现.md",
     "blog/db.json",
     "blog/public/img/miku.png",
     "blog/public/image/image 10.png",
@@ -334,7 +335,6 @@
     "blog/public/categories/课程",
     "blog/public/404.html",
     "blog/public/categories/SQL/index.html",
-    "blog/public/categories/SQL",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
