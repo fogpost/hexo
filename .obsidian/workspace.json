@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/sqli10-20.md",
+                "file": "Notion/过去的想法/靶场/自制靶场/deprecation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "sqli10-20"
+              "title": "deprecation"
             }
           }
         ],
@@ -211,13 +211,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_posts/sqli10-20.md",
+                "file": "Notion/过去的想法/靶场/自制靶场/deprecation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "sqli10-20 的大纲"
+              "title": "deprecation 的大纲"
             }
           },
           {
@@ -289,6 +289,7 @@
   },
   "active": "d19392a506d819c0",
   "lastOpenFiles": [
+    "blog/source/_posts/sqli10-20.md",
     "Notion/过去的想法/靶场/自制靶场/deprecation.md",
     "Notion/过去的想法/CVE/CVE-2024-2961/CVE-2024-2961.md",
     "Notion/过去的想法/靶场/自制靶场",
@@ -315,7 +316,6 @@
     "blog/source/_drafts/每日计划.md",
     "blog/source/_drafts/msf靶场.md",
     "blog/source/_drafts/面经.md",
-    "blog/source/_drafts/未命名.md",
     "blog/db.json",
     "blog/public/img/miku.png",
     "blog/public/image/image 10.png",
