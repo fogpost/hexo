@@ -34,4 +34,22 @@ nginx:x:101:102:nginx:/var/lib/nginx:/sbin/nologin
 shanran:x:1000:1000:shan******:/home/shanran:/bin/sh
 redis:x:102:104:redis:/var/lib/redis:/sbin/nologin
 ```
-尝试利用shanran获取ssh密码
+尝试利用shanran获取ssh密码，其实也是看别人的
+shanran:shanran123
+然后ssh连接后查看文件获取
+flag{user-0374e740474ae0e861460e5baf5ce293}。
+查看用户权限，发现redis
+```linux
+Deprecation:~$ sudo -l
+Matching Defaults entries for shanran on Deprecation:
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+Runas and Command-specific defaults for shanran:
+    Defaults!/usr/sbin/visudo env_keep+="SUDO_EDITOR EDITOR VISUAL"
+
+User shanran may run the following commands on Deprecation:
+    (ALL) NOPASSWD: /sbin/rc-service redis restart
+    (ALL) NOPASSWD: /sbin/rc-service redis stop
+    (ALL) NOPASSWD: /sbin/rc-service redis start
+    (ALL) NOPASSWD: /sbin/rc-service redis status
+```
