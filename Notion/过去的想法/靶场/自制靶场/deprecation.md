@@ -90,3 +90,6 @@ save 60 10000
 ```
 
 提权流程
+生成rsa密钥
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa
+> ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Gl4KbuGTBiFCzlJgJxk8cFx2MxiJf6R0v7QNJUhXkvIBxPSiDNVs1eVjheT23hn671PceSWNffn6vdLRwjDqQ8JW72nNBrkI9bcHtrCOgVQGtp8rotmqXkS5N0A0QZ+syI1w1LF8b0zNuZY+39dgR8HJoKXn7AnJqSoF1wGcdh+CpBfo2zI1ze07GlZXh7A6dUu0Z1dtHgtjpYo5wng2S7AEZMS6rBBl7aqH7CHzo6P2OMNMJonbxLscXKoKnp9g4hNndgqhAwzgCiyVlqqEH/VUQEnZA+P8HgP4WhmSbuwwtKNnxyRRUpsMpmMq6fMc2KAnKrSukpfji8+viXmv root@kali
