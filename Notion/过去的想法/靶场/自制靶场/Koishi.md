@@ -102,6 +102,5 @@ klogd:x:100:101:klogd:/dev/null:/sbin/nologin
 nginx:x:101:102:nginx:/var/lib/nginx:/sbin/nologin
 514:x:1000:1000::/home/514:/bin/sh
 ```
-
-
-总结：审计节奏、边界思维、linux基础
+在别人得帮助下知道这个user.txt.在这
+file=/proc/self/root/home/514/user.txt
