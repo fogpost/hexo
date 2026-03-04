@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/过去的想法/靶场/自制靶场/未命名.md",
+                "file": "Notion/过去的想法/靶场/自制靶场/Koishi.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "Koishi"
             }
           },
           {
@@ -186,13 +186,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/过去的想法/靶场/自制靶场/未命名.md",
+                "file": "Notion/过去的想法/靶场/自制靶场/Koishi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "Koishi 的大纲"
             }
           },
           {
@@ -265,7 +265,7 @@
   "active": "d19392a506d819c0",
   "lastOpenFiles": [
     "Notion/过去的想法/靶场/知识点.md",
-    "Notion/过去的想法/靶场/自制靶场/未命名.md",
+    "Notion/过去的想法/靶场/自制靶场/Koishi.md",
     "Notion/过去的想法/靶场/自制靶场/deprecation.md",
     "Notion/过去的想法/靶场/靶场.md",
     "Notion/过去的想法/靶场/HTB/HTB.md",
