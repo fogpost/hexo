@@ -28,7 +28,9 @@ open_basedir no value no value
 
 攻击链为首先LFI，利用Proc提权或RCE。
 
-利用/proc/3473/fd/5获取到文件句柄
+利用/proc/3473/fd/5获取到文件句柄，发现可以调用
+action=read
+action=list
 ```php
 <?php
 error_reporting(0);
@@ -75,5 +77,7 @@ if ($action === 'read') {
     $dirs = @glob('/proc/[0-9]*', GLOB_ONLYDIR);
     echo implode(PHP_EOL, $dirs);
 }
-
 ```
+
+
+总结：审计节奏、边界思维、linux基础
