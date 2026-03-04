@@ -78,6 +78,7 @@ if ($action === 'read') {
     echo implode(PHP_EOL, $dirs);
 }
 ```
+利用action=list找到目标进程，利用/proc/pid/cmdline发现服务件
 
 
 总结：审计节奏、边界思维、linux基础
