@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b80817e4edb3bb92",
+        "id": "2463309e9b3eea15",
         "type": "tabs",
         "children": [
           {
-            "id": "d19392a506d819c0",
+            "id": "c10e54fd18f80d42",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_posts/Diary.md",
+                "file": "Notion/过去的想法/靶场/知识点.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,31 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Diary"
-            }
-          },
-          {
-            "id": "850562351e823696",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notion/过去的想法/靶场/自制靶场/deprecation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "deprecation"
+              "title": "知识点"
             }
           }
         ]
@@ -186,13 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_posts/Diary.md",
+                "file": "Notion/过去的想法/靶场/知识点.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Diary 的大纲"
+              "title": "知识点 的大纲"
             }
           },
           {
@@ -262,10 +238,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d19392a506d819c0",
+  "active": "c10e54fd18f80d42",
   "lastOpenFiles": [
     "Notion/过去的想法/靶场/自制靶场/Koishi.md",
     "Notion/过去的想法/靶场/自制靶场/deprecation.md",
+    "blog/source/_posts/Diary.md",
     "Notion/过去的想法/靶场/知识点.md",
     "Notion/过去的想法/靶场/靶场.md",
     "Notion/过去的想法/靶场/HTB/HTB.md",
@@ -290,7 +267,6 @@
     "Notion/过去的想法/靶场/DC系列/DC-1.md",
     "blog/source/_posts/rce绕过总结.md",
     "blog/source/_posts/vulhub搭建.md",
-    "blog/source/_drafts/每日计划.md",
     "blog/db.json",
     "blog/public/img/miku.png",
     "blog/public/image/image 10.png",
