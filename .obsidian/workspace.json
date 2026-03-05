@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/过去的想法/靶场/自制靶场/Koishi.md",
+                "file": "Notion/求职.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Koishi"
+              "title": "求职"
             }
           }
         ],
@@ -187,13 +187,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/过去的想法/靶场/自制靶场/Koishi.md",
+                "file": "Notion/求职.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Koishi 的大纲"
+              "title": "求职 的大纲"
             }
           },
           {
@@ -265,8 +265,9 @@
   },
   "active": "c10e54fd18f80d42",
   "lastOpenFiles": [
-    "Notion/过去的想法/靶场/知识点.md",
     "Notion/过去的想法/靶场/自制靶场/Koishi.md",
+    "Notion/求职.md",
+    "Notion/过去的想法/靶场/知识点.md",
     "Notion/过去的想法/靶场/自制靶场/deprecation.md",
     "blog/source/_posts/Diary.md",
     "Notion/过去的想法/靶场/靶场.md",
@@ -291,7 +292,6 @@
     "Notion/过去的想法/靶场/DC系列/DC系列.md",
     "Notion/过去的想法/靶场/DC系列/DC-1.md",
     "blog/source/_posts/rce绕过总结.md",
-    "blog/source/_posts/vulhub搭建.md",
     "blog/db.json",
     "blog/public/img/miku.png",
     "blog/public/image/image 10.png",
