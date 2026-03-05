@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c10e54fd18f80d42",
+            "id": "e7efe6fcc0fd0d9a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "知识点"
             }
+          },
+          {
+            "id": "c10e54fd18f80d42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notion/过去的想法/靶场/自制靶场/Koishi.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Koishi"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -162,13 +187,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/过去的想法/靶场/知识点.md",
+                "file": "Notion/过去的想法/靶场/自制靶场/Koishi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "知识点 的大纲"
+              "title": "Koishi 的大纲"
             }
           },
           {
@@ -240,10 +265,10 @@
   },
   "active": "c10e54fd18f80d42",
   "lastOpenFiles": [
+    "Notion/过去的想法/靶场/知识点.md",
     "Notion/过去的想法/靶场/自制靶场/Koishi.md",
     "Notion/过去的想法/靶场/自制靶场/deprecation.md",
     "blog/source/_posts/Diary.md",
-    "Notion/过去的想法/靶场/知识点.md",
     "Notion/过去的想法/靶场/靶场.md",
     "Notion/过去的想法/靶场/HTB/HTB.md",
     "blog/source/_posts/sqli10-20.md",

