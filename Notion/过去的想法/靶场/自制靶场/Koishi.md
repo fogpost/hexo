@@ -184,7 +184,7 @@ PID 3504: php-fpm: pool www
 PID 3506: sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups 
 PID 3840: Error: Access Denied or File Unreadable
 ``` 
-这里发现可以利用/proc/net/tcp来发现tcp端口服务,看了wp才知道，对linux系统所了解的还是只有些基础命令罢了
+这里发现可以利用/proc/net/tcp来发现tcp端口服务,看了wp才知道,并且端口只能扫一次，对linux系统所了解的还是只有些基础命令罢了
 ```
   sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
    0: 00000000:0050 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 15203 1 0000000048957835 100 0 0 10 0                     
