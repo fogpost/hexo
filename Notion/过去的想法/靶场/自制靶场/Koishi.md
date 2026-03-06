@@ -216,4 +216,5 @@ connect to [172.18.100.74] from (UNKNOWN) [172.18.105.157] 43103
 uid=1000(514) gid=1000(514) groups=1000(514)
 
 ```
-之后的提示是pspy的进程查看
+之后的提示是pspy的进程查看,发现特殊的monitor进程
+>2026/03/06 13:55:00 CMD: UID=0     PID=3816   | /bin/sh -c PATH=/usr/local/bin:$PATH /usr/bin/monitor
