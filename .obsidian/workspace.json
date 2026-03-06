@@ -55,7 +55,8 @@
               "title": "Koishi"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -186,13 +187,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/过去的想法/靶场/知识点.md",
+                "file": "Notion/过去的想法/靶场/自制靶场/Koishi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "知识点 的大纲"
+              "title": "Koishi 的大纲"
             }
           },
           {
@@ -262,10 +263,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c10e54fd18f80d42",
+  "active": "aee905851ad21827",
   "lastOpenFiles": [
-    "Notion/过去的想法/靶场/自制靶场/Koishi.md",
     "Notion/过去的想法/靶场/知识点.md",
+    "Notion/过去的想法/靶场/自制靶场/Koishi.md",
     "Notion/过去的想法/靶场/自制靶场/deprecation.md",
     "Notion/求职.md",
     "blog/source/_posts/Diary.md",

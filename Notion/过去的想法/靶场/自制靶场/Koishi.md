@@ -218,3 +218,16 @@ uid=1000(514) gid=1000(514) groups=1000(514)
 ```
 之后的提示是pspy的进程查看,发现特殊的monitor进程
 >2026/03/06 13:55:00 CMD: UID=0     PID=3816   | /bin/sh -c PATH=/usr/local/bin:$PATH /usr/bin/monitor
+
+查看monitor发现调用worning，利用warning提权
+/usr/bin $ cat monitor
+#!/bin/sh
+i=1
+while [ $i -le 3 ]; do
+    if [ ! -f /home/514/protected/secret ]; then
+        warning
+    fi
+    sleep 2
+    i=$((i+1))
+done
+修改warning，写入rsa密钥
