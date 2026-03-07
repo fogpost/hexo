@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/过去的想法/靶场/知识点.md",
+                "file": "Notion/基础工具.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "知识点"
-            }
-          },
-          {
-            "id": "aee905851ad21827",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notion/过去的想法/靶场/自制靶场/Koishi.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Koishi"
+              "title": "基础工具"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -187,13 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/过去的想法/靶场/自制靶场/Koishi.md",
+                "file": "Notion/基础工具.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Koishi 的大纲"
+              "title": "基础工具 的大纲"
             }
           },
           {
@@ -263,10 +238,16 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "aee905851ad21827",
+  "active": "c10e54fd18f80d42",
   "lastOpenFiles": [
-    "Notion/过去的想法/靶场/知识点.md",
+    "Notion/开发/网络抓包工具/知识点.md",
+    "Notion/基础工具.md",
+    "Untitled.md",
+    "Notion/开发/网络抓包工具",
+    "Notion/开发",
+    "Untitled 1.md",
     "Notion/过去的想法/靶场/自制靶场/Koishi.md",
+    "Notion/过去的想法/靶场/知识点.md",
     "Notion/过去的想法/靶场/自制靶场/deprecation.md",
     "Notion/求职.md",
     "blog/source/_posts/Diary.md",
@@ -288,10 +269,6 @@
     "Notion/过去的想法/靶场/Tryhackme/TryHack3M Bricks Heist.md",
     "Notion/过去的想法/靶场/HTB/Chemistry.md",
     "Notion/过去的想法/靶场/HTB/Dog.md",
-    "Notion/过去的想法/靶场/HTB/Unrested.md",
-    "Notion/过去的想法/靶场/DC系列/DC系列.md",
-    "Notion/过去的想法/靶场/DC系列/DC-1.md",
-    "blog/source/_posts/rce绕过总结.md",
     "blog/db.json",
     "blog/public/img/miku.png",
     "blog/public/image/image 10.png",
@@ -309,8 +286,6 @@
     "blog/public/image/image 26.png",
     "blog/public/categories/课程/index.html",
     "blog/public/categories/课程",
-    "blog/public/404.html",
-    "blog/public/categories/SQL/index.html",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
