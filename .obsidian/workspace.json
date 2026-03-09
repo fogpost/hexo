@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/华顺信安.md",
+                "file": "Notion/春招/面试公司.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "华顺信安"
+              "title": "面试公司"
             }
           }
         ],
@@ -229,6 +229,7 @@
   "active": "2d5bf906b3c31f07",
   "lastOpenFiles": [
     "Notion/春招/华顺信安.md",
+    "Notion/春招/面试公司.md",
     "Notion/春招/华顺",
     "Notion/春招",
     "Untitled.md",
@@ -255,7 +256,6 @@
     "blog/source_backup/_posts/web反序列化.md",
     "blog/source_backup/_posts/web十大基础漏洞.md",
     "blog/source_backup/_posts/web中可执行的xml文件jelly.md",
-    "blog/source_backup/_posts/vulhub搭建.md",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
