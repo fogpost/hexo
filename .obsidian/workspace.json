@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "5324373015726ba8",
+    "id": "b57c1ce3523c3518",
     "type": "split",
     "children": [
       {
-        "id": "78260e87bf7dcb01",
+        "id": "fe55d9f409957b92",
         "type": "tabs",
         "children": [
           {
-            "id": "6de96b7a066a6c55",
+            "id": "8b64e1f070b60a4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/source/_drafts/电视机顶盒改造.md",
+                "file": "Notion/过去的想法/靶场/DC系列/DC-1.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,29 +28,42 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "电视机顶盒改造"
+              "title": "DC-1"
+            }
+          },
+          {
+            "id": "2d5bf906b3c31f07",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.12.4"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "b971764f73ca6414",
+    "id": "b8ec3979cb77b551",
     "type": "split",
     "children": [
       {
-        "id": "fb389d8ec5223695",
+        "id": "0db37d078941b01d",
         "type": "tabs",
         "children": [
           {
-            "id": "d7e5de6f28be6c43",
+            "id": "8d8573e2076395ba",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -58,12 +71,12 @@
             }
           },
           {
-            "id": "d97e2b16298b9079",
+            "id": "965949396a52113f",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#copilot-conversation",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -75,7 +88,7 @@
             }
           },
           {
-            "id": "14a9ef9e22442b90",
+            "id": "ec44c1b17bb3b570",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -83,38 +96,28 @@
               "icon": "lucide-bookmark",
               "title": "书签"
             }
-          },
-          {
-            "id": "dfd9030025492a51",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 338.5
+    "width": 300
   },
   "right": {
-    "id": "d66e5580a245b52f",
+    "id": "0e498920733188c2",
     "type": "split",
     "children": [
       {
-        "id": "48032d8f4539a852",
+        "id": "d159e136ea1c68ce",
         "type": "tabs",
         "children": [
           {
-            "id": "4ee67c916fa20199",
+            "id": "259b17eac79d58ca",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/source/_drafts/论文checklist.md",
+                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,25 +127,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "论文checklist 的反向链接列表"
+              "title": "基于obsidian的自动化推送blog搭建 的反向链接列表"
             }
           },
           {
-            "id": "95ed0bb638d0ccb2",
+            "id": "79efd44fb4d83a92",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/source/_drafts/论文checklist.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "论文checklist 的出链列表"
+              "title": "出链"
             }
           },
           {
-            "id": "907181a577e99513",
+            "id": "f803ac1cd11ebe66",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -157,22 +159,22 @@
             }
           },
           {
-            "id": "7efab45a138c88e3",
+            "id": "d65c4feba55af888",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/source/_drafts/电视机顶盒改造.md",
+                "file": "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "电视机顶盒改造 的大纲"
+              "title": "基于obsidian的自动化推送blog搭建 的大纲"
             }
           },
           {
-            "id": "dc3d9f5680895c4f",
+            "id": "725173a74b3709ae",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -182,35 +184,13 @@
             }
           },
           {
-            "id": "6779eb78639ba72c",
+            "id": "c77defa9e7eda7d4",
             "type": "leaf",
             "state": {
               "type": "git-history-view",
               "state": {},
               "icon": "history",
               "title": "History"
-            }
-          },
-          {
-            "id": "5a6c2fde7ad24c7a",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
-            }
-          },
-          {
-            "id": "d2fd872b8793a5ce",
-            "type": "leaf",
-            "state": {
-              "type": "footnotes",
-              "state": {
-                "file": "blog/source/_drafts/论文checklist.md"
-              },
-              "icon": "lucide-file-signature",
-              "title": "脚注"
             }
           }
         ],
@@ -222,70 +202,66 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "publish:发布更改": false,
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false,
-      "copilot:Open Copilot Chat": false,
-      "publish:发布更改": false,
-      "pdf-plus:PDF++: Toggle auto-copy": false,
-      "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "dc3d9f5680895c4f",
+  "active": "8d8573e2076395ba",
   "lastOpenFiles": [
-    "blog/source/_drafts/毕设日志.md",
-    "blog/source/_drafts/网站总结.md",
-    "blog/source/_drafts/电视机顶盒改造.md",
+    "Notion/未命名",
     "Untitled.md",
-    "blog/source/_drafts/未命名.md",
-    "blog/source/_drafts/论文checklist.md",
-    "blog/source/_posts/Diary.md",
-    "blog/source/_drafts/逆向导学ppt.md",
-    "blog/source/_drafts/简单的远控木马啊.md",
-    "blog/source/about/index.md",
-    "blog/db.json",
-    "blog/public/img/miku.png",
-    "blog/public/image/image 10.png",
-    "blog/public/image/image 29.png",
-    "blog/public/img/fluid.png",
-    "blog/public/categories/电子榨菜/index.html",
-    "blog/public/categories/电子榨菜",
-    "blog/public/image/image 3.png",
-    "blog/public/image/image 5.png",
-    "blog/public/image/image 4.png",
-    "blog/public/image/image 25.png",
-    "blog/public/image/image 28.png",
-    "blog/public/categories/教程/index.html",
-    "blog/public/categories/教程",
-    "blog/public/image/image 26.png",
-    "blog/public/categories/课程/index.html",
-    "blog/public/categories/课程",
-    "blog/public/404.html",
-    "blog/public/categories/SQL/index.html",
-    "blog/public/categories/SQL",
-    "Templates/Time_Stamp.md",
-    "blog/source/_posts/wuai第八课.md",
-    "blog/source/_posts/rc4.md",
-    "blog/source/_posts/sql.md",
-    "blog/source/_posts/web中可执行的xml文件jelly.md",
-    "blog/source/_posts/web十大基础漏洞.md",
-    "blog/source/_posts/sqli10-20.md",
-    "blog/source/_posts/基于obsidian的自动化推送blog搭建.md",
-    "blog/source/_posts/新的开始.md",
-    "blog/source/_posts/逆向出题记录.md",
-    "blog/source/_posts/脱壳教程第一课.md",
-    "blog/source/_posts/脚本命令的改变.md",
-    "blog/source/_posts/区块链2.md",
-    "blog/source/_posts/可恶的gitee吃掉外链了.md",
-    "blog/source/_posts/区块链.md",
-    "blog/source/_posts/web简单利用.md",
+    "Notion/过去的想法/靶场/DC系列/DC-1.md",
+    "Notion/过去的想法/靶场/DC系列/DC系列.md",
+    "blog/source/_posts/PEcompact.md",
+    "blog/source_backup/_posts/逆向出题记录.md",
+    "blog/source_backup/_posts/按钮事件.md",
+    "blog/source_backup/_posts/可恶的gitee吃掉外链了.md",
+    "blog/source_backup/_posts/脱壳教程第一课.md",
+    "blog/source_backup/_posts/脚本命令的改变.md",
+    "blog/source_backup/_posts/电子榨菜.md",
+    "blog/source_backup/_posts/爬虫初识.md",
+    "blog/source_backup/_posts/新的开始.md",
+    "blog/source_backup/_posts/基于obsidian的自动化推送blog搭建.md",
+    "blog/source_backup/_posts/常见的API.md",
+    "blog/source_backup/_posts/wuai第八课.md",
+    "blog/source_backup/_posts/反序列化.md",
+    "blog/source_backup/_posts/区块链.md",
+    "blog/source_backup/_posts/区块链2.md",
+    "blog/source_backup/_posts/web简单利用.md",
+    "blog/source_backup/_posts/web杂项.md",
+    "blog/source_backup/_posts/web安全流程.md",
+    "blog/source_backup/_posts/web反序列化.md",
+    "blog/source_backup/_posts/web十大基础漏洞.md",
+    "blog/source_backup/_posts/web中可执行的xml文件jelly.md",
+    "blog/source_backup/_posts/vulhub搭建.md",
+    "blog/source_backup/image/LDAP.jpeg",
+    "blog/source_backup/image/image.png",
+    "blog/source_backup/image/image 9.png",
+    "blog/source_backup/image/image 8.png",
+    "blog/source_backup/image/image 5.png",
+    "blog/source_backup/image/image 7.png",
+    "blog/source_backup/image/image 6.png",
+    "blog/source_backup/image/image 4.png",
+    "blog/source_backup/image/image 3.png",
+    "blog/source_backup/image/image 34.png",
+    "blog/source_backup/image/favorites_2025_3_8.html",
+    "blog/source_backup/_posts",
+    "blog/source_backup/_drafts",
+    "blog/source_backup/image",
+    "blog/source_backup/CNAME",
+    "blog/source_backup/img",
+    "blog/source_backup/about",
+    "blog/source_backup",
+    "blog/pyscript/update+8.py",
+    "blog/pyscript/del.py",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
