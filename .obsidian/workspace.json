@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/反序列化.md",
+                "file": "Notion/春招/MySQL.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "反序列化"
+              "title": "MySQL"
             }
           }
         ]
@@ -203,8 +203,12 @@
   },
   "active": "8b64e1f070b60a4c",
   "lastOpenFiles": [
-    "Notion/春招/sql注入.md",
+    "Notion/春招/Docker.md",
+    "Notion/春招/MySQL.md",
+    "Notion/春招/Redis.md",
+    "Notion/春招/XSS.md",
     "Notion/春招/反序列化.md",
+    "Notion/春招/sql注入.md",
     "Notion/春招/Go.md",
     "Notion/春招/华顺信安.md",
     "Notion/春招/自我介绍.md",
@@ -227,10 +231,6 @@
     "blog/source_backup/_posts/电子榨菜.md",
     "blog/source_backup/_posts/爬虫初识.md",
     "blog/source_backup/_posts/新的开始.md",
-    "blog/source_backup/_posts/基于obsidian的自动化推送blog搭建.md",
-    "blog/source_backup/_posts/常见的API.md",
-    "blog/source_backup/_posts/wuai第八课.md",
-    "blog/source_backup/_posts/反序列化.md",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
