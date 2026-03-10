@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/MySQL.md",
+                "file": "Notion/春招/渗透测试.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MySQL"
+              "title": "渗透测试"
             }
           }
         ]
@@ -201,23 +201,26 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8d8573e2076395ba",
+  "active": "8b64e1f070b60a4c",
   "lastOpenFiles": [
-    "Notion/漏洞挖掘",
-    "Notion/春招/Docker.md",
     "Notion/春招/MySQL.md",
+    "Notion/春招/渗透测试.md",
+    "Notion/春招/git.md",
+    "Notion/春招/base_knowledge.md",
+    "Notion/春招/sql_inject.md",
     "Notion/春招/Redis.md",
-    "Notion/春招/XSS.md",
-    "Notion/春招/反序列化.md",
-    "Notion/春招/sql注入.md",
+    "Notion/春招/Docker.md",
     "Notion/春招/Go.md",
+    "Notion/春招/面试公司.md",
+    "Notion/春招/unserialize.md",
+    "Notion/漏洞挖掘",
+    "Notion/春招/XSS.md",
     "Notion/春招/华顺信安.md",
     "Notion/春招/自我介绍.md",
     "Notion/文件检索阶段性学习.md",
     "Notion/文件检索与更新.md",
     "Notion/🎯 奇安信测试岗校招备战题库（完整版）.md",
     "Notion/《安全服务工程师网络安全工具与命令实战笔记.md",
-    "Notion/春招/面试公司.md",
     "Notion/春招/华顺",
     "Notion/春招",
     "Untitled.md",
@@ -229,8 +232,6 @@
     "blog/source_backup/_posts/可恶的gitee吃掉外链了.md",
     "blog/source_backup/_posts/脱壳教程第一课.md",
     "blog/source_backup/_posts/脚本命令的改变.md",
-    "blog/source_backup/_posts/电子榨菜.md",
-    "blog/source_backup/_posts/爬虫初识.md",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
@@ -248,7 +249,6 @@
     "blog/source_backup/CNAME",
     "blog/source_backup/img",
     "blog/source_backup/about",
-    "blog/source_backup",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
