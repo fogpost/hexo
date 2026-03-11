@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/linux知识.md",
+                "file": "Notion/春招/面试公司.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "linux知识"
+              "title": "面试公司"
             }
           }
         ]
@@ -185,7 +185,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,12 +202,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8b64e1f070b60a4c",
+  "active": "8d8573e2076395ba",
   "lastOpenFiles": [
     "Notion/春招/华顺信安.md",
+    "Notion/春招/安全生涯.md",
+    "Notion/春招/sql_inject.md",
     "Notion/靶场/linux知识.md",
     "Notion/靶场",
-    "Notion/春招/安全生涯.md",
     "Notion/春招/base_knowledge.md",
     "Notion/春招/面试公司.md",
     "Notion/春招/AI智能体与agent.md",
@@ -214,7 +216,6 @@
     "Notion/春招/渗透测试.md",
     "Notion/春招/MySQL.md",
     "Notion/春招/Redis.md",
-    "Notion/春招/sql_inject.md",
     "Notion/春招/unserialize.md",
     "Notion/春招/Go.md",
     "Notion/春招/XSS.md",
