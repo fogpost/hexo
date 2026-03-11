@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/华顺信安.md",
+                "file": "Notion/靶场/linux知识.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "华顺信安"
+              "title": "linux知识"
             }
           }
         ]
@@ -201,11 +201,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8d8573e2076395ba",
+  "active": "8b64e1f070b60a4c",
   "lastOpenFiles": [
-    "Notion/未命名",
-    "Notion/春招/安全生涯.md",
     "Notion/春招/华顺信安.md",
+    "Notion/靶场/linux知识.md",
+    "Notion/靶场",
+    "Notion/春招/安全生涯.md",
     "Notion/春招/base_knowledge.md",
     "Notion/春招/面试公司.md",
     "Notion/春招/AI智能体与agent.md",
@@ -248,7 +249,6 @@
     "blog/source_backup/image",
     "blog/source_backup/CNAME",
     "blog/source_backup/img",
-    "blog/source_backup/about",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
