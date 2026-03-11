@@ -11,3 +11,4 @@
 |A08|Software and Data Integrity Failures（软件与数据完整性失败）|
 |A09|Security Logging and Monitoring Failures（日志监控不足）|
 |A10|Server-Side Request Forgery（SSRF）|
+这是啥呀我记得之前不是这些；难搞
