@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/面试公司.md",
+                "file": "Notion/靶场/自制靶场/jorJS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "面试公司"
+              "title": "jorJS"
             }
           }
         ]
@@ -202,15 +202,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8d8573e2076395ba",
+  "active": "8b64e1f070b60a4c",
   "lastOpenFiles": [
+    "Notion/春招/面试公司.md",
+    "Notion/靶场/自制靶场/jorJS.md",
+    "Notion/靶场/自制靶场",
+    "Notion/靶场/dvwa",
     "Notion/春招/华顺信安.md",
     "Notion/春招/安全生涯.md",
     "Notion/春招/sql_inject.md",
     "Notion/靶场/linux知识.md",
     "Notion/靶场",
     "Notion/春招/base_knowledge.md",
-    "Notion/春招/面试公司.md",
     "Notion/春招/AI智能体与agent.md",
     "Notion/春招/自我介绍.md",
     "Notion/春招/渗透测试.md",
@@ -233,7 +236,6 @@
     "Notion/过去的想法/靶场/DC系列/DC系列.md",
     "blog/source/_posts/PEcompact.md",
     "blog/source_backup/_posts/逆向出题记录.md",
-    "blog/source_backup/_posts/按钮事件.md",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
@@ -248,8 +250,6 @@
     "blog/source_backup/_posts",
     "blog/source_backup/_drafts",
     "blog/source_backup/image",
-    "blog/source_backup/CNAME",
-    "blog/source_backup/img",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
