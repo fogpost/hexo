@@ -41,3 +41,16 @@ C: **`ssh-brute` (暴力破解模拟)**
 - **实验价值**:  
     - 如果你设置的密码太简单（如 `123456` 或 `password`），这个脚本会直接在扫描结果中显示出你的明文密码。
     - 这是提醒管理员“弱口令危害”最直观的方式。
+```
+PORT   STATE SERVICE
+22/tcp open  ssh
+|_ssh-run: Failed to specify credentials and command to run.
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|_    password
+| ssh-brute: 
+|   Accounts: No valid accounts found
+|_  Statistics: Performed 114 guesses in 601 seconds, average tps: 0.2
+
+```
