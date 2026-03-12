@@ -15,3 +15,15 @@ ls /usr/share/wordlists/
 ## hydra
 
 ## dirb
+
+## 虚拟主机（Virtual Host）
+在 Apache / Nginx 里，一个 IP 可以同时承载 **多个网站**，服务器通过 **HTTP请求头里的 Host 字段** 来决定返回哪个网站的内容。
+
+|问题现象|原因|
+|---|---|
+|curl IP 返回 301|虚拟主机配置重定向|
+|curl [www.dav.dsz](http://www.dav.dsz/) 失败|系统无法解析域名（DNS缺失）|
+|浏览器打不开|同上|
+|网速/桥接/网络设置|与此问题无关|
+虚拟主机需要修改hosts
+curl -H "Host: www.dav.dsz" http://172.25.36.226
