@@ -12,4 +12,6 @@ ls /usr/share/wordlists/
 |**-vV**|显示详细的输出过程（Verbose），方便查看尝试进度。|
 |**-f**|找到第一对正确的用户名和密码后立即停止。|
 
-hydra
+## hydra
+
+## dirb

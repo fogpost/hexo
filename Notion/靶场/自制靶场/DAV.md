@@ -13,3 +13,8 @@ PORT     STATE SERVICE VERSION
 6065/tcp open  http    Golang net/http server
 ```
 
+目录扫描
+feroxbuster --url "http://www.dav.dsz/" --wordlist
+/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x
+.git,.php,.html,.xml,.zip,.7z,.tar,.bak,.sql,.py,.pl,.txt,.jpg,.jpeg,.png,.js,.aa
+c,.ogg,.flac,.alac,.wav,.aiff,.dsd,.mp3,.mp4,.mkv,.phtml -s 200 301 302
