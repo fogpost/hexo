@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/毕业设计/网络解析+go抓包.md",
+                "file": "Notion/毕业设计/功能展示.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "网络解析+go抓包"
+              "title": "功能展示"
             }
           }
         ]
@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "0e498920733188c2",
@@ -206,6 +206,7 @@
   "lastOpenFiles": [
     "Notion/毕业设计/前端展示.md",
     "Notion/毕业设计/网络解析+go抓包.md",
+    "Notion/毕业设计/功能展示.md",
     "Notion/毕业设计/go抓包.md",
     "Notion/毕业设计/连接shell.md",
     "Notion/靶场/kali知识.md",
@@ -233,7 +234,6 @@
     "Notion/春招/渗透测试.md",
     "Notion/春招/MySQL.md",
     "Notion/春招/Redis.md",
-    "Notion/春招/unserialize.md",
     "Notion/漏洞挖掘",
     "Notion/春招/华顺",
     "Notion/春招",
