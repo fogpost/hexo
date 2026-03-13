@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/kali知识.md",
+                "file": "Notion/毕业设计/前端展示.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "kali知识"
+              "title": "前端展示"
             }
           }
         ]
@@ -204,10 +204,15 @@
   },
   "active": "8b64e1f070b60a4c",
   "lastOpenFiles": [
+    "Notion/毕业设计/网络解析+go抓包.md",
+    "Notion/毕业设计/go抓包.md",
+    "Notion/毕业设计/连接shell.md",
+    "Notion/毕业设计/前端展示.md",
+    "Notion/靶场/kali知识.md",
+    "Notion/毕业设计",
     "Notion/靶场/linux知识.md",
     "Notion/靶场/自制靶场/DAV.md",
     "Notion/靶场/自制靶场/jorJS.md",
-    "Notion/靶场/kali知识.md",
     "Notion/靶场/OWASP TOP 10.md",
     "Notion/靶场/dvwa/学习顺序.md",
     "Templates/Time_Stamp.md",
@@ -229,10 +234,6 @@
     "Notion/春招/MySQL.md",
     "Notion/春招/Redis.md",
     "Notion/春招/unserialize.md",
-    "Notion/春招/Go.md",
-    "Notion/春招/XSS.md",
-    "Notion/春招/git.md",
-    "Notion/春招/Docker.md",
     "Notion/漏洞挖掘",
     "Notion/春招/华顺",
     "Notion/春招",
@@ -249,7 +250,6 @@
     "blog/source_backup/image/favorites_2025_3_8.html",
     "blog/source_backup/_posts",
     "blog/source_backup/_drafts",
-    "blog/source_backup/image",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
