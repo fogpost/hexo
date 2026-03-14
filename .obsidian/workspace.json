@@ -11,14 +11,24 @@
             "id": "c10e54fd18f80d42",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
-                "bFile": "Notion/过去的想法/CTF/GHCTF/反弹shell的🐎.md",
-                "aRef": ""
+                "file": "Notion/求职/《安全服务工程师网络安全工具与命令实战笔记.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: 反弹shell的🐎  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "《安全服务工程师网络安全工具与命令实战笔记"
             }
           }
         ]
@@ -152,12 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Notion/求职/《安全服务工程师网络安全工具与命令实战笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "《安全服务工程师网络安全工具与命令实战笔记 的大纲"
             }
           },
           {
@@ -227,34 +238,34 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c10e54fd18f80d42",
+  "active": "d7e5de6f28be6c43",
   "lastOpenFiles": [
-    "Notion/过去的想法/Web安全/提权.md",
-    "Notion/过去的想法/Web安全/LDAP.md",
-    "Notion/过去的想法/Web安全/反弹shell升级.md",
+    "Notion/求职",
+    "Notion/求职.md",
+    "Notion/求职/《安全服务工程师网络安全工具与命令实战笔记.md",
+    "Notion/求职/🎯 奇安信测试岗校招备战题库（完整版）.md",
+    "Notion/文件检索阶段性学习.md",
+    "Notion/文件检索与更新.md",
+    "Notion/求职/工具网站.md",
+    "Notion/基础工具.md",
+    "Notion/新的开始/新的开始.md",
+    "Notion/新的开始/学会py脚本写个项目.md",
+    "Notion/日记/2025320.md",
+    "Notion/日记/日记.md",
+    "Notion/日记/2025317.md",
+    "Notion/日记/2025321.md",
+    "Notion/日记/2025322.md",
+    "Notion/日记/2025325.md",
+    "Notion/日记/2025412.md",
+    "Notion/日记/202551.md",
     "Notion/过去的想法/Web安全/网络.md",
+    "Notion/开发/网络抓包工具/知识点.md",
     "Notion/过去的想法/Web安全/Web安全.md",
-    "Notion/过去的想法/Web安全/Roundcube/Untitled.md",
-    "Notion/过去的想法/Web安全/Roundcube/Roundcube.md",
-    "Notion/过去的想法/Web安全/知识点/web反序列化.md",
-    "Notion/过去的想法/Web安全/知识点/知识点.md",
-    "Notion/过去的想法/Web安全/知识点/SSTI.md",
-    "Notion/过去的想法/Web安全/知识点/SSRF.md",
-    "Notion/过去的想法/Web安全/知识点/代理与反向代理.md",
-    "Notion/过去的想法/Web安全/知识点/内存马.md",
-    "Notion/过去的想法/Web安全/知识点/反弹shell.md",
-    "Notion/过去的想法/Web安全/知识点/协议/协议.md",
-    "Notion/过去的想法/Web安全/知识点/协议/Gopher 协议.md",
-    "Notion/过去的想法/Web安全/知识点/数据库/Oracale sql.md",
-    "Notion/过去的想法/Web安全/知识点/数据库/Mysql.md",
-    "Notion/过去的想法/Web安全/知识点/数据库/数据库.md",
-    "Notion/过去的想法/Web安全/知识点/数据库/Sqlite.md",
-    "Notion/过去的想法/Web安全/工具/wpscan.md",
-    "Notion/过去的想法/Web安全/工具/工具.md",
-    "Notion/过去的想法/Web安全/工具/Nmap.md",
-    "Notion/过去的想法/Web安全/工具/coulbatsrike.md",
-    "Notion/过去的想法/CVE/CVE.md",
-    "Notion/过去的想法/CVE/CVE-2025-24813.md",
+    "Notion/过去的想法/Web安全/提权.md",
+    "Notion/过去的想法/windows操作小技巧/全局快捷键.md",
+    "Notion/过去的想法/windows操作小技巧/windows操作小技巧.md",
+    "Notion/过去的想法/过去的想法.md",
+    "Notion/过去的想法/捕获敏感信息.md",
     "Notion/过去的想法/工具网站",
     "未命名.base",
     "Notion/开发/网络抓包工具",
