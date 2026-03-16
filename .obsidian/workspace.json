@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/linux知识.md",
+                "file": "Notion/毕业设计/vue1.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "linux知识"
+              "title": "vue1"
             }
           }
         ]
@@ -203,8 +203,10 @@
   },
   "active": "8d8573e2076395ba",
   "lastOpenFiles": [
-    "Notion/靶场/kali知识.md",
+    "Notion/毕业设计/vue.md",
+    "Notion/毕业设计/vue1.md",
     "Notion/靶场/linux知识.md",
+    "Notion/靶场/kali知识.md",
     "Notion/靶场/知识点.md",
     "Notion/过去的想法/靶场/红日靶场.md",
     "Notion/过去的想法/靶场/Tryhackme/Cyber Kill Chain.md",
@@ -227,8 +229,6 @@
     "Notion/靶场/自制靶场/jorJS.md",
     "Notion/靶场/自制靶场/DAV.md",
     "Notion/靶场/自制靶场/Koishi.md",
-    "Notion/靶场/自制靶场/deprecation.md",
-    "Notion/漏洞挖掘/总起.md",
     "Notion/vue",
     "Notion/网安学习",
     "Notion/靶场/自制靶场",
