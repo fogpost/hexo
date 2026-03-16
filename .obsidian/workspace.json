@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/毕业设计/vue1.md",
+                "file": "Notion/靶场/linux知识.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "vue1"
+              "title": "linux知识"
             }
           }
         ]
@@ -185,8 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,38 +201,38 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8b64e1f070b60a4c",
+  "active": "8d8573e2076395ba",
   "lastOpenFiles": [
-    "Notion/毕业设计/vue.md",
-    "Notion/毕业设计/vue1.md",
-    "Notion/毕业设计/网络解析+go抓包.md",
+    "Notion/靶场/kali知识.md",
     "Notion/靶场/linux知识.md",
-    "Notion/vue",
+    "Notion/靶场/知识点.md",
+    "Notion/过去的想法/靶场/红日靶场.md",
+    "Notion/过去的想法/靶场/Tryhackme/Cyber Kill Chain.md",
+    "Notion/过去的想法/靶场/Tryhackme/TryHack3M Bricks Heist.md",
+    "Notion/过去的想法/靶场/Tryhackme/Tryhackme.md",
+    "Notion/靶场/HTB/Redis数据库简单应用.md",
+    "Notion/过去的想法/靶场/HTB/Unrested.md",
+    "Notion/靶场/HTB/Dog.md",
+    "Notion/过去的想法/靶场/HTB/HTB.md",
+    "Notion/靶场/HTB/Chemistry.md",
+    "Notion/过去的想法/靶场/DC系列/DC-1.md",
+    "Notion/过去的想法/靶场/DC系列/DC系列.md",
+    "Notion/靶场/Web安全/工具/Nmap.md",
+    "Notion/过去的想法/开发/语言学习/语言学习.md",
+    "CC++.md",
+    "Notion/过去的想法/windows操作小技巧/全局快捷键.md",
+    "Notion/靶场/Web安全/工具/wpscan.md",
+    "Notion/靶场/Web安全/知识点/网络.md",
+    "Notion/靶场/OWASP TOP 10.md",
+    "Notion/靶场/自制靶场/jorJS.md",
+    "Notion/靶场/自制靶场/DAV.md",
+    "Notion/靶场/自制靶场/Koishi.md",
+    "Notion/靶场/自制靶场/deprecation.md",
     "Notion/漏洞挖掘/总起.md",
-    "Notion/漏洞挖掘/未命名.md",
-    "Notion/春招/面试公司.md",
+    "Notion/vue",
     "Notion/网安学习",
-    "Notion/春招/华顺信安.md",
-    "Notion/春招/安全生涯.md",
-    "Notion/求职/工具网站.md",
-    "Notion/求职/🎯 奇安信测试岗校招备战题库（完整版）.md",
-    "Notion/求职/《安全服务工程师网络安全工具与命令实战笔记.md",
-    "Notion/日记/2025325.md",
-    "Notion/日记/2025412.md",
-    "Notion/日记/2025322.md",
-    "Notion/日记/2025321.md",
-    "Notion/日记/2025320.md",
-    "Notion/日记/2025317.md",
-    "Notion/日记/2025315.md",
-    "Notion/日记/2025314.md",
-    "Notion/日记/2025313.md",
-    "Notion/日记/202551.md",
-    "conflict-files-obsidian-git.md",
-    "Notion/毕业设计/功能展示.md",
-    "blog/source/_drafts/面经.md",
-    "blog/source/_drafts/每日计划.md",
-    "Notion/过去的想法/靶场/自制靶场",
-    "Notion/求职",
+    "Notion/靶场/自制靶场",
+    "Notion/春招/求职",
     "Notion/毕业设计",
     "Notion/靶场/自制靶场",
     "Notion/靶场/dvwa",
