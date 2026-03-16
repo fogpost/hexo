@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/漏洞挖掘/总起.md",
+                "file": "Notion/靶场/linux知识.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "总起"
+              "title": "linux知识"
             }
           }
         ]
@@ -204,8 +204,8 @@
   },
   "active": "8b64e1f070b60a4c",
   "lastOpenFiles": [
-    "Notion/漏洞挖掘/未命名.md",
     "Notion/漏洞挖掘/总起.md",
+    "Notion/漏洞挖掘/未命名.md",
     "Notion/春招/面试公司.md",
     "Notion/网安学习",
     "Notion/春招/华顺信安.md",
