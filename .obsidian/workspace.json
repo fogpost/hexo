@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/毕业设计/vue1.md",
+                "file": "Notion/春招/base_knowledge.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "vue1"
+              "title": "base_knowledge"
             }
           }
         ]
@@ -185,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,44 +201,43 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8d8573e2076395ba",
+  "active": "8b64e1f070b60a4c",
   "lastOpenFiles": [
-    "Notion/毕业设计/vue.md",
-    "Notion/毕业设计/vue1.md",
-    "Notion/靶场/linux知识.md",
-    "Notion/靶场/kali知识.md",
-    "Notion/靶场/知识点.md",
-    "Notion/过去的想法/靶场/红日靶场.md",
-    "Notion/过去的想法/靶场/Tryhackme/Cyber Kill Chain.md",
-    "Notion/过去的想法/靶场/Tryhackme/TryHack3M Bricks Heist.md",
-    "Notion/过去的想法/靶场/Tryhackme/Tryhackme.md",
-    "Notion/靶场/HTB/Redis数据库简单应用.md",
-    "Notion/过去的想法/靶场/HTB/Unrested.md",
-    "Notion/靶场/HTB/Dog.md",
-    "Notion/过去的想法/靶场/HTB/HTB.md",
-    "Notion/靶场/HTB/Chemistry.md",
-    "Notion/过去的想法/靶场/DC系列/DC-1.md",
-    "Notion/过去的想法/靶场/DC系列/DC系列.md",
-    "Notion/靶场/Web安全/工具/Nmap.md",
-    "Notion/过去的想法/开发/语言学习/语言学习.md",
-    "CC++.md",
-    "Notion/过去的想法/windows操作小技巧/全局快捷键.md",
-    "Notion/靶场/Web安全/工具/wpscan.md",
-    "Notion/靶场/Web安全/知识点/网络.md",
-    "Notion/靶场/OWASP TOP 10.md",
-    "Notion/靶场/自制靶场/jorJS.md",
-    "Notion/靶场/自制靶场/DAV.md",
-    "Notion/靶场/自制靶场/Koishi.md",
+    "Notion/春招/面经.md",
+    "未命名.md",
+    "Notion/春招/base_knowledge.md",
+    "Notion/春招/自我介绍.md",
+    "Notion/春招/渗透测试.md",
+    "Notion/春招/面试公司.md",
+    "Notion/春招/工具/MySQL.md",
+    "Notion/春招/工具/Docker.md",
+    "Notion/春招/工具",
+    "Notion/春招/漏洞/安全生涯.md",
+    "Notion/春招/公司/华顺信安.md",
+    "Notion/春招/漏洞/sql_inject.md",
+    "Notion/春招/公司",
+    "Notion/春招/代码",
+    "Notion/春招/代码.md",
+    "Notion/春招/工具/Redis.md",
+    "Notion/春招/漏洞/JWT漏洞.md",
+    "Notion/春招/漏洞/CSRF.md",
+    "Notion/春招/漏洞",
+    "Notion/春招/漏洞/SSTI.md",
+    "Notion/春招/漏洞/XXE漏洞.md",
+    "Notion/春招/漏洞/命令注入.md",
+    "Notion/春招/漏洞/文件上传.md",
+    "Notion/春招/漏洞/SSRF.md",
+    "Notion/春招/漏洞/XSS.md",
+    "Notion/春招/漏洞/unserialize.md",
+    "Notion/春招/工具/Go.md",
+    "Notion/春招/工具/git.md",
+    "Notion/春招/AI智能体与agent.md",
     "Notion/vue",
     "Notion/网安学习",
     "Notion/靶场/自制靶场",
     "Notion/春招/求职",
     "Notion/毕业设计",
     "Notion/靶场/自制靶场",
-    "Notion/靶场/dvwa",
-    "Notion/靶场",
-    "Notion/漏洞挖掘",
-    "Notion/春招/华顺",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
