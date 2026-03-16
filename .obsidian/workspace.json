@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/linux知识.md",
+                "file": "Notion/毕业设计/vue.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "linux知识"
+              "title": "vue"
             }
           }
         ]
@@ -204,6 +204,9 @@
   },
   "active": "8b64e1f070b60a4c",
   "lastOpenFiles": [
+    "Notion/靶场/linux知识.md",
+    "Notion/毕业设计/vue.md",
+    "Notion/vue",
     "Notion/漏洞挖掘/总起.md",
     "Notion/漏洞挖掘/未命名.md",
     "Notion/春招/面试公司.md",
@@ -229,8 +232,6 @@
     "blog/source/_drafts/每日计划.md",
     "blog/source/_drafts/找实习.md",
     "blog/source/_drafts/msf靶场.md",
-    "Notion/过去的想法/靶场/自制靶场/Koishi.md",
-    "Notion/过去的想法/靶场/自制靶场/deprecation.md",
     "Notion/过去的想法/靶场/自制靶场",
     "Notion/求职",
     "Notion/毕业设计",
@@ -239,7 +240,6 @@
     "Notion/靶场",
     "Notion/漏洞挖掘",
     "Notion/春招/华顺",
-    "Notion/春招",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
