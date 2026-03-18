@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/面试公司.md",
+                "file": "Notion/春招/工具/MySQL.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "面试公司"
+              "title": "MySQL"
             }
           }
         ],
@@ -177,13 +177,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/春招/面试公司.md",
+                "file": "Notion/春招/工具/MySQL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "面试公司 的大纲"
+              "title": "MySQL 的大纲"
             }
           },
           {
@@ -230,10 +230,10 @@
   },
   "active": "564ce075b22d0b4b",
   "lastOpenFiles": [
+    "Notion/春招/面试公司.md",
     "Notion/靶场/Tryhackme/pre Security.md",
     "Notion/春招/公司/深圳 内网渗透工程师-实习.md",
     "Notion/靶场/Tryhackme",
-    "Notion/春招/面试公司.md",
     "Notion/春招/base_knowledge.md",
     "Notion/春招/面经.md",
     "未命名.md",
