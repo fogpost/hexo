@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/公司/深圳 内网渗透工程师-实习.md",
+                "file": "Notion/靶场/Tryhackme/pre Security.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "深圳 内网渗透工程师-实习"
+              "title": "pre Security"
             }
           }
         ],
@@ -177,13 +177,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/春招/公司/深圳 内网渗透工程师-实习.md",
+                "file": "Notion/靶场/Tryhackme/pre Security.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "深圳 内网渗透工程师-实习 的大纲"
+              "title": "pre Security 的大纲"
             }
           },
           {
@@ -211,7 +211,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,8 +230,10 @@
   },
   "active": "564ce075b22d0b4b",
   "lastOpenFiles": [
-    "Notion/春招/面试公司.md",
     "Notion/春招/公司/深圳 内网渗透工程师-实习.md",
+    "Notion/靶场/Tryhackme/pre Security.md",
+    "Notion/靶场/Tryhackme",
+    "Notion/春招/面试公司.md",
     "Notion/春招/base_knowledge.md",
     "Notion/春招/面经.md",
     "未命名.md",
@@ -258,13 +261,11 @@
     "Notion/春招/漏洞/unserialize.md",
     "Notion/春招/工具/Go.md",
     "Notion/春招/工具/git.md",
-    "Notion/春招/AI智能体与agent.md",
     "Notion/vue",
     "Notion/网安学习",
     "Notion/靶场/自制靶场",
     "Notion/春招/求职",
     "Notion/毕业设计",
-    "Notion/靶场/自制靶场",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
