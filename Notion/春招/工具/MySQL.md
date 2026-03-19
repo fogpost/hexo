@@ -39,3 +39,7 @@ MySQL 支持 **慢查询日志**
 
 数据库安全与用户自定义函数
 1. 防范sql注入攻击
+
+安全函数：
+① mysqli_real_escape_string()函数
+mysqli_real_escape_string()函数可以帮助我们消除掉SQL语句中的特殊字符。这个函数会自动把特殊字符转义成转义字符（\\），从而避免了恶意代码的注入
