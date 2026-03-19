@@ -73,5 +73,6 @@ MAC Address: 00:0C:29:7C:3A:16 (VMware)
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 22.89 seconds
 ```
-发现老Samba，利用enum4linux针对 Windows / SMB 服务做信息探测
+发现Samba，尝试利用Metasploit
+
 
