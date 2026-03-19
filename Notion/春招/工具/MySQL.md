@@ -43,3 +43,6 @@ MySQL 支持 **慢查询日志**
 安全函数：
 ① mysqli_real_escape_string()函数
 mysqli_real_escape_string()函数可以帮助我们消除掉SQL语句中的特殊字符。这个函数会自动把特殊字符转义成转义字符（\\），从而避免了恶意代码的注入
+
+PDO预处理语句
+PDO预处理语句是一种更加安全的方式，它可以先预处理SQL语句，再将参数绑定到SQL语句中，从而避免了SQL注入攻击。
