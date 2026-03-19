@@ -74,5 +74,18 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 22.89 seconds
 ```
 发现Samba（2.2看wp才知道），尝试利用Metasploit
+```bash
+msfconsole
+search smb_version
+set RHOSTS 192.168.199.1
+msf6 auxiliary(scanner/smb/smb_version) > run
+[*] 192.168.199.1:139     -   Host could not be identified: Unix (Samba 2.2.1a)
+[*] 192.168.199.1:        - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+```
+利用远程RCEexploi
+Samba < 2.2.8 (Linux/BSD) - Remote Code Execution                 | multiple/remote/10.c
+
+
 
 
