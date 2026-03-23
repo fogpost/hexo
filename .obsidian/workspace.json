@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/毕业设计/代码理解/main.py.md",
+                "file": "Notion/毕业设计/代码理解/start_all.ps.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "main.py"
+              "title": "start_all.ps"
             }
           }
         ],
@@ -177,13 +177,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/靶场/vulnhub/kioptrix.md",
+                "file": "Notion/毕业设计/代码理解/start_all.ps.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "kioptrix 的大纲"
+              "title": "start_all.ps 的大纲"
             }
           },
           {
@@ -211,8 +211,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -230,8 +229,8 @@
   },
   "active": "3f7e8e341f02e9e3",
   "lastOpenFiles": [
-    "Notion/毕业设计/论文提示.md",
     "Notion/毕业设计/代码理解/main.py.md",
+    "Notion/毕业设计/论文提示.md",
     "Notion/毕业设计/前端展示.md",
     "Notion/毕业设计/网络解析+go抓包.md",
     "Notion/毕业设计/连接shell.md",

@@ -181,7 +181,7 @@ def analysis_report():
 - 做流量分析规则检测
 
 ### 块理解
-1. 配置区
+1. 配置区(路径/环境变量)
 ```python
 BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_PCAP = DATA_ROOT / "test" / "all-xena-pcap" / "ARP_Spoofing.pcap"
@@ -192,3 +192,107 @@ UPLOAD_DIR = DATA_ROOT / "imported"
 - `DEFAULT_PCAP`：默认加载的 pcap
 - `PCAP_ON_STARTUP`：可以通过环境变量覆盖
 - `UPLOAD_DIR`：上传文件保存位置
+
+2. 生命周期
+```python
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    if PCAP_ON_STARTUP.exists():
+        pcap_loader.load_pcap(PCAP_ON_STARTUP)
+        set_sequence_cursor_from_path(PCAP_ON_STARTUP)
+    yield
+```
+启动钩子：
+- 加载默认pcap
+- 设置文件游标
+
+3. FastAPI初始化
+```
+app = FastAPI(title="Traffic Analyzer API", version="0.1.0", lifespan=lifespan)
+```
+
+4. 中间件
+```python
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ORIGINS,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+```
+允许前端访问，防止CORS错误
+
+5. API路由
+```python
+@app.get("/health") # 测活{"status": "ok"}
+
+@app.post("/load") #手动pcap文件加载
+@app.get("/load") #/load?file_path=xxx.pcap
+"""
+内部逻辑
+pcap_loader.load_pcap(target)  解析pcap
+set_sequence_cursor_from_path(target) 设置文件位置游标
+"""
+
+@app.get("/pcap-files") #获取所有pcap
+"""
+- 数据目录
+- 当前加载文件
+- 所有 pcap 列表
+"""
+
+@app.post("/load-data-file") #相对路径加载
+@app.post("/load-next-data-file") #加载下一个文件
+"""
+get_next_data_file()
+批量分析  
+自动轮询数据集
+"""
+
+@app.post("/upload-pcap") #上传PCAP
+"""
+格式：pcap、pcapng、cap
+- 接收文件
+- 保存到 `imported`
+- 自动加载
+"""
+
+@app.get("/packets") #数据包列表
+#get_packet_list()
+
+@app.get("/packet/{packet_id}") #单个数据包用于列表
+
+@app.get("/packet/{packet_id}/detail") #数据包细节
+"""
+parse_packet_detail()
+- Ethernet
+- IP
+- TCP/UDP
+- Payload
+"""
+
+@app.get("/analysis/rules") #检测规则
+#规则库：RULE_LIBRARY
+
+@app.get("/analysis/report") #分析报告
+"""
+build_detection_report()
+- 是否存在攻击
+- 命中规则
+- 风险等级
+"""
+```
+
+### 核心模块表
+```
+main.py（API层）
+   ↓
+core/
+   ├── pcap_loader        （读取pcap）
+   ├── packet_list        （分页）
+   ├── list_packet_parser （简略解析）
+   ├── packet_detail_parser（详细解析🔥）
+   ├── detection_engine   （检测🔥）
+   └── pcap_catalog       （文件管理）
+```
