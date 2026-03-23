@@ -4,59 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "fe55d9f409957b92",
+        "id": "61f6ccb59ff3b7d3",
         "type": "tabs",
         "children": [
           {
-            "id": "8b64e1f070b60a4c",
+            "id": "c03b87cb76edd07f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notion/春招/面经.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "面经"
-            }
-          },
-          {
-            "id": "564ce075b22d0b4b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notion/春招/工具/codex.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "codex"
+              "title": "新标签页"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -228,13 +189,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "564ce075b22d0b4b",
+  "active": "c03b87cb76edd07f",
   "lastOpenFiles": [
+    "Notion/春招/面经.md",
+    "Notion/春招/工具/codex.md",
     "Notion/春招/工具/MySQL.md",
     "Notion/靶场/vulnhub/kioptrix-level1.md",
     "Notion/靶场/漏洞利用.md",
     "Notion/靶场/自制靶场/Koishi.md",
-    "Notion/春招/工具/codex.md",
     "Notion/靶场/知识点.md",
     "Notion/靶场/vulnhub",
     "Notion/春招/面试公司.md",
@@ -242,7 +204,6 @@
     "Notion/春招/公司/深圳 内网渗透工程师-实习.md",
     "Notion/靶场/Tryhackme",
     "Notion/春招/base_knowledge.md",
-    "Notion/春招/面经.md",
     "未命名.md",
     "Notion/春招/自我介绍.md",
     "Notion/春招/渗透测试.md",
