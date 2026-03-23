@@ -4,20 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "61f6ccb59ff3b7d3",
+        "id": "4e024259052c9096",
         "type": "tabs",
         "children": [
           {
-            "id": "c03b87cb76edd07f",
+            "id": "f6e95e801a23f1f4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Notion/毕业设计/论文提示.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "论文提示"
+            }
+          },
+          {
+            "id": "3f7e8e341f02e9e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notion/毕业设计/代码理解/main.py.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "main.py"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -189,8 +228,23 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c03b87cb76edd07f",
+  "active": "3f7e8e341f02e9e3",
   "lastOpenFiles": [
+    "Notion/毕业设计/论文提示.md",
+    "Notion/毕业设计/代码理解/main.py.md",
+    "Notion/毕业设计/前端展示.md",
+    "Notion/毕业设计/网络解析+go抓包.md",
+    "Notion/毕业设计/连接shell.md",
+    "Notion/毕业设计/功能展示.md",
+    "Notion/毕业设计/代码理解/app.go.md",
+    "Notion/毕业设计/代码理解/pcap_loader.py.md",
+    "Notion/毕业设计/代码理解/start_all.ps.md",
+    "Notion/毕业设计/代码理解/pcap_catalog.py.md",
+    "Notion/毕业设计/代码理解/packet_detail_parser.py.md",
+    "Notion/毕业设计/代码理解/main.go.md",
+    "Notion/毕业设计/代码理解/App.vue.md",
+    "Notion/毕业设计/代码理解/detection_engine.py.md",
+    "Notion/毕业设计/代码理解",
     "Notion/春招/面经.md",
     "Notion/春招/工具/codex.md",
     "Notion/春招/工具/MySQL.md",
@@ -205,28 +259,13 @@
     "Notion/靶场/Tryhackme",
     "Notion/春招/base_knowledge.md",
     "未命名.md",
-    "Notion/春招/自我介绍.md",
-    "Notion/春招/渗透测试.md",
-    "Notion/春招/工具/Docker.md",
     "Notion/春招/工具",
-    "Notion/春招/漏洞/安全生涯.md",
-    "Notion/春招/公司/华顺信安.md",
-    "Notion/春招/漏洞/sql_inject.md",
     "Notion/春招/公司",
     "Notion/春招/代码",
-    "Notion/春招/代码.md",
-    "Notion/春招/工具/Redis.md",
-    "Notion/春招/漏洞/JWT漏洞.md",
-    "Notion/春招/漏洞/CSRF.md",
     "Notion/春招/漏洞",
-    "Notion/春招/漏洞/SSTI.md",
-    "Notion/春招/漏洞/XXE漏洞.md",
-    "Notion/春招/漏洞/命令注入.md",
-    "Notion/春招/漏洞/文件上传.md",
     "Notion/vue",
     "Notion/网安学习",
     "Notion/靶场/自制靶场",
-    "Notion/春招/求职",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
