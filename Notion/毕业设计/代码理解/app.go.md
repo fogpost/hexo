@@ -114,6 +114,51 @@ ListCaptureInterfaces() #go run . -list-ifaces -json
 """
 ```
 - 启动抓包
+```go
+startCapture() #go run . -iface-index 3
+```
+
+4. 终端系统
+- 本地终端
+```go
+startLocalShell() #powershell bash
+```
+- ssh
+```go
+startSSHShell() #ssh
+"""
+golang.org/x/crypto/ssh
+- 交互式 shell
+- 实时输出
+"""
+```
+- 输入命令
+```go
+ExecuteTerminalCommandByID()
+stdin.Write() #Web 终端（类似 WebShell）
+```
+
+5. 日志流系统
+```go
+streamReader()
+- 读取 stdout/stderr
+- 自动解码（UTF-8 / GBK）
+- 写入日志数组
+```
+
+6. 服务控制（核心接口）
+- 启动
+```go
+StartEmbeddedStack()
+- 启动 FastAPI
+- 等待：
+waitHTTP("http://127.0.0.1:8000/health") #等待系统自检正常
+```
+- 停止
+```go
+StopEmbeddedStack()
+StopCapture() #Process.Kill()
+```
 
 ## 代码展示
 

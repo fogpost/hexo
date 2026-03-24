@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/面试公司.md",
+                "file": "Notion/春招/工具/codex.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "面试公司"
+              "title": "codex"
             }
           }
         ],
@@ -201,13 +201,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/春招/红方/综述.md",
+                "file": "Notion/春招/工具/codex.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "综述 的大纲"
+              "title": "codex 的大纲"
             }
           },
           {
@@ -235,8 +235,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -254,6 +253,8 @@
   },
   "active": "bd77f3ad6cc5e88f",
   "lastOpenFiles": [
+    "Notion/毕业设计/代码理解/app.go.md",
+    "Notion/春招/面试公司.md",
     "Notion/春招/工具/数据库/Postgres.md",
     "Notion/春招/红方/综述.md",
     "Notion/春招/红方",
@@ -261,7 +262,6 @@
     "Notion/春招/工具/数据库/MSSQL.md",
     "Notion/春招/工具/数据库/MySQL.md",
     "Notion/春招/工具/数据库",
-    "Notion/毕业设计/代码理解/app.go.md",
     "Notion/春招/工具/未命名.md",
     "Notion/毕业设计/代码理解/start_all.ps.md",
     "Notion/毕业设计/代码理解/main.py.md",
@@ -282,7 +282,6 @@
     "Notion/靶场/vulnhub/kioptrix-level1.md",
     "Notion/靶场/漏洞利用.md",
     "Notion/靶场/自制靶场/Koishi.md",
-    "Notion/靶场/知识点.md",
     "Notion/靶场/vulnhub",
     "Notion/靶场/Tryhackme",
     "Notion/春招/工具",
