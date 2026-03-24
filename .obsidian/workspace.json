@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/工具/数据库/Postgres.md",
+                "file": "Notion/春招/红方/综述.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Postgres"
+              "title": "综述"
             }
           }
         ],
@@ -177,13 +177,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/春招/工具/数据库/Postgres.md",
+                "file": "Notion/春招/红方/综述.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Postgres 的大纲"
+              "title": "综述 的大纲"
             }
           },
           {
@@ -230,8 +230,10 @@
   },
   "active": "3f7e8e341f02e9e3",
   "lastOpenFiles": [
-    "Notion/春招/工具/数据库/MongoDB.md",
     "Notion/春招/工具/数据库/Postgres.md",
+    "Notion/春招/红方/综述.md",
+    "Notion/春招/红方",
+    "Notion/春招/工具/数据库/MongoDB.md",
     "Notion/春招/工具/数据库/MSSQL.md",
     "Notion/春招/工具/数据库/MySQL.md",
     "Notion/春招/工具/数据库",
@@ -258,14 +260,12 @@
     "Notion/靶场/自制靶场/Koishi.md",
     "Notion/靶场/知识点.md",
     "Notion/靶场/vulnhub",
-    "Notion/春招/面试公司.md",
     "Notion/靶场/Tryhackme",
     "Notion/春招/工具",
     "Notion/春招/公司",
     "Notion/春招/代码",
     "Notion/春招/漏洞",
     "Notion/vue",
-    "Notion/网安学习",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
