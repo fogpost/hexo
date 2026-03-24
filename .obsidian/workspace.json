@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/公司/鼎安天下.md",
+                "file": "Notion/靶场/CVE/CVE-2026-21708.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "鼎安天下"
+              "title": "CVE-2026-21708"
             }
           }
         ],
@@ -201,13 +201,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/春招/公司/鼎安天下.md",
+                "file": "Notion/靶场/CVE/CVE-2026-21708.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "鼎安天下 的大纲"
+              "title": "CVE-2026-21708 的大纲"
             }
           },
           {
@@ -254,8 +254,14 @@
   },
   "active": "bd77f3ad6cc5e88f",
   "lastOpenFiles": [
-    "Notion/毕业设计/代码理解/detection_engine.py.md",
+    "Notion/漏洞挖掘/流程.md",
+    "Notion/靶场/CVE/CVE-2026-21708.md",
+    "Notion/靶场/CVE",
+    "Notion/未命名",
+    "Notion/漏洞挖掘/练习.md",
+    "Notion/漏洞挖掘/总起.md",
     "Notion/春招/公司/鼎安天下.md",
+    "Notion/毕业设计/代码理解/detection_engine.py.md",
     "Notion/毕业设计/代码理解/main.py.md",
     "Notion/毕业设计/代码理解/main.go.md",
     "Notion/毕业设计/代码理解/App.vue.md",
@@ -278,18 +284,12 @@
     "Notion/毕业设计/功能展示.md",
     "Notion/毕业设计/代码理解/pcap_loader.py.md",
     "Notion/毕业设计/代码理解/pcap_catalog.py.md",
-    "Notion/毕业设计/代码理解/packet_detail_parser.py.md",
     "Notion/毕业设计/代码理解",
-    "Notion/春招/面经.md",
-    "Notion/靶场/vulnhub/kioptrix-level1.md",
-    "Notion/靶场/漏洞利用.md",
     "Notion/靶场/vulnhub",
     "Notion/靶场/Tryhackme",
     "Notion/春招/工具",
     "Notion/春招/公司",
     "Notion/春招/代码",
-    "Notion/春招/漏洞",
-    "Notion/vue",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
