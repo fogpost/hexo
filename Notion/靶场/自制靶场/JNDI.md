@@ -259,4 +259,5 @@ find / -perm -4000 -type f 2>/dev/null
 /usr/lib/openssh/ssh-keysign
 /usr/libexec/polkit-agent-helper-1
 ```
+查看版本pkexec version 0.105<0.120
 
