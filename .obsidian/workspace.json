@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/自制靶场/lanSSudoyy.md",
+                "file": "Notion/靶场/自制靶场/JNDI.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "lanSSudoyy"
+              "title": "JNDI"
             }
           }
         ],
@@ -255,6 +255,7 @@
   "active": "bd77f3ad6cc5e88f",
   "lastOpenFiles": [
     "Notion/靶场/自制靶场/lanSSudoyy.md",
+    "Notion/靶场/自制靶场/JNDI.md",
     "Notion/靶场/自制靶场/Koishi.md",
     "Notion/靶场/靶机流程.md",
     "Notion/靶场/知识点.md",
@@ -281,7 +282,6 @@
     "Notion/春招/公司/鼎安天下.md",
     "Notion/毕业设计/代码理解/main.py.md",
     "Notion/毕业设计/代码理解/main.go.md",
-    "Notion/毕业设计/代码理解/App.vue.md",
     "Notion/春招/红方",
     "Notion/春招/工具/数据库",
     "Notion/毕业设计/代码理解",
