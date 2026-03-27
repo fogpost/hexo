@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/自制靶场/JNDI.md",
+                "file": "Notion/靶场/靶机流程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "JNDI"
+              "title": "靶机流程"
             }
           }
         ],
@@ -254,8 +254,8 @@
   },
   "active": "bd77f3ad6cc5e88f",
   "lastOpenFiles": [
-    "Notion/靶场/靶机流程.md",
     "Notion/靶场/自制靶场/JNDI.md",
+    "Notion/靶场/靶机流程.md",
     "Notion/靶场/漏洞利用.md",
     "Notion/靶场/自制靶场/deprecation.md",
     "Notion/靶场/自制靶场/lanSSudoyy.md",

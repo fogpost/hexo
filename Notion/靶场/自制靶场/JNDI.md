@@ -261,3 +261,14 @@ find / -perm -4000 -type f 2>/dev/null
 ```
 查看版本pkexec version 0.105<0.120
 
+总结链条
+- 信息收集（nmap）
+- 发现 Tomcat + AJP
+- Ghostcat 尝试（失败）
+- 找到隐藏点 `ptjo.pyv`
+- 解密 → `jndi.jsp`
+- JNDI 注入 → RCE
+- 拿 shell
+- 升级 tty
+- 枚举 → 发现 pkexec
+- 利用 PwnKit → root
