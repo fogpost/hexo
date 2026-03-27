@@ -239,3 +239,24 @@ drwxr-xr-x  2 root root 4096 Mar 18  2025 .
 drwxr-xr-x 82 root root 4096 Mar 27 10:25 ..
 -rw-r--r--  1 root root  102 Oct 11  2019 .placeholder
 ```
+看suid,发现/usr/bin/pkexec，认为是Polkit 提权，经典漏洞：PwnKit
+CVE-2021-4034
+```bash
+bluebird@JNDI:~$ find / -perm -4000 -type f 2>/dev/null
+find / -perm -4000 -type f 2>/dev/null
+/usr/bin/chsh
+/usr/bin/chfn
+/usr/bin/newgrp
+/usr/bin/gpasswd
+/usr/bin/mount
+/usr/bin/su
+/usr/bin/umount
+/usr/bin/pkexec
+/usr/bin/sudo
+/usr/bin/passwd
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/openssh/ssh-keysign
+/usr/libexec/polkit-agent-helper-1
+```
+
