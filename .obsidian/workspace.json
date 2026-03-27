@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/靶机流程.md",
+                "file": "Notion/靶场/自制靶场/lanSSudoyy.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "靶机流程"
+              "title": "lanSSudoyy"
             }
           }
         ],
@@ -255,12 +255,12 @@
   "active": "bd77f3ad6cc5e88f",
   "lastOpenFiles": [
     "Notion/靶场/自制靶场/lanSSudoyy.md",
+    "Notion/靶场/自制靶场/Koishi.md",
     "Notion/靶场/靶机流程.md",
     "Notion/靶场/知识点.md",
     "Notion/靶场/自制靶场/deprecation.md",
     "Notion/靶场/自制靶场/DAV.md",
     "Notion/靶场/自制靶场/虚拟机链接.md",
-    "Notion/靶场/自制靶场/Koishi.md",
     "Notion/靶场/自制靶场/jorJs.md",
     "Notion/靶场/Tryhackme/pre Security.md",
     "Notion/靶场/vulnhub/kioptrix-level1.md",
