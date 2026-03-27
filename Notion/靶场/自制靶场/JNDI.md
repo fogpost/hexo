@@ -63,3 +63,6 @@ python3 tomcat-ajp-lfi.py ip -p 8009 -f WEB-INF/web.xml
 发现连不上问了才知道是移位密码jndi.jsp
 然后进入对应页面
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603272112518.png)
+发现存在jndilookup漏洞
+![image.png](https://gitee.com/fogpost/photo/raw/master/202603272123359.png)
+找到现成的marshalsec
