@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/自制靶场/JNDI.md",
+                "file": "Notion/靶场/CVE/CWE/CWE-125_Out-of-bounds_Read.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "JNDI"
+              "title": "CWE-125_Out-of-bounds_Read"
             }
           }
         ],
@@ -254,10 +254,14 @@
   },
   "active": "bd77f3ad6cc5e88f",
   "lastOpenFiles": [
+    "Notion/靶场/CVE/CVE-2021-4034_Polkit_pkexec.md",
+    "Notion/靶场/CVE/CWE/CWE-125_Out-of-bounds_Read.md",
+    "Notion/靶场/CVE/CWE",
+    "Notion/靶场/CVE/CVE-2026-21708.md",
+    "Notion/靶场/自制靶场/JNDI.md",
     "Notion/靶场/自制靶场/DAV.md",
     "Notion/靶场/自制靶场/虚拟机链接.md",
     "Notion/靶场/靶机流程.md",
-    "Notion/靶场/自制靶场/JNDI.md",
     "Notion/靶场/漏洞利用.md",
     "Notion/靶场/自制靶场/deprecation.md",
     "Notion/靶场/自制靶场/lanSSudoyy.md",
@@ -274,14 +278,11 @@
     "Notion/毕业设计/代码理解/app.go.md",
     "Notion/春招/面经.md",
     "Notion/阅读/Memfit AI 专业记忆：Agent 动手之前，先翻了一遍你的知识库.md",
-    "Notion/靶场/CVE/CVE-2026-21708.md",
     "Notion/阅读",
     "Notion/靶场/CVE",
     "Notion/漏洞挖掘/练习.md",
     "Notion/漏洞挖掘/总起.md",
     "Notion/春招/公司/鼎安天下.md",
-    "Notion/毕业设计/代码理解/main.py.md",
-    "Notion/毕业设计/代码理解/main.go.md",
     "Notion/春招/红方",
     "Notion/春招/工具/数据库",
     "Notion/毕业设计/代码理解",
@@ -289,7 +290,6 @@
     "Notion/靶场/Tryhackme",
     "Notion/春招/工具",
     "Notion/春招/公司",
-    "Notion/春招/代码",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
