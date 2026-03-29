@@ -275,3 +275,8 @@ find / -perm -4000 -type f 2>/dev/null
 - 利用 PwnKit → root
 
 ## wp总结
+之前搞错了，这个靶机的提权方式是再liz下的横向之前也没有弄过可以学习一下
+nc传文件
+```
+
+```
