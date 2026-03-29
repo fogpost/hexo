@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/自制靶场/DAV.md",
+                "file": "Notion/靶场/dvwa/Brute force.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DAV"
+              "title": "Brute force"
             }
           }
         ],
@@ -254,8 +254,10 @@
   },
   "active": "bd77f3ad6cc5e88f",
   "lastOpenFiles": [
-    "Notion/靶场/自制靶场/jorJs.md",
+    "Notion/靶场/dvwa/学习顺序.md",
+    "Notion/靶场/dvwa/Brute force.md",
     "Notion/靶场/自制靶场/DAV.md",
+    "Notion/靶场/自制靶场/jorJs.md",
     "Notion/靶场/kali知识.md",
     "Notion/靶场/知识点.md",
     "Notion/靶场/自制靶场/JNDI.md",
@@ -279,10 +281,8 @@
     "Notion/靶场/linux知识.md",
     "Notion/毕业设计/代码理解/detection_engine.py.md",
     "Notion/毕业设计/代码理解/app.go.md",
-    "Notion/阅读/Memfit AI 专业记忆：Agent 动手之前，先翻了一遍你的知识库.md",
     "Notion/阅读",
     "Notion/靶场/CVE",
-    "Notion/漏洞挖掘/练习.md",
     "Notion/春招/红方",
     "Notion/春招/工具/数据库",
     "Notion/毕业设计/代码理解",
