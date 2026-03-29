@@ -27,3 +27,12 @@ ls /usr/share/wordlists/
 |网速/桥接/网络设置|与此问题无关|
 虚拟主机需要修改hosts
 curl -H "Host: www.dav.dsz" http://172.25.36.226
+
+## tmux
+- `Ctrl+B %` → 垂直分屏
+- `Ctrl+B "` → 水平分屏
+- `Ctrl+B →/←` → 切换分屏
+- `Ctrl+B c` → 新建窗口（相当于标签）
+- `Ctrl+B n` / `Ctrl+B p` → 切换窗口
+- `Ctrl+B d` → detach（分离，后台运行会话）
+- `tmux attach` → 重新连接会话
