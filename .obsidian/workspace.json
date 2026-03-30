@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/靶机流程.md",
+                "file": "Notion/靶场/自制靶场/DAV.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "靶机流程"
+              "title": "DAV"
             }
           }
         ],
@@ -230,6 +230,7 @@
   },
   "active": "059f4969deb42c51",
   "lastOpenFiles": [
+    "Notion/靶场/靶机流程.md",
     "Notion/靶场/自制靶场/DAV.md",
     "Notion/靶场/自制靶场/虚拟机链接.md",
     "Notion/春招/红方/综述.md",
@@ -240,7 +241,6 @@
     "Notion/靶场/kali知识.md",
     "Notion/靶场/知识点.md",
     "Notion/靶场/自制靶场/JNDI.md",
-    "Notion/靶场/靶机流程.md",
     "Notion/春招/面经.md",
     "Notion/靶场/模板.md",
     "Notion/靶场/CVE/CWE/CWE-125_Out-of-bounds_Read.md",

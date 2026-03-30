@@ -56,4 +56,5 @@ Not authorized
 ```
 找到密码admin:qwertyuiop
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603301723530.png)
-
+了解到这个dav是有挂载文件的
+cadaver http://dev.dav.dsz:6065/
