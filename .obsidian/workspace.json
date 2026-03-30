@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/自制靶场/DAV.md",
+                "file": "Notion/靶场/靶机流程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DAV"
+              "title": "靶机流程"
             }
           }
         ],
@@ -230,8 +230,8 @@
   },
   "active": "059f4969deb42c51",
   "lastOpenFiles": [
-    "Notion/靶场/自制靶场/虚拟机链接.md",
     "Notion/靶场/自制靶场/DAV.md",
+    "Notion/靶场/自制靶场/虚拟机链接.md",
     "Notion/春招/红方/综述.md",
     "Notion/毕业设计/论文提示.md",
     "Notion/靶场/dvwa/Brute force.md",
