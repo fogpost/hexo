@@ -24,6 +24,12 @@ System Administrator Note:
 The internal mount point for development assets has been migrated to the dev.dav.dsz sub-domain. Please update your local mapping scripts accordingly.
 开发资产的内部挂载点已迁移到 dev.dav.dsz 子域。请相应更新您的本地映射脚本。
 ```
+加hosts ip dev.dav.dsz
+![image.png](https://gitee.com/fogpost/photo/raw/master/202603301624906.png)
+目录爆破
+> [04:27:20] 200 -   56KB - /test.php
+
+
 
 
 
