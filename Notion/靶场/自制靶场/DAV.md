@@ -56,5 +56,8 @@ Not authorized
 ```
 找到密码admin:qwertyuiop
 ![image.png](https://gitee.com/fogpost/photo/raw/master/202603301723530.png)
-了解到这个dav是有挂载文件的
+了解到这个dav是有挂载文件的，且可以上传文件，直接上传个shell上去
 cadaver http://dev.dav.dsz:6065/
+
+![image.png](https://gitee.com/fogpost/photo/raw/master/202603301745830.png)
+
