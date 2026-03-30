@@ -54,4 +54,6 @@ curl -v -X options http://dev.dav.dsz:6065/ 来看响应报文，查看页面需
 Not authorized
 * Connection #0 to host dev.dav.dsz left intact
 ```
-![image.png](https://gitee.com/fogpost/photo/raw/master/202603301651019.png)
+找到密码admin:qwertyuiop
+![image.png](https://gitee.com/fogpost/photo/raw/master/202603301723530.png)
+
