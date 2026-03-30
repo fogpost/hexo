@@ -17,6 +17,105 @@
 返回报告
 ```
 
+### 规则库
+```
+RULE_LIBRARY = [
+    {"id": "ARP_SPOOF_MULTI_MAC", "name": "ARP 欺骗可疑", "severity": "high", ...},
+    {"id": "TCP_SYN_FLOOD", "name": "SYN Flood 可疑", "severity": "high", ...},
+    {"id": "DNS_QUERY_FLOOD", "name": "DNS 请求洪泛可疑", "severity": "medium", ...},
+    {"id": "ICMP_ECHO_FLOOD", "name": "ICMP Flood 可疑", "severity": "medium", ...},
+    {"id": "TCP_PORT_SCAN", "name": "端口扫描可疑", "severity": "medium", ...},
+]
+
+- **ARP 欺骗**：同一个 IP 出现多个 MAC。
+- **SYN Flood**：大量 SYN 包但没有 ACK。
+- **DNS 请求洪泛**：短时间内大量 DNS 查询。
+- **ICMP Flood**：大量 ICMP Echo 请求（ping 洪泛）。
+- **端口扫描**：一个源访问很多端口。
+```
+
+### 核心函数
+- 初始化统计变量
+```
+packet_count = len(packets)
+protocol_counter = Counter()
+src_counter = Counter()
+dst_counter = Counter()
+```
+- 遍历数据包
+```
+for idx, pkt in enumerate(packets):
+    src_ip = None
+    dst_ip = None
+    if pkt.haslayer(IP):
+        ...
+    elif pkt.haslayer(ARP):
+        ...
+    else:
+        protocol_counter[pkt.name] += 1
+    if src_ip:
+        src_counter[src_ip] += 1
+    if dst_ip:
+        dst_counter[dst_ip] += 1
+```
+- 识别异常行为
+```
+if pkt.haslayer(ARP):
+    if arp.op == 2:  # ARP reply
+        arp_ip_to_macs[psrc].add(hwsrc)
+        arp_packet_ids[psrc].append(idx)   
+```
+#### **SYN Flood & 端口扫描**
+```
+if pkt.haslayer(TCP):  
+    syn = tcp.flags & 0x02  
+    ack = tcp.flags & 0x10  
+    if syn and not ack:  
+        syn_counter[src_ip] += 1  
+        scan_ports[src_ip].add(tcp.dport)
+```
+- SYN Flood：大量 SYN 包，没有 ACK。
+- 端口扫描：同一源访问很多端口。
+#### **DNS 请求洪泛**
+```
+if pkt.haslayer(UDP) and udp.dport == 53:  
+    dns_counter[src_ip] += 1
+```
+#### **ICMP Flood**
+```
+if pkt.haslayer(ICMP) and icmp.type == 8:  
+    icmp_counter[src_ip] += 1
+```
+
+- 生成告警
+阈值：
+1.  **SYN Flood**：`max(100, packet_count*0.2)`
+2. **DNS / ICMP Flood**：`max(80, packet_count*0.15)`
+3. **端口扫描**：访问端口数 ≥ 20
+4. **ARP 欺骗**：同一 IP 对应多个 MAC
+
+包含：
+1.  `rule_id`、`severity`、`title`、`description`
+2.  `evidence`：具体 IP、MAC、访问端口、匹配的 packet_id
+3.  `recommendation`：建议处理方式
+4.  `alert_id`：唯一编号
+
+- 构建报告
+```python
+return {
+    "generated_at": datetime.now(timezone.utc).isoformat(),
+    "packet_count": packet_count,
+    "feature_stats": {
+        "protocol_counts": _top_items(protocol_counter),
+        "top_src_ips": _top_items(src_counter),
+        "top_dst_ips": _top_items(dst_counter),
+        "unique_src_ips": len(src_counter),
+        "unique_dst_ips": len(dst_counter),
+    },
+    "rules": RULE_LIBRARY,
+    "alerts": alerts,
+}
+```
 
 ## 代码展示
 ```python

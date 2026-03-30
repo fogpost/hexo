@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bd77f3ad6cc5e88f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notion/靶场/自制靶场/虚拟机链接.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "虚拟机链接"
-            }
-          },
-          {
             "id": "059f4969deb42c51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/靶场/自制靶场/DAV.md",
+                "file": "Notion/毕业设计/中期检查问答.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DAV"
+              "title": "中期检查问答"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -177,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/靶场/CVE/CVE-2026-21708.md",
+                "file": "Notion/毕业设计/中期检查问答.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CVE-2026-21708 的大纲"
+              "title": "中期检查问答 的大纲"
             }
           },
           {
@@ -211,8 +186,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -230,12 +204,20 @@
   },
   "active": "059f4969deb42c51",
   "lastOpenFiles": [
+    "Notion/毕业设计/代码理解/app.go.md",
+    "Notion/毕业设计/代码理解/App.vue.md",
+    "Notion/毕业设计/代码理解/detection_engine.py.md",
+    "Notion/毕业设计/中期检查问答.md",
+    "Notion/毕业设计/网络解析+go抓包.md",
+    "Notion/毕业设计/前端展示.md",
+    "Notion/毕业设计/论文提示.md",
+    "Notion/毕业设计/连接shell.md",
+    "Notion/毕业设计/功能展示.md",
+    "Notion/靶场/自制靶场/DAV.md",
     "Notion/靶场/靶机流程.md",
     "Notion/靶场/漏洞利用.md",
-    "Notion/靶场/自制靶场/DAV.md",
     "Notion/靶场/自制靶场/虚拟机链接.md",
     "Notion/春招/红方/综述.md",
-    "Notion/毕业设计/论文提示.md",
     "Notion/靶场/dvwa/Brute force.md",
     "Notion/靶场/dvwa/学习顺序.md",
     "Notion/靶场/自制靶场/jorJs.md",
@@ -249,14 +231,6 @@
     "Notion/靶场/CVE/CWE",
     "Notion/靶场/CVE/CVE-2026-21708.md",
     "Notion/靶场/自制靶场/deprecation.md",
-    "Notion/靶场/自制靶场/lanSSudoyy.md",
-    "Notion/靶场/自制靶场/Koishi.md",
-    "Notion/靶场/Tryhackme/pre Security.md",
-    "Notion/靶场/vulnhub/kioptrix-level1.md",
-    "Notion/漏洞挖掘/流程.md",
-    "Notion/靶场/OWASP TOP 10.md",
-    "Notion/靶场/linux知识.md",
-    "Notion/毕业设计/代码理解/detection_engine.py.md",
     "Notion/阅读",
     "Notion/靶场/CVE",
     "Notion/春招/红方",
