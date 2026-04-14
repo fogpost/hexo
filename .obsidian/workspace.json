@@ -11,13 +11,24 @@
             "id": "97e160de6cbc0076",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "未命名 2.base",
-                "viewName": "表格"
+                "file": "Notion/春招/红方/综述.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-table",
-              "title": "未命名 2"
+              "icon": "lucide-file",
+              "title": "综述"
             }
           }
         ]
@@ -73,8 +84,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -192,13 +202,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "97e160de6cbc0076",
+  "active": "8d8573e2076395ba",
   "lastOpenFiles": [
-    "未命名 2.base",
-    "未命名 1.base",
+    "Notion/考研",
+    "Notion/未命名.md",
+    "Notion/春招/红方/综述.md",
+    "Notion/hvv",
+    "Notion/hvv.md",
+    "Notion/阅读/Memfit AI 专业记忆：Agent 动手之前，先翻了一遍你的知识库.md",
     "2026-04-04.md",
-    "未命名.canvas",
     "未命名.base",
+    "未命名.canvas",
+    "未命名 1.base",
+    "未命名 2.base",
     "Notion/毕业设计/代码理解/pcap_loader.py.md",
     "Notion/毕业设计/代码理解/pcap_catalog.py.md",
     "Notion/毕业设计/代码理解/packet_detail_parser.py.md",
@@ -218,19 +234,13 @@
     "Notion/靶场/靶机流程.md",
     "Notion/靶场/漏洞利用.md",
     "Notion/靶场/自制靶场/虚拟机链接.md",
-    "Notion/春招/红方/综述.md",
     "Notion/靶场/dvwa/Brute force.md",
-    "Notion/靶场/dvwa/学习顺序.md",
-    "Notion/靶场/自制靶场/jorJs.md",
-    "Notion/靶场/kali知识.md",
     "Notion/靶场/CVE/CWE",
     "Notion/阅读",
     "Notion/靶场/CVE",
     "Notion/春招/红方",
     "Notion/春招/工具/数据库",
     "Notion/毕业设计/代码理解",
-    "Notion/靶场/vulnhub",
-    "Notion/靶场/Tryhackme",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
