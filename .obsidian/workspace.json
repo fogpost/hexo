@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/hvv/护网流程.md",
+                "file": "Notion/春招/漏洞/安全生涯.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "护网流程"
+              "title": "安全生涯"
             }
           }
         ]
@@ -204,8 +204,19 @@
   },
   "active": "97e160de6cbc0076",
   "lastOpenFiles": [
-    "Notion/春招/红方/综述.md",
+    "Notion/春招/漏洞/标准流程.md",
+    "Notion/春招/漏洞/提权思路.md",
+    "Notion/春招/漏洞/应急响应.md",
+    "Notion/春招/漏洞/常用命令.md",
+    "Notion/春招/漏洞/安全生涯.md",
+    "Notion/春招/漏洞/unserialize.md",
+    "Notion/春招/漏洞/文件上传.md",
+    "Notion/春招/漏洞/SSRF.md",
+    "Notion/春招/漏洞/CSRF.md",
+    "Notion/春招/漏洞/XSS.md",
+    "Notion/春招/漏洞/sql_inject.md",
     "Notion/hvv/护网流程.md",
+    "Notion/春招/红方/综述.md",
     "Notion/考研",
     "Notion/未命名.md",
     "Notion/hvv",
@@ -225,17 +236,6 @@
     "Notion/毕业设计/代码理解/detection_engine.py.md",
     "Notion/毕业设计/代码理解/App.vue.md",
     "Notion/毕业设计/代码理解/app.go.md",
-    "Notion/毕业设计/中期检查问答.md",
-    "Notion/毕业设计/网络解析+go抓包.md",
-    "Notion/毕业设计/前端展示.md",
-    "Notion/毕业设计/论文提示.md",
-    "Notion/毕业设计/连接shell.md",
-    "Notion/毕业设计/功能展示.md",
-    "Notion/靶场/自制靶场/DAV.md",
-    "Notion/靶场/靶机流程.md",
-    "Notion/靶场/漏洞利用.md",
-    "Notion/靶场/自制靶场/虚拟机链接.md",
-    "Notion/靶场/dvwa/Brute force.md",
     "Notion/靶场/CVE/CWE",
     "Notion/阅读",
     "Notion/靶场/CVE",
