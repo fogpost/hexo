@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/google建号.md",
+                "file": "Notion/考研/高数.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "google建号"
+              "title": "高数"
             }
           }
         ]
@@ -202,11 +202,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8d8573e2076395ba",
+  "active": "97e160de6cbc0076",
   "lastOpenFiles": [
+    "Notion/google建号.md",
+    "Notion/考研/高数.md",
     "Notion/未命名",
     "Notion/春招/自我介绍.md",
-    "Notion/google建号.md",
     "Notion/春招/渗透测试.md",
     "Notion/春招/面试公司.md",
     "Notion/春招/面经.md",
@@ -240,7 +241,6 @@
     "Notion/阅读",
     "Notion/靶场/CVE",
     "Notion/春招/红方",
-    "Notion/春招/工具/数据库",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
     "blog/source_backup/image/image 9.png",
