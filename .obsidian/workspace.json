@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/春招/自我介绍.md",
+                "file": "Notion/google建号.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "自我介绍"
+              "title": "google建号"
             }
           }
         ]
@@ -202,8 +202,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "97e160de6cbc0076",
+  "active": "8d8573e2076395ba",
   "lastOpenFiles": [
+    "Notion/未命名",
+    "Notion/春招/自我介绍.md",
+    "Notion/google建号.md",
     "Notion/春招/渗透测试.md",
     "Notion/春招/面试公司.md",
     "Notion/春招/面经.md",
@@ -221,7 +224,6 @@
     "Notion/hvv/护网流程.md",
     "Notion/春招/红方/综述.md",
     "Notion/考研",
-    "Notion/未命名.md",
     "Notion/hvv",
     "Notion/hvv.md",
     "Notion/阅读/Memfit AI 专业记忆：Agent 动手之前，先翻了一遍你的知识库.md",
@@ -234,8 +236,6 @@
     "Notion/毕业设计/代码理解/pcap_catalog.py.md",
     "Notion/毕业设计/代码理解/packet_detail_parser.py.md",
     "Notion/毕业设计/代码理解/start_all.ps.md",
-    "Notion/毕业设计/代码理解/main.py.md",
-    "Notion/毕业设计/代码理解/main.go.md",
     "Notion/靶场/CVE/CWE",
     "Notion/阅读",
     "Notion/靶场/CVE",
