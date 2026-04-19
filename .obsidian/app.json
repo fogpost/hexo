@@ -2,7 +2,7 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "source/_posts",
   "newLinkFormat": "shortest",
-  "attachmentFolderPath": "source/image",
+  "attachmentFolderPath": "blog/source/image",
   "promptDelete": false,
   "showUnsupportedFiles": false,
   "alwaysUpdateLinks": true,
