@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/hvv/护网流程.md",
+                "file": "Notion/靶场/vulnhub/kioptrix-level1.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "护网流程"
+              "title": "kioptrix-level1"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "hydra",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +84,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -204,6 +205,9 @@
   },
   "active": "97e160de6cbc0076",
   "lastOpenFiles": [
+    "blog/source/_drafts/一些工具的使用方法.md",
+    "Notion/hvv/密码爆破.md",
+    "Notion/hvv/护网流程.md",
     "Notion/hvv/护网报告/湘潭市大数据和产业创新发展中心.md",
     "blog/source/image/屏幕截图 2026-04-19 163827.png",
     "Pasted image 20260419164128.png.md",
@@ -214,9 +218,7 @@
     "Notion/hvv/护网报告",
     "Notion/hvv/未命名.md",
     "Notion/hvv/基础工具.md",
-    "Notion/hvv/密码爆破.md",
     "Notion/hvv/隧道转发.md",
-    "Notion/hvv/护网流程.md",
     "Notion/考研/高数.md",
     "Notion/google建号.md",
     "Notion/未命名",
