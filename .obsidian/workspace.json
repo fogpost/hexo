@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/hvv/护网报告/湖南食家益食品有限公司.md",
+                "file": "Notion/靶场/靶机流程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "湖南食家益食品有限公司"
+              "title": "靶机流程"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hydra",
+                "query": "gobu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +84,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -204,10 +205,10 @@
   },
   "active": "34988c5a53dca2b4",
   "lastOpenFiles": [
+    "Notion/hvv/护网报告/湖南食家益食品有限公司.md",
     "blog/source/image/Pasted image 20260420105456.png",
     "blog/source/image/Pasted image 20260420105418.png",
     "Notion/hvv/护网报告/资产探测.md",
-    "Notion/hvv/护网报告/湖南食家益食品有限公司.md",
     "Notion/hvv/护网报告/湘潭市第一中学.md",
     "blog/source/image/Pasted image 20260420091008.png",
     "blog/source/image/Pasted image 20260420090837.png",
@@ -250,7 +251,6 @@
     "Notion/靶场/CVE/CWE",
     "blog/source_backup/image/LDAP.jpeg",
     "blog/source_backup/image/image.png",
-    "blog/source_backup/image/image 9.png",
     "未命名 1.canvas"
   ]
 }
