@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/hvv/漏洞学习/Swagger未授权访问漏洞.md",
+                "file": "Notion/hvv/护网报告/资产探测.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Swagger未授权访问漏洞"
+              "title": "资产探测"
             }
           }
         ]
@@ -204,8 +204,8 @@
   },
   "active": "34988c5a53dca2b4",
   "lastOpenFiles": [
-    "Notion/hvv/护网报告/资产探测.md",
     "Notion/hvv/漏洞学习/Swagger未授权访问漏洞.md",
+    "Notion/hvv/护网报告/资产探测.md",
     "Notion/hvv/漏洞学习",
     "Notion/hvv/未命名.md",
     "Notion/hvv/护网报告/湖南皇爷食品有限公司.md",
