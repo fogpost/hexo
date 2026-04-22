@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/hvv/护网报告/资产探测.md",
+                "file": "Notion/hvv/漏洞学习/Swagger未授权访问漏洞.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "资产探测"
+              "title": "Swagger未授权访问漏洞"
             }
           }
         ]
@@ -204,6 +204,10 @@
   },
   "active": "34988c5a53dca2b4",
   "lastOpenFiles": [
+    "Notion/hvv/护网报告/资产探测.md",
+    "Notion/hvv/漏洞学习/Swagger未授权访问漏洞.md",
+    "Notion/hvv/漏洞学习",
+    "Notion/hvv/未命名.md",
     "Notion/hvv/护网报告/湖南皇爷食品有限公司.md",
     "Notion/hvv/护网报告/湘潭市第五人民医院.md",
     "Notion/hvv/护网报告/湘潭市第三人民医院.md",
@@ -224,7 +228,6 @@
     "Notion/hvv/护网报告/步步高商业连锁股份有限公司.md",
     "Notion/hvv/护网报告/湘潭市“12345”政务服务便民热线.md",
     "Notion/hvv/护网流程.md",
-    "Notion/hvv/护网报告/资产探测.md",
     "Notion/hvv/护网报告/湘潭市大数据和产业创新发展中心.md",
     "Notion/hvv/护网报告/湘潭电化科技股份有限公司.md",
     "Notion/hvv/护网报告/湘潭大学.md",
@@ -239,8 +242,6 @@
     "blog/source/image/Pasted image 20260420091008.png",
     "Notion/春招/工具/Docker.md",
     "Notion/hvv/工具.md",
-    "Notion/靶场/vulnhub/kioptrix-level1.md",
-    "blog/source/_drafts/一些工具的使用方法.md",
     "source/image",
     "source",
     "Notion/hvv/护网报告",
@@ -250,7 +251,6 @@
     "未命名.canvas",
     "未命名 1.base",
     "未命名 2.base",
-    "Notion/靶场/CVE/CWE",
     "未命名 1.canvas"
   ]
 }
