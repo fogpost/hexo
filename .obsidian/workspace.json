@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/hvv/护网报告/湘电集团有限公司.md",
+                "file": "Notion/hvv/护网报告/华菱线缆.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "湘电集团有限公司"
+              "title": "华菱线缆"
             }
           }
         ]
@@ -204,8 +204,9 @@
   },
   "active": "34988c5a53dca2b4",
   "lastOpenFiles": [
-    "Notion/hvv/护网报告/湘潭供水中心.md",
     "Notion/hvv/护网报告/湘电集团有限公司.md",
+    "Notion/hvv/护网报告/华菱线缆.md",
+    "Notion/hvv/护网报告/湘潭供水中心.md",
     "Notion/hvv/护网报告/资产探测.md",
     "Notion/hvv/漏洞学习/Swagger未授权访问漏洞.md",
     "Notion/hvv/漏洞学习",
@@ -238,7 +239,6 @@
     "blog/source/image/Pasted image 20260420170246.png",
     "blog/source/image/Pasted image 20260420114713.png",
     "未命名.base",
-    "Notion/靶场/靶机流程.md",
     "blog/source/image/Pasted image 20260420105456.png",
     "blog/source/image/Pasted image 20260420105418.png",
     "blog/source/image/Pasted image 20260420091008.png",
